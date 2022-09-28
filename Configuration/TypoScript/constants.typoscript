@@ -1,0 +1,80 @@
+page {
+
+    components {
+        # cat =t3up: components/appearance/110; type =options[1,2,3,4]; label= LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:bootstrapnewsslider
+        bootstrapnewsslider              =  1   
+    } 
+
+    files {
+                           
+        # cat = t3up: files/javascript/10;  type =options[,active]; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:newsmultislider
+        newsmultislider              =    active
+    }
+
+    rss {
+        # cat =t3up: rss//100; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.typenumber
+        typenumber                    =-1
+        # cat =t3up: rss//101; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.address
+        webadress                     =
+        # cat =t3up: rss//102; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.title
+        title                         =
+        # cat =t3up: rss//103; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.copyright
+        copyright                     =
+        # cat =t3up: rss//104; type =int+; 			label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.folder
+        start                         =
+        # cat =t3up: rss//105; type =int+; 			label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.single
+        detail                        =
+        # cat =t3up: rss//106; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.category
+        categories                    =
+        # cat =t3up: rss//107; type =options[0,active]; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.archived
+        archiverestriction            = 0
+        # cat =t3up: rss//108; type =int+; 			label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.recursive
+        recursive                     = 2
+        # cat =t3up: rss//109; type =int+; 			label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.limit 
+        limt                          = 100
+        # cat =t3up: rss//110; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.description
+        description                   =
+        # cat =t3up: rss//111; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.categorytitle
+        category                     = Education
+        # cat =t3up: rss//112; type =options[,1,2,3]; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.pos        
+		pos                          =
+        # cat =t3up: rss//113; type =options[0,1,2,3,4,5]; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.categoryConjunction 
+		categoryConjunction         = 0
+
+    }
+    
+    scss {
+        # t3up - Extensions ____________________________________________
+        # customsubcategory=t3upextensions=T3UP-Extensions            
+        # cat = t3up: scss/t3upextensions/210;  type =string; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:scssnews
+        scssT3upNews                 = EXT:t3up_news/Resources/Public/Sass/_t3upNews.scss
+        # cat = t3up: scss/t3upextensions/211;  type =string; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:scsseventnews
+        scssT3upEventnews            = EXT:t3up_news/Resources/Public/Sass/_t3upEventnews.scss     
+    }
+    
+    typography {
+        # cat =t3up: typography/slider/01; type =string; label =LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:sliderfontsize
+        sliderfontsize                     =1rem
+        
+        # cat =t3up: typography/slider/02; type =string; label =LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:sliderheaderfontsize
+        sliderheaderfontsize               =1.35rem
+        
+        # cat =t3up: typography/slider/03; type =string; label =LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:sliderheaderDesktopfontsize
+        sliderheaderDesktopfontsize        =1.5rem
+    }
+}
+
+
+
+plugin.tx_news{
+
+	settings {
+        # cat=plugin.tx_news//; type = int+; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:detailPid
+		 detailPid = 
+        # cat=plugin.tx_news//; type = int+; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:storagePid
+		storagePid = 
+        # cat=plugin.tx_news//; type = int+; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:recursive
+		recursive = 4	
+	}	 	 
+}
+

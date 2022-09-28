@@ -1,0 +1,513 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:events="http://typo3.org/ns/GeorgRinger/Eventnews/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+      
+      
+<f:layout name="General" />
+    <f:section name="content">
+        <f:if condition="{settings.templateLayout} == 45">  	
+			<div class="row">
+				<div class="col-md-2">
+					<h3>
+						<f:translate key="filter" />
+					</h3>
+					<f:form method="post" action="month" object="{search}" name="search" arguments="{overwriteDemand:overwriteDemand}">
+						<input type="hidden" name="id" value="{currentPageId}" />
+		
+						<h4>
+							<f:translate key="organizers" extensionName="eventnews" />
+						</h4>
+						<ul style="list-style: none">
+							<events:filter.organizer organizers="{allOrganizers}" news="{news}" as="filteredOrganizers">
+								<f:for each="{filteredOrganizers}" as="organizer">
+									<li>
+										<label>
+											<f:form.checkbox property="organizers.{organizer.uid}" value="{organizer.uid}" />
+											{organizer.title} </label>
+									</li>
+								</f:for>
+							</events:filter.organizer>
+						</ul>
+						<h4>
+							<f:translate key="locations" extensionName="eventnews" />
+						</h4>
+						<ul style="list-style: none">
+							<events:filter.location locations="{allLocations}" news="{news}" as="filteredEvents">
+								<f:for each="{filteredEvents}" as="location">
+									<li>
+										<label>
+											<f:form.checkbox property="locations.{location.uid}" value="{location.uid}" />
+											{location.title} </label>
+									</li>
+								</f:for>
+							</events:filter.location>
+						</ul>
+						<h4>
+							<f:translate key="categories" extensionName="eventnews" />
+						</h4>
+						<ul style="list-style: none">
+							<f:for each="{allCategories}" as="category">
+								<li>
+									<label>
+										<f:form.checkbox property="categories.{category.uid}" value="{category.uid}" />
+										{category.title} </label>
+								</li>
+							</f:for>
+						</ul>
+		                <h4>
+		                    <f:translate key="tags"/>
+		                </h4>
+		                <ul style="list-style: none">
+		                    <f:for each="{allTags}" as="tag">
+		                        <li>
+		                            <label>
+		                                <f:form.checkbox property="tags.{tag.uid}" value="{tag.uid}" />
+		                                {tag.title} </label>
+		                        </li>
+		                    </f:for>
+		                </ul>
+		
+						<div class="form-group">
+							<label for="searchDateFrom">
+								<f:translate key="searchDateFrom" extensionName="eventnews" />
+							</label>
+							<f:form.textfield property="searchDateFrom" id="searchDateFrom" type="date" />
+						</div>
+						<div class="form-group">
+							<label for="searchDateTo">
+								<f:translate key="searchDateTo" extensionName="eventnews" />
+							</label>
+							<f:form.textfield property="searchDateTo" id="searchDateTo" type="date" />
+						</div>
+		
+						<f:form.submit value="{f:translate(key:'filter_submit',extensionName:'eventnews')}" class="btn btn-default" />
+					</f:form>
+		
+				</div>
+				<div class="col-md-7">
+					<h2>
+						<f:translate key="calendar" extensionName="eventnews" />
+					</h2>
+					<events:calendar newsList="{newsWithNoDaySupport}" demand="{demand}" firstDayOfWeek="1">
+						<table class="table">
+							<tr class="title">
+								<th colspan="7">
+									<ul class="pager">
+										<li class="previous">
+											<f:link.page rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:previousMonthData.month,year:previousMonthData.year}}}">
+												&larr; {f:format.date(date:previousMonthData.date,format:'%B %Y')}
+											</f:link.page>
+										</li>
+										<li>{f:format.date(date:currentMonthData.date,format:'%B %Y')}</li>
+										<li class="next">
+											<f:link.page rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:nextMonthData.month,year:nextMonthData.year}}}">
+												{f:format.date(date:nextMonthData.date,format:'%B %Y')} &rarr;
+											</f:link.page>
+										</li>
+									</ul>
+								</th>
+							</tr>
+							<tr class="days">
+								<f:for each="{weeks.0}" as="day">
+									<th>
+										{f:format.date(date: day.ts, format: '%a')}
+									</th>
+								</f:for>
+							</tr>
+							<f:for each="{weeks}" as="week">
+								<tr>
+									<f:for each="{week}" as="day">
+										<f:render partial="Month/Calday" arguments="{day:day, settings:settings}" />
+									</f:for>
+								</tr>
+							</f:for>
+						</table>
+					</events:calendar>
+				</div>
+				<div class="col-md-3">
+					<h2>
+						<f:translate key="list" extensionName="eventnews" />
+					</h2>
+					<div class="row">
+						<f:for each="{news}" as="n">
+							<f:if condition="{overwriteDemand.day}">
+								<f:then>
+		                            <f:if condition="{events:dayCompare(newsItem:n,demand:demand)}">
+		                                <f:render partial="Month/ListItem" arguments="{_all}" />
+									</f:if>
+								</f:then>
+								<f:else>
+									<f:render partial="Month/ListItem" arguments="{_all}" />
+								</f:else>
+							</f:if>
+		
+						</f:for>
+					</div>
+				</div>
+			</div>
+	    </f:if>
+	    
+		<f:if condition="{settings.templateLayout} == 41">  	
+			<div class="row">
+	            <h2 class="h1 col-12"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:result-month"/>{f:format.date(date:currentMonthData.date,format:'%B %Y')}</h2>
+	            <div class="col-12 col-md-8 news-list standard">
+	                <f:for each="{news}" as="n">
+	                    <f:if condition="{overwriteDemand.day}">
+	                        <f:then>
+	                            <f:if condition="{events:dayCompare(newsItem:n,demand:demand)}">
+	                                <f:render partial="Month/ListItem1" arguments="{_all}" />
+	                            </f:if>
+	                        </f:then>
+	                        <f:else>
+	                            <f:render partial="Month/ListItem1" arguments="{_all}" />
+	                        </f:else>
+	                    </f:if>
+	
+	                </f:for>   
+	            </div>
+	            
+	            <!-- Calendar and Filter ---------------------------------------- beginn-->
+	            <div class="col-12 col-md-4 newscalendarTable">   
+	                <events:calendar newsList="{newsWithNoDaySupport}" demand="{demand}" firstDayOfWeek="1">
+	                    <table class="table">
+	                        <tr class="days">
+	                            <f:for each="{weeks.0}" as="day">
+	                                <th>
+	                                    {f:format.date(date: day.ts, format: '%a')}
+	                                </th>
+	                            </f:for>
+	                        </tr>
+	                        <f:for each="{weeks}" as="week">
+	                            <tr>
+	                                <f:for each="{week}" as="day">
+	                                    <f:render partial="Month/Calday1" arguments="{day:day, settings:settings}" />
+	                                </f:for>
+	                            </tr>
+	                        </f:for>
+	                        <tr class="title">
+	                            <th colspan="7">
+	                                <ul class="pager my-0 mx-0 py-0 px-0 list-unstyled">
+	                                    <li class="previous">
+	                                        <f:link.page class="symbol" rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:previousMonthData.month,year:previousMonthData.year}}}">&#xF104</f:link.page>
+	                                    </li>
+	                                    <li>{f:format.date(date:currentMonthData.date,format:'%B %Y')}</li>
+	                                    <li class="next">
+	                                        <f:link.page class="awe" rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:nextMonthData.month,year:nextMonthData.year}}}">&#xF105</f:link.page>
+	                                    </li>
+	                                </ul>
+	                            </th>
+	                        </tr>      
+	                    </table>
+	                </events:calendar>
+	    
+	                <!-- Filter beginn-->
+	               
+	               <f:form method="post" class="monthfilter" action="month" object="{search}" name="search" arguments="{overwriteDemand:overwriteDemand}">
+	                    <input type="hidden" name="id" value="{currentPageId}" />
+	                    
+	                    <div class="d-none">
+	                         <events:filter.organizer organizers="{allOrganizers}" news="{news}" as="filteredOrganizers">
+	                             <div class="filters">
+	                                 <f:if condition="{filteredOrganizers}">   
+	                                    <h4><f:translate key="organizers" extensionName="eventnews" /></h4>
+	                                    <ul class="list-unstyled">  
+	                                        <f:for each="{filteredOrganizers}" as="organizer">
+	                                            <li>
+	                                                <label><f:form.checkbox property="organizers.{organizer.uid}" value="{organizer.uid}" />{organizer.title}</label>
+	                                            </li>
+	                                        </f:for>
+	                                    </ul> 
+	                                </f:if>   
+	                            </div>    
+	                        </events:filter.organizer>
+	                    </div>
+	                    
+	                    <div class="d-none">
+	                        <events:filter.location locations="{allLocations}" news="{news}" as="filteredEvents">
+	                            <div class="filters">
+	                                <f:if condition="{filteredEvents}">  
+	                                    <h4><f:translate key="locations" extensionName="eventnews" /></h4>
+	                                    <ul class="list-unstyled">  
+	                                        <f:for each="{filteredEvents}" as="location">
+	                                            <li>
+	                                                <label><f:form.checkbox property="locations.{location.uid}" value="{location.uid}" />{location.title}</label>
+	                                            </li>
+	                                        </f:for>
+	                                    </ul>
+	                                </f:if>
+	                           </div> 
+	                        </events:filter.location>
+	                    </div>
+	                    
+	                    <div class="d-none">
+	                        <f:if condition="{allCategories}">  
+	                            <div class="filters">
+	                                <h4 class="newscats"><f:translate key="categories" extensionName="eventnews" /></h4>
+	                                <ul class="newscategories list-unstyled">
+	                                    <f:for each="{allCategories}" as="category">
+	                                        <li>
+	                                            <label><f:form.checkbox property="categories.{category.uid}" value="{category.uid}" />{category.title}</label>
+	                                        </li>
+	                                    </f:for>
+	                                </ul>
+	                            </div>     
+	                        </f:if>  
+	                    </div>
+	
+	                    <f:if condition="{allTags}">
+	                        <div class="filters">            
+	                            <h4><f:translate key="tags"/></h4>
+	                            <ul class="list-unstyled">
+	                                <f:for each="{allTags}" as="tag">
+	                                    <li>
+	                                        <label><f:form.checkbox property="tags.{tag.uid}" value="{tag.uid}" />{tag.title}</label>
+	                                    </li>
+	                                </f:for>
+	                            </ul>
+	                        </div>     
+	                    </f:if>   
+	
+	                    <div class="form-group row"  style="margin-top: 15px">
+	                        <label for="searchDateFrom" class="col-4 col-form-label">
+	                            <f:translate key="searchDateFrom" extensionName="eventnews" />
+	                        </label>
+	                        <div class="col-8">
+	                            <f:form.textfield class="form-control" property="searchDateFrom" id="searchDateFrom" type="date" />
+	                        </div>
+	                    </div>
+	                    <div class="form-group row">
+	                        <label for="searchDateTo" class="col-4 col-form-label">
+	                            <f:translate key="searchDateTo" extensionName="eventnews" />
+	                        </label>
+	                        <div class="col-8">
+	                            <f:form.textfield class="form-control"  property="searchDateTo" id="searchDateTo" type="date" />
+	                        </div>
+	                    </div>
+	 
+	                 <f:form.submit value="{f:translate(key:'filter_submit',extensionName:'eventnews')}" class="btn btn-secondary" />
+	             </f:form>
+	            <!-- Calendar and Filter ---------------------------------------- ende-->
+	        </div>  
+		</f:if>
+		
+		<f:if condition="{settings.templateLayout} == 42">
+		
+				<events:calendar newsList="{newsWithNoDaySupport}" demand="{demand}" firstDayOfWeek="1">
+				<div class="row mx-0 mb-5 justify-content-between w-100">
+					<ul class="monthPagination w-auto">
+						<li class="previous">
+							<f:link.page rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:previousMonthData.month,year:previousMonthData.year}}}">
+								{f:format.date(date:previousMonthData.date,format:'%B')}
+							</f:link.page>
+						</li>
+						<li class="thisMonth">{f:format.date(date:currentMonthData.date,format:'%B')}</li>
+						<li class="next">
+							<f:link.page rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:nextMonthData.month,year:nextMonthData.year}}}">
+								{f:format.date(date:nextMonthData.date,format:'%B')} 
+							</f:link.page>
+						</li>
+					</ul>
+					<ul class="moreInfs w-auto">
+						<li class="monthView">
+							<f:link.page rel="nofollow" pageUid="{settings.listPid}" >
+								<f:translate key="LLL:EXT:t3up/Resources/Private/Language/locallang_frontend.xlf:listview" /> 
+							</f:link.page>
+						</li>
+						<f:cObject typoscriptObjectPath="lib.ical" />
+					</ul>	
+				</div>
+				
+				<table class="monthWide">
+					<tr class="days">
+						<f:for each="{weeks.0}" as="day">
+							<th>
+								{f:format.date(date: day.ts, format: '%A')}
+							</th>
+						</f:for>
+					</tr>
+					<f:for each="{weeks}" as="week">
+						<tr>
+							<f:for each="{week}" as="day">
+								<f:render partial="Month/Calday2" arguments="{day:day, settings:settings}" />
+							</f:for>
+						</tr>
+					</f:for>
+				</table>
+			</events:calendar>
+			
+		</f:if>
+		
+		
+		<f:if condition="{settings.templateLayout} == 43">
+			<div class="row mx-0 mb-5 justify-content-between">
+				<ul class="monthPagination">
+					<li class="previous">
+						<f:link.page rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:previousMonthData.month,year:previousMonthData.year}}}">
+							{f:format.date(date:previousMonthData.date,format:'%B')}
+						</f:link.page>
+					</li>
+					<li class="thisMonth">{f:format.date(date:currentMonthData.date,format:'%B')}</li>
+					<li class="next">
+						<f:link.page rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:nextMonthData.month,year:nextMonthData.year}}}">
+							{f:format.date(date:nextMonthData.date,format:'%B')} 
+						</f:link.page>
+					</li>
+				</ul>
+				<ul class="moreInfs">
+					<li class="monthView">
+						<f:link.page rel="nofollow" pageUid="{settings.backPid}" >
+							<f:translate key="LLL:EXT:t3up/Resources/Private/Language/locallang_frontend.xlf:monthview" /> 
+						</f:link.page>
+					</li>
+					<f:cObject typoscriptObjectPath="lib.ical" />
+				</ul>	
+			</div>
+				
+		<div class="row">
+	            <h2 class="h1 col-12"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:result-month"/>{f:format.date(date:currentMonthData.date,format:'%B %Y')}</h2>
+	            <div class="col-12 col-md-8 news-list standard">
+	                <f:for each="{news}" as="n">
+	                    <f:if condition="{overwriteDemand.day}">
+	                        <f:then>
+	                            <f:if condition="{events:dayCompare(newsItem:n,demand:demand)}">
+	                                <f:render partial="Month/ListItem1" arguments="{_all}" />
+	                            </f:if>
+	                        </f:then>
+	                        <f:else>
+	                            <f:render partial="Month/ListItem1" arguments="{_all}" />
+	                        </f:else>
+	                    </f:if>
+	
+	                </f:for>   
+	            </div>
+	            
+	            <!-- Calendar and Filter ---------------------------------------- beginn-->
+	            <div class="col-12 col-md-4 newscalendarTable">   
+	    
+	                <!-- Filter beginn-->
+	               
+	               <f:form method="post" class="monthfilter" action="month" object="{search}" name="search" arguments="{overwriteDemand:overwriteDemand}">
+	                    <input type="hidden" name="id" value="{currentPageId}" />
+	                    
+	                    <div class="d-none">
+	                         <events:filter.organizer organizers="{allOrganizers}" news="{news}" as="filteredOrganizers">
+	                             <div class="filters">
+	                                 <f:if condition="{filteredOrganizers}">   
+	                                    <h4><f:translate key="organizers" extensionName="eventnews" /></h4>
+	                                    <ul class="list-unstyled">  
+	                                        <f:for each="{filteredOrganizers}" as="organizer">
+	                                            <li>
+	                                                <label><f:form.checkbox property="organizers.{organizer.uid}" value="{organizer.uid}" />{organizer.title}</label>
+	                                            </li>
+	                                        </f:for>
+	                                    </ul> 
+	                                </f:if>   
+	                            </div>    
+	                        </events:filter.organizer>
+	                    </div>
+	                    
+	                    <div class="d-none">
+	                        <events:filter.location locations="{allLocations}" news="{news}" as="filteredEvents">
+	                            <div class="filters">
+	                                <f:if condition="{filteredEvents}">  
+	                                    <h4><f:translate key="locations" extensionName="eventnews" /></h4>
+	                                    <ul class="list-unstyled">  
+	                                        <f:for each="{filteredEvents}" as="location">
+	                                            <li>
+	                                                <label><f:form.checkbox property="locations.{location.uid}" value="{location.uid}" />{location.title}</label>
+	                                            </li>
+	                                        </f:for>
+	                                    </ul>
+	                                </f:if>
+	                           </div> 
+	                        </events:filter.location>
+	                    </div>
+	                    
+	                    <div class="d-none">
+	                        <f:if condition="{allCategories}">  
+	                            <div class="filters">
+	                                <h4 class="newscats"><f:translate key="categories" extensionName="eventnews" /></h4>
+	                                <ul class="newscategories list-unstyled">
+	                                    <f:for each="{allCategories}" as="category">
+	                                        <li>
+	                                            <label><f:form.checkbox property="categories.{category.uid}" value="{category.uid}" />{category.title}</label>
+	                                        </li>
+	                                    </f:for>
+	                                </ul>
+	                            </div>     
+	                        </f:if>  
+	                    </div>
+	
+	                    <f:if condition="{allTags}">
+	                        <div class="filters">            
+	                            <h4><f:translate key="tags"/></h4>
+	                            <ul class="list-unstyled">
+	                                <f:for each="{allTags}" as="tag">
+	                                    <li>
+	                                        <label><f:form.checkbox property="tags.{tag.uid}" value="{tag.uid}" />{tag.title}</label>
+	                                    </li>
+	                                </f:for>
+	                            </ul>
+	                        </div>     
+	                    </f:if>   
+	
+	                    <div class="form-group row"  style="margin-top: 15px">
+	                        <label for="searchDateFrom" class="col-4 col-form-label">
+	                            <f:translate key="searchDateFrom" extensionName="eventnews" />
+	                        </label>
+	                        <div class="col-8">
+	                            <f:form.textfield class="form-control" property="searchDateFrom" id="searchDateFrom" type="date" />
+	                        </div>
+	                    </div>
+	                    <div class="form-group row">
+	                        <label for="searchDateTo" class="col-4 col-form-label">
+	                            <f:translate key="searchDateTo" extensionName="eventnews" />
+	                        </label>
+	                        <div class="col-8">
+	                            <f:form.textfield class="form-control"  property="searchDateTo" id="searchDateTo" type="date" />
+	                        </div>
+	                    </div>
+	 
+	                 <f:form.submit value="{f:translate(key:'filter_submit',extensionName:'eventnews')}" class="btn btn-secondary" />
+	             </f:form>
+	            <!-- Calendar and Filter ---------------------------------------- ende-->
+	        </div>  	
+		</f:if>
+		<f:if condition="{settings.templateLayout} == 44">
+			<div class="newscalendarTable">
+	            <events:calendar newsList="{newsWithNoDaySupport}" demand="{demand}" firstDayOfWeek="1">
+	                <table class="table">
+	                    <tr class="days">
+	                        <f:for each="{weeks.0}" as="day">
+	                            <th>
+	                                {f:format.date(date: day.ts, format: '%a')}
+	                            </th>
+	                        </f:for>
+	                    </tr>
+	                    <f:for each="{weeks}" as="week">
+	                        <tr>
+	                            <f:for each="{week}" as="day">
+	                                <f:render partial="Month/Calday1" arguments="{day:day, settings:settings}" />
+	                            </f:for>
+	                        </tr>
+	                    </f:for>
+	                    <tr class="title">
+	                        <th colspan="7">
+	                            <ul class="pager my-0 mx-0 py-0 px-0 list-unstyled">
+	                                <li class="previous">
+	                                    <f:link.page class="symbol" rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:previousMonthData.month,year:previousMonthData.year}}}">&#xF104</f:link.page>
+	                                </li>
+	                                <li>{f:format.date(date:currentMonthData.date,format:'%B %Y')}</li>
+	                                <li class="next">
+	                                    <f:link.page class="awe" rel="nofollow" pageUid="{currentPageId}" additionalParams="{tx_news_pi1:{overwriteDemand:{month:nextMonthData.month,year:nextMonthData.year}}}">&#xF105</f:link.page>
+	                                </li>
+	                            </ul>
+	                        </th>
+	                    </tr>      
+	                </table>
+     	       </events:calendar>
+	    	</div>
+		</f:if>
+	</f:section>
+</html>

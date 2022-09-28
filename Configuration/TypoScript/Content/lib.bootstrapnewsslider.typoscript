@@ -1,0 +1,3 @@
+lib.bootstrapnewsslider = TEXT
+lib.bootstrapnewsslider.value                    =  {$page.components.bootstrapnewsslider}  
+lib.bootstrapnewsslider.insertData               = 1

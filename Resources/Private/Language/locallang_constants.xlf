@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-09-22T11:44:12Z" product-name="t3up_news">
+        <header/>
+        <body>
+
+            /* -- RSS ------------------------- */  
+            
+            <trans-unit id="rss.address">
+                 <source>The url of the RSS</source>
+            </trans-unit>   
+            <trans-unit id="rss.typenumber">
+                 <source>Pagetype number eg. 9820, value =  -1; button is hidden</source>
+            </trans-unit>   
+            <trans-unit id="rss.title">
+                 <source>title</source>
+            </trans-unit>   
+            <trans-unit id="rss.copyright">
+                 <source>copyright</source>
+            </trans-unit>                           
+            <trans-unit id="rss.folder">
+                 <source>ID of the newsfolder</source>
+            </trans-unit>                           
+            <trans-unit id="rss.single">
+                 <source>ID singlenews view</source>
+            </trans-unit>                           
+            <trans-unit id="rss.category">
+                 <source>ID of the newscategory /-categories. (List)</source>
+            </trans-unit>                       
+            <trans-unit id="rss.archived">
+                 <source>Archived data are allowed </source>
+            </trans-unit>               
+            <trans-unit id="rss.recursive">
+                 <source>Recursive level </source>
+            </trans-unit>               
+            <trans-unit id="rss.limit">
+                 <source>Limit of items </source>
+            </trans-unit>   
+            <trans-unit id="rss.description">
+                 <source>Description </source>
+            </trans-unit>   
+            <trans-unit id="rss.categorytitle">
+                 <source>Title of the category</source>
+            </trans-unit>               
+            <trans-unit id="rss.pos">
+                 <source>Position: 1 - baseline, 2 -toparea, 3 - fixedmenu</source>
+            </trans-unit>   
+            <trans-unit id="rss.categoryConjunction">
+                 <source>Position: 1 (Don't care, show all), 2 (Show items with selected categories (OR)), 3 (Show items with selected categories (AND)), 4 (Do NOT show items with selected categories (OR)), 5 (Do NOT show items with selected categories (AND))</source>
+            </trans-unit>               
+            
+
+            /* -- SCSS ------------------------- */ 
+
+            <trans-unit id="scssnews">
+                 <source>Including the news-scss (default active, recommended)</source>
+            </trans-unit>     
+            <trans-unit id="scsseventnews">
+                 <source>Including the eventnews-scss (default active, recommended)</source>
+            </trans-unit>     
+             
+            
+            /* Extras ----------------------------------*/  
+            
+             <trans-unit id="detailPid">
+                 <source>Detailpage for the linkhandler</source>
+            </trans-unit>
+            
+             <trans-unit id="newsmultislider">
+                 <source>Javascript for multislider news</source>
+            </trans-unit>
+            
+             <trans-unit id="bootstrapnewsslider">
+                 <source>Design for bootstrap newsslider</source>
+            </trans-unit>       
+            
+            /* TYPO ----------------------------------*/        
+                    
+             <trans-unit id="sliderfontsize">
+                 <source>Fontsize of the subtext in the newsslider</source>
+            </trans-unit>
+            
+             <trans-unit id="sliderheaderfontsize">
+                 <source>Fontsize of the h3-header in the newsslider</source>
+            </trans-unit>
+            
+             <trans-unit id="sliderheaderDesktopfontsize">
+                 <source>Fontsize of the h3-header in the newsslider in desktop devices</source>
+            </trans-unit>       
+            
+            
+                
+        
+        </body>
+    </file>
+</xliff>

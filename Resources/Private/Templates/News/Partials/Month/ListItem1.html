@@ -1,0 +1,205 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+      
+    <div class="article">
+    <f:if condition="{n.mediaPreviews}">
+        <f:then>
+            <div class="row mx-0">
+                <div class="newsimage col-3 pl-0 ps-0">
+                    <f:if condition="{n.mediaPreviews}">
+                        <f:then>
+                            <f:if condition="{n.nomore}">
+                                <f:then>
+                                    <f:alias map="{mediaElement: '{n.mediaPreviews.0}'}">
+                                        <f:if condition="{mediaElement.originalResource.type} == 2">
+                                                <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/> 
+                                        </f:if>
+                                        <f:if condition="{mediaElement.originalResource.type} == 4">
+                                            <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>                
+                                        </f:if>
+                                        <f:if condition="{mediaElement.originalResource.type} == 5">
+                                            <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+                                        </f:if>         
+                                    </f:alias>      
+                                </f:then>
+                                <f:else>            
+                                    <n:link newsItem="{newsItem}" settings="{settings}" title="{n.title}">
+                                        <f:alias map="{mediaElement: '{n.mediaPreviews.0}'}">
+                                            <f:if condition="{mediaElement.originalResource.type} == 2">
+                                                    <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/> 
+                                            </f:if>
+                                            <f:if condition="{mediaElement.originalResource.type} == 4">
+                                                <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>                
+                                            </f:if>
+                                            <f:if condition="{mediaElement.originalResource.type} == 5">
+                                                <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+                                            </f:if>         
+                                        </f:alias>
+                                    </n:link>
+                                </f:else>
+                            </f:if>
+                        </f:then>
+                    </f:if>
+                </div>
+                
+                <div class="teasertext col-9">
+                    <p><strong>{n.title}</strong></p>
+
+                    <ul class="infos list-unstyled">
+            
+                        <f:if condition="{n.organizerSimple}">
+                            <f:then>
+                                <li>
+                                   <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:organizer"/>:</label>
+                                    {n.organizerSimple}
+                                </li>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{n.organizer}">
+                                    <li>
+                                       <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:organizer"/>:</label>
+                                        {n.organizer.title}
+                                    </li>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                                        
+                        <f:if condition="{n.locationSimple}">
+                            <f:then>
+                                <li>
+                                    <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:location"/>:</label>
+                                    {n.locationSimple}
+                                </li>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{n.location}">
+                                    <li>
+                                        <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:location"/>:</label>
+                                        {n.location.title}
+                                    </li>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                        
+                        <f:if condition="{n.fullDay}">
+                            <f:then>
+                                <li>
+                                    <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:event_fullday"/>:</label>
+                                </li>
+                            </f:then>
+                            
+                            <f:else>
+                                <li>
+                                    <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:event_start"/>:</label>
+                                    <f:format.date format="%d.%m.%Y" >{n.datetime}</f:format.date> | <f:format.date format="H:i" >{n.datetime}</f:format.date> 
+                                </li>     
+                                <f:if condition="{n.eventEnd}">
+                                    <li>
+                                        <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:event_end"/>:</label>
+                                        <f:format.date format="%d.%m.%Y" >{n.eventEnd}</f:format.date> | <f:format.date format="H:i" >{n.eventEnd}</f:format.date> 
+                                    </li>   
+                                </f:if>
+                            </f:else>
+                            
+                        </f:if>
+                    </ul>
+
+                    
+                    <!-- teaser -->
+                        <f:if condition="{n.teaser}">
+                            <f:then>
+                                <span itemprop="description">{n.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+                            </f:then>
+                            <f:else>
+                                <span itemprop="description">{n.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+                            </f:else>
+                        </f:if>
+                        <n:link newsItem="{n}" settings="{settings}" class="moreNews" title="{n.title}">&nbsp;</n:link>
+                    </div>          
+                        
+                <!-- teaser end-->  
+                </div>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="teasertext">            
+                <h3>{n.title}</h3>
+                    
+                <ul class="infos list-unstyled">
+        
+                    <f:if condition="{n.organizerSimple}">
+                        <f:then>
+                            <li>
+                               <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:organizer"/>:</label>
+                                {n.organizerSimple}
+                            </li>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{n.organizer}">
+                                <li>
+                                   <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:organizer"/>:</label>
+                                    {n.organizer.title}
+                                </li>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                                    
+                    <f:if condition="{n.locationSimple}">
+                        <f:then>
+                            <li>
+                                <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:location"/>:</label>
+                                {n.locationSimple}
+                            </li>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{n.location}">
+                                <li>
+                                    <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:location"/>:</label>
+                                    {n.location.title}
+                                </li>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                    
+                    <f:if condition="{n.fullDay}">
+                        <f:then>
+                            <li>
+                                <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:event_fullday"/>:</label>
+                                <f:format.date format="%d.%m.%Y" >{n.datetime}</f:format.date>
+                            </li>
+                        </f:then>
+                        
+                        <f:else>
+                            <li>
+                                <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:event_start"/>:</label>
+                                <f:format.date format="%d.%m.%Y" >{n.datetime}</f:format.date> | <f:format.date format="H:i" >{n.datetime}</f:format.date> 
+                            </li>   
+                            <f:if condition="{n.eventEnd}">
+                                <li>
+                                    <label class="eventlistlabel"><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:event_end"/>:</label>
+                                    <f:format.date format="%d.%m.%Y" >{n.eventEnd}</f:format.date> | <f:format.date format="H:i" >{n.eventEnd}</f:format.date> 
+                                </li>   
+                            </f:if>
+                        </f:else>
+                        
+                    </f:if>
+                </ul>
+
+                <!-- teaser -->
+                    <f:if condition="{n.teaser}">
+                        <f:then>
+                            <span itemprop="description">{n.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+                        </f:then>
+                        <f:else>
+                            <span itemprop="description">{n.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+                        </f:else>
+                    </f:if>
+                    <n:link newsItem="{n}" settings="{settings}" class="moreNews" title="{n.title}">&nbsp;</n:link>
+                </div>          
+                    
+            <!-- teaser end-->  
+            </div>
+        </f:else>
+    </f:if> 
+</html>

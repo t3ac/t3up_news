@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+	 
+	  
+	 <div class="carousel-item col-12 px-0 {f:if(condition: '{iterator.isFirst}', then: ' active')}"  data-bs-interval="{settings.carouselSpeed}">
+		<n:excludeDisplayedNews newsItem="{newsItem}"/>
+
+		<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
+			<f:if condition="{mediaElement.originalResource.type} == 2">
+				<f:render section="picture" arguments="{_all}"/> 
+			</f:if>	
+		</f:alias> 		
+			
+	    <div class="carousel-caption" style="color: {settings.captioncolor}; text-align: {settings.textalignment}">
+    		<h3 style="background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity}; color: {settings.captioncolor}">
+    			{newsItem.title}
+    		</h3> 
+    		<f:if condition="{settings.head}">
+	    		<span class="d-none d-md-inline-block">
+		       		{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+		        </span>	
+	        </f:if>	    		
+        </div>
+    </div>
+    
+    <f:section name="picture">
+		<picture>
+		    <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '2560')}"   media="(min-width: 1441px)" type="image/jpeg"> 
+            <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1440')}"   media="(min-width: 1281px)" type="image/jpeg">  
+            <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1280')}"   media="(min-width: 993px)" type="image/jpeg"> 
+            <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '992')}"   media="(min-width: 769px)" type="image/jpeg">              	
+            <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '768')}"   media="(min-width: 641px)" type="image/jpeg"> 
+            <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '640')}"   media="(min-width: 361px)" type="image/jpeg">          	
+            <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '360')}"  type="image/jpeg">
+            <img src="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', height: '{dimensions.height}', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '{data.imagewidth}')}"
+            {f:if(condition: '{mediaElement.originalResource.title}', then: 'title="{mediaElement.originalResource.title}"')}
+            {f:if(condition: '{mediaElement.originalResource.alternative}', then: 'alt="{mediaElement.originalResource.alternative}"')}  role="presentation" 
+             loading="lazy" />
+        </picture>
+    </f:section>  
+    
+
+</html>

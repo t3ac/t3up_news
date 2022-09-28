@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2021-01-22T11:44:12Z" product-name="t3up_news">
+		<header/>
+		<body>
+			
+			
+			<trans-unit id="sheet.carousel">
+			     <source>Boostrap-Carousel</source>
+				<target state="translated">Boostrap-Carousel</target>
+		    </trans-unit>
+
+			/* -- Controls --------------------------------- */
+		    
+			<trans-unit id="carousel.autostart">
+			     <source>Autostart</source>
+			     <target state="translated">Autostart</target>
+		    </trans-unit>
+			<trans-unit id="carousel.animation">
+			     <source>Type of presentation</source>
+			     <target state="translated">Art der Präsentation</target>
+		    </trans-unit>
+			<trans-unit id="carousel.animation.1">
+			     <source>slide</source>
+			     <target state="translated">Verschiebe</target>
+		    </trans-unit>
+			<trans-unit id="carousel.animation.2">
+			     <source>fade</source>
+			     <target state="translated">Einblenden</target>
+		    </trans-unit>
+			<trans-unit id="carousel.carouselwidth">
+			     <source>Width of the carousel</source>
+			     <target state="translated">Breite des Carousels: 0 = 100%</target>
+		    </trans-unit>	
+			<trans-unit id="carousel.carouselheight">
+			     <source>Height of the carousel</source>
+			     <target state="translated">Höhe des Carousels (1-100vH) Vordefiniert: 40vH, Mindestwert 200px;</target>	
+		    </trans-unit>
+			<trans-unit id="carousel.controlNav">
+			     <source>Show controls</source>
+			     <target state="translated">Zeige Kontrollpunkte</target>
+		    </trans-unit>
+			<trans-unit id="carousel.directionNav">
+			     <source>Create navigation for previous/next navigation</source>
+			     <target state="translated">Zeige Richtungspfeile</target>
+		    </trans-unit>
+			<trans-unit id="carousel.slideshowSpeed">
+			     <source>Speed in mil. Sec.</source>
+			     <target state="translated">Geschwindigkeit in Millisekunden (Vorgabe 4 Sekunden)</target>
+		    </trans-unit>
+			<trans-unit id="carousel.animationLoop">
+			     <source>Animation Loop</source>
+			     <target state="translated">Animation wiederholen</target>
+		    </trans-unit>	 
+		    
+		    
+			/* -- Optionen --------------------------------- */
+			
+			<trans-unit id="carousel.style">
+			     <source>Style</source>
+			     <target state="translated">Design-Stil</target>
+		    </trans-unit>
+		    	
+			<trans-unit id="carousel.captionbg">
+			     <source>Background-color</source>
+			     <target state="translated">Hintergrundfarbe des Textbereich/Richtungspfeile</target>	
+		    </trans-unit>		
+		    
+			<trans-unit id="carousel.captionColor">
+			     <source>Text-color</source>
+			     <target state="translated">Textbereich/Richtungspfeile</target>	
+		    </trans-unit>	
+		    
+			<trans-unit id="carousel.captionOpacity">
+			     <source>Background-opacity</source>
+			     <target state="translated">Hintergrund Durchsichtigkeit</target>	
+		   </trans-unit>
+			<trans-unit id="carousel.textalign">
+				<source>textalign</source>
+				<target state="translated">Textausrichtigung</target>
+			</trans-unit>
+
+			<trans-unit id="carousel.header">
+			     <source>only header</source>
+			     <target state="translated">Nur Header anzeigen</target>	
+		    </trans-unit>	
+			<trans-unit id="carousel.imagecarouselbg">
+			     <source>Background-color</source>
+			     <target state="translated">Hintergrundfarbe</target>	
+		    </trans-unit>	
+			<trans-unit id="carousel.carouselbg">
+			     <source>Background-color</source>
+			     <target state="translated">Hintergrundfarbe des kompletten Carousels-Items</target>
+		    </trans-unit>	
+		    
+			<trans-unit id="carousel.carouseloverlaycolor">
+			     <source>Overlay-color</source>
+			     <target state="translated">Transparenzfarbe für die Bilder</target>
+		    </trans-unit>	
+			
+			<trans-unit id="carousel.lazy">
+			     <source>lazy scrolling</source>
+			     <target state="translated">Verzöckertes Nachladen</target>
+		    </trans-unit>	
+			
+		    /* Standard */
+		    
+			<trans-unit id="carousel.style">
+			     <source>Design</source>
+		    </trans-unit>		
+			<trans-unit id="label.basic">
+			     <source>Basic</source>
+		    </trans-unit> 
+			<trans-unit id="label.yes">
+			     <source>yes</source>
+			     <target state="translated">Ja</target>
+		    </trans-unit>	  		
+			<trans-unit id="label.no">
+			     <source>no</source>
+			     <target state="translated">Nein</target>
+		    </trans-unit>	 		    		    		    
+			<trans-unit id="label.stil1">
+			     <source>Stil 1</source>
+		    </trans-unit>	 		    
+			<trans-unit id="label.stil2">
+			     <source>Stil 2</source>
+		    </trans-unit>	 
+			<trans-unit id="label.stil3">
+			     <source>Stil 3</source>
+		    </trans-unit>
+		    <trans-unit id="label.stil4">
+			     <source>Stil 4</source>
+		    </trans-unit>
+			<trans-unit id="label.stil5">
+			     <source>Stil 5</source>
+		    </trans-unit>
+			<trans-unit id="label.stil6">
+			     <source>Stil 6</source>
+		    </trans-unit>
+		</body>
+	</file>
+</xliff>

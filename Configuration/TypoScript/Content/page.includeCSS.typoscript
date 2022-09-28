@@ -1,0 +1,8 @@
+plugin.tx_wsscss.variables {
+
+    sliderfontsize                          = {$page.typography.sliderfontsize}
+    sliderheaderfontsize                    = {$page.typography.sliderheaderfontsize}
+    sliderheaderDesktopfontsize             = {$page.typography.sliderheaderDesktopfontsize}
+
+
+}

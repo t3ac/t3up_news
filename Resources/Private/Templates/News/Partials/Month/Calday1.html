@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">  
+
+		<td class="day{f:format.date(date: day.ts, format: 'N')} {f:if(condition: day.curmonth, then: 'curmonth', else: 'othermonth')}{f:if(condition: day.news, then: ' hasevents')}{f:if(condition: day.curday, then: ' today')}">
+            <f:if condition="{day.dayBelongsToCurrentMonth}">
+                <f:if condition="{day.news}">
+                    <f:then>
+                        <strong>
+                            <f:link.action action="month" addQueryString="1" additionalParams="{tx_news_pi1:{overwriteDemand:{year:day.year,month:day.month,day:day.day}}}">{day.day}</f:link.action>
+                        </strong>
+    
+                        <div class="termin">
+                            <f:for each="{day.news}" as="newsItem">
+                                <n:link newsItem="{newsItem}" settings="{settings}">
+                                    {newsItem.title}
+                                </n:link>
+                            </f:for>
+                        </div>
+    
+                    </f:then>
+                    <f:else>
+                        {day.day}
+                    </f:else>
+                </f:if>
+            </f:if>
+        </td>
+</html>

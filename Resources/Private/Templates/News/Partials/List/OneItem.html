@@ -1,0 +1,167 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+	 
+	 <div class="carousel-item col-12 px-0 {f:if(condition: '{iterator.isFirst}', then: ' active')}" data-bs-interval="{settings.carouselSpeed}">
+		<n:excludeDisplayedNews newsItem="{newsItem}"/>
+
+
+		<f:if condition="{settings.carouseloverlaycolor}">
+			<div class="overlayslider" style="
+				{f:if(condition:'{settings.carouseloverlaycolor}',then:'background-color: {settings.carouseloverlaycolor};')}
+				height:{settings.itemheight}px">
+			</div>
+    	</f:if>
+
+		<f:if condition="{newsItem.imageonly}">
+		
+			<f:then>
+				<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
+					<f:if condition="{mediaElement.originalResource.type} == 2">
+						<f:render section="picture" arguments="{_all}"/> 
+					</f:if>	
+				</f:alias>       	
+			</f:then>	
+			
+			<f:else>
+				<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
+					<f:if condition="{mediaElement.originalResource.type} == 2">
+						<f:render section="picture" arguments="{_all}"/> 
+					</f:if>	
+				</f:alias> 		
+
+
+                <f:if condition="{f:cObject(typoscriptObjectPath:'lib.bootstrapnewsslider')} == 1">
+                    <f:then>
+                    
+                        <div class="container carousel-caption w-auto p-3" style="color: {settings.captioncolor}; text-align: {settings.textalignment}; background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity};">
+                            <n:link style="color: {settings.captioncolor}" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+	                            <h3 class="m-0" color: {settings.captioncolor}">{newsItem.title}</h3>
+	                            <f:if condition="{settings.head}">
+	                                <p class="d-none d-md-inline-block">
+	                                    {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.htmlentitiesDecode()}
+	                                </p> 
+	                           </f:if>
+                           </n:link>    
+                       </div>
+                       
+                    
+                    </f:then>
+                </f:if> 
+                
+                <f:if condition="{f:cObject(typoscriptObjectPath:'lib.bootstrapnewsslider')} == 2">
+                    <f:then>
+	                    <div class="carousel-caption w-100" style="color: {settings.captioncolor}; text-align: {settings.textalignment}; background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity}; ">
+	                        <div class="container w-auto p-3">
+	                            <n:link style="color: {settings.captioncolor}" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+		                            <h3 class="m-0" color: {settings.captioncolor}">{newsItem.title}</h3>
+		                            <f:if condition="{settings.head}">
+		                                <p class="d-none d-md-inline-block">
+		                                    {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.htmlentitiesDecode()}
+		                                </p> 
+		                           </f:if>
+	                           </n:link>    
+	                        </div>   
+                        </div>
+                    </f:then>
+                </f:if>                 			
+
+
+                <f:if condition="{f:cObject(typoscriptObjectPath:'lib.bootstrapnewsslider')} == 3">
+                    <f:then>
+                    
+                        <div class="container carousel-caption p-0" style="text-align: {settings.textalignment}" >
+	                        <div class="w-auto p-3 d-inline-block" style="color: {settings.captioncolor}; text-align: {settings.textalignment}; background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity};">
+	                            <n:link style="color: {settings.captioncolor}" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+	                            <h3 class="m-0" color: {settings.captioncolor}">{newsItem.title}</h3>
+	                            <f:if condition="{settings.head}">
+	                                <p class="d-none d-md-inline-block">
+	                                    {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.htmlentitiesDecode()}
+	                                </p> 
+	                           </f:if>
+	                           </n:link>    
+	                       </div>
+                       </div>
+                    </f:then>
+                </f:if> 
+
+                <f:if condition="{f:cObject(typoscriptObjectPath:'lib.bootstrapnewsslider')} == 4">
+                    <f:then>
+                        <div class="container carousel-caption d-flex">
+                            <n:link style="color: {settings.captioncolor}; text-align: {settings.textalignment}" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                                <h3 class="d-inline-block px-3 py-2 m-0" style="background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity}; color: {settings.captioncolor}">
+                                    {newsItem.title}
+                                </h3>
+                                <f:if condition="{settings.head}">
+                                    <br /><p class="px-3 py-2 d-md-inline-block" style="background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity}; color: {settings.captioncolor}">
+                                        {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.htmlentitiesDecode()}
+                                    </p> 
+                               </f:if>
+                           </n:link>    
+                       </div>
+                       
+                    </f:then>
+                </f:if> 	
+
+                <f:if condition="{f:cObject(typoscriptObjectPath:'lib.bootstrapnewsslider')} == 5">
+                    <f:then>
+                        <div class="container carousel-caption d-flex">
+                            <n:link style="color: {settings.captioncolor}; text-align: {settings.textalignment}" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                                <p class="d-inline-block px-3 py-2 mb-3" style="background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity}; color: {settings.captioncolor}">
+                                    {newsItem.title}
+                                </p>    
+                               
+                                <f:if condition="{settings.head}"><br />
+                                   <p class="px-3 py-2 d-md-inline-block" style="background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity}; color: {settings.captioncolor}">
+                                        {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.htmlentitiesDecode()}
+                                   </p>   
+                               </f:if>
+                           </n:link>    
+                       </div>
+                       
+                    </f:then>
+                </f:if>
+		   </f:else>
+		</f:if>	  	      
+    </div>
+    
+    <f:section name="picture">
+		<picture class="w-100">
+		
+		
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '4000')}"  media="(min-width: 2561px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '4000')}"  media="(min-width: 2561px)" type="image/jpeg">
+             
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '2560')}"  media="(min-width: 1841px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '2560')}"  media="(min-width: 1841px)" type="image/jpeg">
+             
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1840')}"  media="(min-width: 1441px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1840')}"  media="(min-width: 1441px)" type="image/jpeg">            
+                             
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1440')}"  media="(min-width: 1281px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1440')}"  media="(min-width: 1281px)" type="image/jpeg">            
+             
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1280')}"  media="(min-width: 993px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1280')}"  media="(min-width: 993px)" type="image/jpeg">        
+                     
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '992')}"   media="(min-width: 769px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '992')}"   media="(min-width: 769px)" type="image/jpeg"> 
+             
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '768')}"   media="(min-width: 641px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '768')}"   media="(min-width: 641px)" type="image/jpeg">
+             
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '640')}"   media="(min-width: 361px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '640')}"   media="(min-width: 361px)" type="image/jpeg">
+                    
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '360')}"  type="image/wepb">        
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '360')}"  type="image/jpeg">    
+
+            <img class="w-100" src="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', height: '{dimensions.height}', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '{data.imagewidth}')}"
+            {f:if(condition: '{mediaElement.originalResource.title}', then: 'title="{mediaElement.originalResource.title}"')}
+            {f:if(condition: '{mediaElement.originalResource.alternative}', then: 'alt="{mediaElement.originalResource.alternative}"')}  role="presentation" 
+             loading="lazy" />
+        </picture>
+    </f:section>  
+    
+
+</html>

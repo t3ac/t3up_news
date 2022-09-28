@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-02-03T22:04:04Z" product-name="t3up_news">
+		<header/>
+		<body>
+			<trans-unit id="Standard">
+				<source>Standard Layout with a big Image</source>
+			</trans-unit>	
+			<trans-unit id="Horizontal">
+				<source>Standard Layout horizontal, with a big Image</source>
+			</trans-unit>	
+			<trans-unit id="Teaser">
+				<source>Standard Layout with small teaser</source>
+			</trans-unit>		
+			<trans-unit id="Calendar">
+				<source>List-Layout for Calendar</source>
+			</trans-unit>
+			<trans-unit id="Smallimage">
+				<source>Standard Layout normal, small Image</source>
+			</trans-unit>
+			<trans-unit id="SmallimageNo">
+				<source>Standard Layout normal, small Image, no Date</source>
+			</trans-unit>
+			<trans-unit id="Teasercategory">
+				<source>Standard Layout with small teaser and category</source>
+			</trans-unit>						
+            <trans-unit id="Monitor">
+                <source>Monitor - Layout for screens</source>
+            </trans-unit>   
+            	
+			<trans-unit id="detailtop">
+				<source>Detail Top image</source>
+			</trans-unit>
+			<trans-unit id="detailinlineright">
+				<source>Detail Image inline right</source>
+			</trans-unit>			
+			<trans-unit id="detailinlineleft">
+				<source>Detail Image inline left</source>
+			</trans-unit>			
+			<trans-unit id="detailcalendar">
+				<source>Detail for calendar</source>
+			</trans-unit>			
+		
+			<trans-unit id="sliderOne">
+				<source>Slider - 1 News</source>
+			</trans-unit>					
+			<trans-unit id="sliderThree">
+				<source>Slider - 3 News</source>
+			</trans-unit>			
+			<trans-unit id="sliderFour">
+				<source>Slider - 4 News</source>
+			</trans-unit>	
+			
+			<trans-unit id="threeItems">
+				<source>3 News in each row</source>
+			</trans-unit>			
+			<trans-unit id="fourItems">
+				<source>4 News in each row</source>
+			</trans-unit>	
+						
+							
+		
+			<trans-unit id="basiscalendar">
+				<source>Basis Calendar</source>
+			</trans-unit>				
+			<trans-unit id="t3upcalendar">
+				<source>T3UP Calendar</source>
+			</trans-unit>				
+			<trans-unit id="t3upcalendarwide">
+				<source>T3UP Calendar wide</source>
+			</trans-unit>			
+			<trans-unit id="t3upcalendarwidelist">
+				<source>T3UP Calendar wide list</source>
+			</trans-unit>		
+			<trans-unit id="t3upcalendarsingle">
+				<source>T3UP Calendar single</source>
+			</trans-unit>		
+		</body>
+	</file>
+</xliff>
