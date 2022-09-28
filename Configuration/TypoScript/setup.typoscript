@@ -7,7 +7,7 @@ plugin.tx_news {
                 subclasses {
                     # three different classes are used for each news type
                     # 0 == default news
-                    0 = T3up\T3upNews\Domain\Model\News
+                    0 = T3ac\T3upNews\Domain\Model\News
                 }
             }
             T3up\T3upNews\Domain\Model\News {
