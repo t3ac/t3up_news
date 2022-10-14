@@ -3,32 +3,21 @@
 tx_news.templateLayouts {
 
         1  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:Standard
-        2  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:Horizontal
-        3  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:Teaser
-        4  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:Calendar
-        5  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:Smallimage
-        6  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:SmallimageNo  
+        2  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:Teaser
+        3  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:Smallimage
+        4  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:Teasercategory
 
-        9  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:Monitor
-        11 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:Teasercategory
 		
 		20 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:detailtop
 		21 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:detailinlineright
 		22 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:detailinlineleft
-		23 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:detailcalendar
 
 
         30 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:sliderOne 
         31 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:sliderThree    
-        32 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:sliderFour        
- 		33 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:threeItems  	
-		34 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:fourItems   
-       
-
-		41 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:t3upcalendar
-		42 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:t3upcalendarwide
-		43 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:t3upcalendarwidelist
-		44 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:t3upcalendarsingle
-		45 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:basiscalendar 
+        32 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:sliderFour 
+ 		33 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:twoItems                 
+ 		34 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:threeItems  	
+		35 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:fourItems   
 
 }

@@ -1,79 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-02-03T22:04:04Z" product-name="eventnews">
+	<file source-language="de" datatype="plaintext" original="messages" date="2015-02-03T22:04:04Z" product-name="t3up_news">
 		<header/>
 		<body>
             <trans-unit id="tx_news_domain_model_news.nomore" xml:space="preserve">
                 <source>No more</source>
                 <target state="translated">Kein Lesen Sie mehr</target>
             </trans-unit>
-            <trans-unit id="tx_news_domain_model_news.imageonly" xml:space="preserve">
-                <source>Image only for the newsslider</source>
-                <target state="translated">Nur Bild für Slider</target>
-            </trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_location">
-				<source>Location</source>
-                <target state="translated">Veranstaltungsort</target>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_location.title">
-				<source>Name des Veranstaltungsortes</source>
-				<target state="translated">Titel</target>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_location.description">
-				<source>Description</source>
-				<target state="translated">Beschreibung</target>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_location.lat">
-				<source>Lat</source>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_location.lng">
-				<source>Lng</source>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_location.link">
-				<source>Link</source>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_organizer">
-				<source>Organizer</source>
-				<target state="translated">Veranstalter</target>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_organizer.title">
-				<source>Title</source>
-				<target state="translated">Name des Veranstalters</target>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_organizer.description">
-				<source>Description</source>
-				<target state="translated">Beschreibung</target>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_organizer.link">
-				<source>Link</source>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_news">
-				<source>News</source>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_news.is_event">
-				<source>Is Event</source>
-				<target state="translated">Ist eine Veranstaltung</target>
-			</trans-unit>
-			<trans-unit id="tx_eventnews_domain_model_news.full_day">
-				<source>Full Day</source>
-				<target state="translated">Ganzer Tag</target>
-			</trans-unit>
-            <trans-unit id="tx_eventnews_domain_model_news.event_end">
-                <source>Event End</source>
-                <target state="translated">Veranstaltungsende</target>
-            </trans-unit>
-            <trans-unit id="tx_eventnews_domain_model_news.event_start">
-                <source>Eventstart</source>
-                <target state="translated">Veranstaltungsbeginn</target>
-            </trans-unit>
-			<trans-unit id="tx_news_domain_model_news.organizer_simple">
-				<source>Organizer simple</source>
-				<target state="translated">Veranstalter einfach (überstimmt den Listenwert)</target>
-			</trans-unit>
-			<trans-unit id="tx_news_domain_model_news.location_simple">
-				<source>Location simple</source>
-                <target state="translated">Veranstaltungsort einfach (überstimmt den Listenwert)</target>
-			</trans-unit>
 		</body>
 	</file>
 </xliff>

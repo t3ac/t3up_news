@@ -47,9 +47,7 @@ page {
         # t3up - Extensions ____________________________________________
         # customsubcategory=t3upextensions=T3UP-Extensions            
         # cat = t3up: scss/t3upextensions/210;  type =string; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:scssnews
-        scssT3upNews                 = EXT:t3up_news/Resources/Public/Sass/_t3upNews.scss
-        # cat = t3up: scss/t3upextensions/211;  type =string; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:scsseventnews
-        scssT3upEventnews            = EXT:t3up_news/Resources/Public/Sass/_t3upEventnews.scss     
+        scssT3upNews                 = EXT:t3up_news/Resources/Public/Sass/_t3upNews.scss 
     }
     
     typography {

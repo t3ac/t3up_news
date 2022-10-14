@@ -17,11 +17,13 @@
     "news"
   ],
   "require": {
-    "typo3/cms-core": "^10.4 || ^11.5"
+    "typo3/cms-core": "^10.4 || ^11.5",
+    "georgringer/news": "10"
+
   },
   "autoload": {
     "psr-4": {
-        "T3ac\\T3upNews\\": "Classes/"
+        "T3ac\\T3upNews\\": "Classes"
     }
   },
   "extra": {

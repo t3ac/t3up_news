@@ -31,9 +31,7 @@ plugin.tx_news{
 
 page.includeCSS{
     t3upNews                            = {$page.scss.scssT3upNews}   
-    t3upNews.if.isTrue                  = {$page.scss.scssT3upNews}    
-    t3upEventnews                       = {$page.scss.scssT3upEventnews}   
-    t3upEventnews.if.isTrue             = {$page.scss.scssT3upEventnews}    
+    t3upNews.if.isTrue                  = {$page.scss.scssT3upNews}     
 }
 
 page.includeJSFooterlibs {
