@@ -5,31 +5,39 @@
 		<body>
 			<trans-unit id="teaser">
 				<source>Teaser Layout</source>
+				<target state="translated">Teaser</target>
 			</trans-unit>	
 			<trans-unit id="calendar">
 				<source>Calendar</source>
+				<target state="translated">Kalender</target>
 			</trans-unit>		
 			<trans-unit id="bigimage">
 				<source>Teaser Layout with a big Image</source>
+				<target state="translated">Teaser mit großem Bild</target>	
 			</trans-unit>			
 			<trans-unit id="smallimage">
 				<source>Teaser Layout with a small Image</source>
+				<target state="translated">Teaser mit kleinem Bild</target>	
 			</trans-unit>
 			
 			<trans-unit id="detail">
 				<source>Detail</source>
+				<target state="translated">Detail-Ansicht</target>	
 			</trans-unit>			
 		
 			<trans-unit id="sliderOne">
 				<source>Slider - 1 News</source>
+				<target state="translated">Slider mit einem Bild</target>
 			</trans-unit>					
 			<trans-unit id="sliderThree">
 				<source>Slider - 3 News</source>
+				<target state="translated">Slider mit gleichzeitig drei Nachrichten</target>	
 			</trans-unit>			
 			<trans-unit id="sliderFour">
 				<source>Slider - 4 News</source>
+				<target state="translated">Slider mit gleichzeitig vier Nachrichten</target>			
 			</trans-unit>	
-	
+										
 		</body>
 	</file>
 </xliff>

@@ -70,24 +70,7 @@
                  <source>Javascript for multislider news</source>
             </trans-unit>
             
-             <trans-unit id="bootstrapnewsslider">
-                 <source>Design for bootstrap newsslider</source>
-            </trans-unit>       
-            
-            /* TYPO ----------------------------------*/        
-                    
-             <trans-unit id="sliderfontsize">
-                 <source>Fontsize of the subtext in the newsslider</source>
-            </trans-unit>
-            
-             <trans-unit id="sliderheaderfontsize">
-                 <source>Fontsize of the h3-header in the newsslider</source>
-            </trans-unit>
-            
-             <trans-unit id="sliderheaderDesktopfontsize">
-                 <source>Fontsize of the h3-header in the newsslider in desktop devices</source>
-            </trans-unit>       
-            
+
 
         
         </body>

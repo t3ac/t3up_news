@@ -1,5 +1,3 @@
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:t3up_news/Configuration/TypoScript/Content/" extensions="typoscript">
-
 plugin.tx_news {
     persistence {
         classes {
@@ -23,25 +21,32 @@ plugin.tx_news {
 
 plugin.tx_news{
 	view{
-		partialRootPaths.10 	  	   = EXT:t3up_news/Resources/Private/Templates/News/Partials/
-		layoutRootPaths.10 	    	   = EXT:t3up_news/Resources/Private/Templates/News/Layouts/
-		templateRootPaths.10 		   = EXT:t3up_news/Resources/Private/Templates/News/Templates/
+		partialRootPaths.10 	  	 = EXT:t3up_news/Resources/Private/Templates/News/Partials/
+		layoutRootPaths.10 	    	 = EXT:t3up_news/Resources/Private/Templates/News/Layouts/
+		templateRootPaths.10 		 = EXT:t3up_news/Resources/Private/Templates/News/Templates/
 	}
+	settings.cssFile                 >
 }
 
 page.includeCSS{
-    t3upNews                            = {$page.scss.scssT3upNews}   
-    t3upNews.if.isTrue                  = {$page.scss.scssT3upNews}     
+    t3upNews                         = {$page.scss.scssT3upNews}   
+    t3upNews.if.isTrue               = {$page.scss.scssT3upNews}  
+    t3upNews.outputStyle             = compressed    
 }
 
 page.includeJSFooterlibs {
-    newsmultislider                     = EXT:t3up_news/Resources/Public/JavaScript/multislider.js
-    newsmultislider.if.isTrue           = {$page.files.newsmultislider}
-    newsmultislider.async               = 1
+    newsmultislider                  = EXT:t3up_news/Resources/Public/JavaScript/multislider.js
+    newsmultislider.if.isTrue        = {$page.files.newsmultislider}
+    newsmultislider.async            = 1
 }
 
-plugin.tx_news.settings.list.media.image.maxWidth 	 = 1200
-plugin.tx_news.settings.list.media.image.maxHeight 	 = 1000
-
-plugin.tx_news.settings.detail.media.image.maxWidth  = 1200
-plugin.tx_news.settings.list.media.image.maxHeight 	 = 1000
+plugin{
+	tx_news{
+		settings{
+			list.media.image.maxWidth 	 = 1200
+			list.media.image.maxHeight 	 = 1000
+			detail.media.image.maxHeight = 1000
+			detail.media.image.maxWidth  = 1200
+		}
+	}
+}

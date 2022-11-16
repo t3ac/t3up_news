@@ -11,243 +11,66 @@
 -->
 
 	<f:section name="content">
-		<f:if condition="{newsItem}">
-			<f:switch expression="{settings.templateLayout}">
-				<f:case value="20">
-		
-					<f:render section="meta" arguments="{_all}" />	
-					<f:render section="pagination" arguments="{_all}" />	
-					<div class="news-content">
-						<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">				
-							<f:render partial="Detail/MediaContainerBig" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />					
-							<p class="news-list-date">
-				                <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-				                    <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-				                </time>
-				            </p>         
-				            <h1 itemprop="headline">{newsItem.title}</h1>											
-								<f:if condition="{newsItem.teaser}">
-									<!-- teaser -->
-									<div class="teaser-text" itemprop="description">
-										<f:format.html>{newsItem.teaser}</f:format.html>
-									</div>
-								</f:if>
-				
-								<!-- main text -->
-								<div class="news-text-wrap" itemprop="articleBody">
-									<f:format.html>{newsItem.bodytext}</f:format.html>
-								</div>
-				
-								<f:if condition="{newsItem.contentElements}">
-									<!-- content elements -->
-									<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
-								</f:if>
-							</n:renderMedia>	
-								
-						<f:render section="social" arguments="{_all}" />
-						<f:render section="related" arguments="{_all}" />
-						<f:render section="back" arguments="{_all}" />
-					</div>
-				</f:case>
-				
-				<f:case value="21">
-					<f:render section="meta" arguments="{_all}" />	
-					<f:render section="pagination" arguments="{_all}" />	
-					<div class="news-content">
-						<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
-							<p class="news-list-date">
-				                <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-				                    <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-				                </time>
-				            </p>
-				            
-				            <h1 itemprop="headline">{newsItem.title}</h1>
-								<f:if condition="{newsItem.teaser}">
-									<!-- teaser -->
-									<div class="teaser-text" itemprop="description">
-										<f:format.html>{newsItem.teaser}</f:format.html>
-									</div>
-								</f:if>
-				
-								<!-- main text -->
-								<div class="news-text-wrap" itemprop="articleBody">
-									<f:render partial="Detail/MediaContainerInlineRight" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
-									<f:format.html>{newsItem.bodytext}</f:format.html>
-								</div>
-				
-								<f:if condition="{newsItem.contentElements}">
-									<!-- content elements -->
-									<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
-								</f:if>
-							</n:renderMedia>	
-								
-						<f:render section="social" arguments="{_all}" />
-						<f:render section="related" arguments="{_all}" />
-						<f:render section="back" arguments="{_all}" />
-					</div>
-				</f:case>
-				
-				<f:case value="22">
-					<f:render section="meta" arguments="{_all}" />	
-					<f:render section="pagination" arguments="{_all}" />	
-					<div class="news-content">
-      
-						<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
-							<p class="news-list-date">
-				                <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-				                    <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-				                </time>
-				            </p>
-				            
-				            <h1 itemprop="headline">{newsItem.title}</h1>
-							
-							
-								<f:if condition="{newsItem.teaser}">
-									<!-- teaser -->
-									<div class="teaser-text" itemprop="description">
-										<f:format.html>{newsItem.teaser}</f:format.html>
-									</div>
-								</f:if>
-				
-								<!-- main text -->
-								<div class="news-text-wrap" itemprop="articleBody">
-									<f:render partial="Detail/MediaContainerInlineLeft" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
-									<f:format.html>{newsItem.bodytext}</f:format.html>
-								</div>
-				
-								<f:if condition="{newsItem.contentElements}">
-									<!-- content elements -->
-									<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
-								</f:if>
-							</n:renderMedia>	
-								
-						<f:render section="social" arguments="{_all}" />
-						<f:render section="related" arguments="{_all}" />
-						<f:render section="back" arguments="{_all}" />
-					</div>
-				</f:case>
-				
-				<f:case value="23">
-		
-					
-					<f:render section="meta" arguments="{_all}" />	
-					<f:render section="pagination" arguments="{_all}" />	
-					<div class="news-content">
-      
-						<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
+		<f:render section="meta" arguments="{_all}" />	
+		<f:render section="pagination" arguments="{_all}" />
 
-				            <h1 itemprop="headline">{newsItem.title}</h1>
-							<div class="col-12 mb-3">
-								
-	                            <label><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:event_start"/>:</label>
-	                            <f:format.date format="%d.%m.%Y" >{newsItem.datetime}</f:format.date> | <f:format.date format="H:i" >{newsItem.datetime}</f:format.date>
-        
-								<hr class="break my-0">
-								
-								<f:if condition="{newsItem.eventEnd}">
-		                            <label><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:event_end"/>:</label>
-		                            <f:format.date format="%d.%m.%Y" >{newsItem.eventEnd}</f:format.date> | <f:format.date format="H:i" >{newsItem.eventEnd}</f:format.date>
-		                            <hr class="break my-0">
-								</f:if>
-								
-								
-								
-								<f:if condition="{newsItem.organizer}">
-		                            <label><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:organizer"/>:</label>
-		                            {newsItem.organizer.title}
-		                            <hr class="break my-0">
-								</f:if>
-								
-								<f:if condition="{newsItem.organizerSimple}">
-		                            <label><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:organizer"/>:</label>
-		                            {newsItem.organizerSimple}
-		                            
-								</f:if>
-								
-								
-								<f:if condition="{newsItem.location}">
-		                            <label><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:location"/>:</label>
-		                            {newsItem.location.title}
-		                            <hr class="break my-0">
-								</f:if>
-								
-								<f:if condition="{newsItem.locationSimple}">
-		                            <label><f:translate key="LLL:EXT:t3up/Resources/Private/Language/eventnews.xlf:location"/>:</label>
-		                            {newsItem.locationSimple}
-		                            <hr class="break my-0">
-								</f:if>
-										
-							</div>
-							
-							<f:if condition="{newsItem.teaser}">
-								<!-- teaser -->
-								<div class="teaser-text" itemprop="description">
-									<f:format.html>{newsItem.teaser}</f:format.html>
-								</div>
-							</f:if>
+		<f:if condition="{settings.topimage}">
+         	<div class="topimage"> 		
+   				<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
+   					<f:if condition="{mediaElement.originalResource.type} == 2">
+   							<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>	
+   					</f:if>
+   					<f:if condition="{mediaElement.originalResource.type} == 4">
+   						<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>				
+   					</f:if>
+   					<f:if condition="{mediaElement.originalResource.type} == 5">
+   						<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+   					</f:if>	
+   					{f:if(condition: mediaElement.originalResource.title, then: '<i class="d-inline-block mb-1 mt-2 px-3">{mediaElement.originalResource.title}</i>')}
+   					{f:if(condition: mediaElement.originalResource.description, then: '<i class="d-inline-block my-1 px-3">{mediaElement.originalResource.description}</i>')}	
+   				</f:alias>	
+			</div>
+        </f:if>				
 			
-							<!-- main text -->
-							<div class="news-text-wrap" itemprop="articleBody">
-								<f:render partial="Detail/MediaContainerInlineLeft" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
-								<f:format.html>{newsItem.bodytext}</f:format.html>
-							</div>
-			
-							<f:if condition="{newsItem.contentElements}">
-								<!-- content elements -->
-								<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
-							</f:if>
-			
-							
-			
-						</n:renderMedia>	
-								
-						<f:render section="social" arguments="{_all}" />
-						<f:render section="related" arguments="{_all}" />
-						<f:render section="back" arguments="{_all}" />
+		<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
+			<div class="detailcontent p-3"> 				
+				<f:if condition="{settings.itemdate}">
+					<span class="detailDate d-inline-block my-1">
+	      		<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+				<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date> 
+				<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+	  			</time>
+					</span>
+	            </f:if>
+	           	<f:if condition="{settings.itemcategory}">
+	           		{f:if(condition: newsItem.firstCategory.title, then: '<span class="d-inline-block my-1">&ensp;|&ensp;{newsItem.firstCategory.title}</span>')}
+	            </f:if>
+	
+	         	<h1 itemprop="headline">{newsItem.title}</h1>											
+				<f:if condition="{newsItem.teaser}">
+					<!-- teaser -->
+					<div class="teaser-text" itemprop="description">
+						<f:format.html>{newsItem.teaser}</f:format.html>
 					</div>
-				</f:case>
-				
-			   <f:defaultCase>
-					<f:render section="meta" arguments="{_all}" />	
-					<f:render section="pagination" arguments="{_all}" />	
-					<div class="news-content">
-							<p class="news-list-date">
-				                <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-				                    <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-				                </time>
-				            </p>
-				            
-				            <h1 itemprop="headline">{newsItem.title}</h1>
-				            
-							<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
-								<f:if condition="{newsItem.teaser}">
-									<!-- teaser -->
-									<div class="teaser-text" itemprop="description">
-										<f:format.html>{newsItem.teaser}</f:format.html>
-									</div>
-								</f:if>
-				
-								<!-- main text -->
-								<div class="news-text-wrap" itemprop="articleBody">
-									<f:format.html>{newsItem.bodytext}</f:format.html>
-								</div>
-				
-								<f:if condition="{newsItem.contentElements}">
-									<!-- content elements -->
-									<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
-								</f:if>
-				
-								<f:render partial="Detail/MediaContainerRow" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
-				
-							</n:renderMedia>	
-								
-						<f:render section="social" arguments="{_all}" />
-						<f:render section="related" arguments="{_all}" />
-						<f:render section="back" arguments="{_all}" />
-					</div>	
-			   </f:defaultCase>
-			</f:switch>
-		</f:if>
+				</f:if>
+		
+				<!-- main text -->
+				<div class="news-text-wrap" itemprop="articleBody">
+					<f:format.html>{newsItem.bodytext}</f:format.html>
+				</div>
+			
+				<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+  
+				<f:if condition="{newsItem.contentElements}">
+					<!-- content elements -->
+					<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+				</f:if>
+	
+				<f:render section="social" arguments="{_all}" />
+				<f:render section="related" arguments="{_all}" />
+				<f:render section="back" arguments="{_all}" />
+			</div>
+		</n:renderMedia>
 	</f:section>
 
 
@@ -387,7 +210,7 @@
 	
 	<f:section name="back">
 	   	 <!-- Link Back -->
-	        <div class="btn btn-secondary"> 
+	        <button type="button" class="btn btn-secondary"> 
 	        	<f:if condition="{settings.backPid}">
 	        		<f:then>
 						<f:link.page pageUid="{settings.backPid}" ><f:translate key="back-link" /></f:link.page>   
@@ -396,6 +219,6 @@
 	        			<a href="javascript:history.back()"><f:translate key="back-link" /></a>
 	        		</f:else>
 				</f:if>
-			</div>
+			</button>
 	</f:section>
 </html>

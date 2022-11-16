@@ -3,9 +3,12 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2015-02-03T22:04:04Z" product-name="t3up_news">
 		<header/>
 		<body>
-            <trans-unit id="tx_news_domain_model_news.nomore" xml:space="preserve">
+			<trans-unit id="nomore">
                 <source>No more</source>
             </trans-unit>
+			<trans-unit id="detail.title">
+			     <source>Details</source>
+		    </trans-unit>
 		</body>
 	</file>
 </xliff>

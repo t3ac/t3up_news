@@ -78,10 +78,6 @@
                  <target state="translated">Javascript für Multisildernews einbinden.</target>
             </trans-unit>
             
-             <trans-unit id="bootstrapnewsslider">
-                 <source>Design for bootstrap newsslider</source>
-                 <target state="translated">Design für Bootstrapnewsslider einbinden.</target>
-            </trans-unit>   
 
         </body>
 

@@ -7,6 +7,10 @@
                 <source>No more</source>
                 <target state="translated">Kein Lesen Sie mehr</target>
             </trans-unit>
+			<trans-unit id="detail.title">
+			     <source>Details</source>
+                <target state="translated">Details</target>
+		    </trans-unit>
 		</body>
 	</file>
 </xliff>

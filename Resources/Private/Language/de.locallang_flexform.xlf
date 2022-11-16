@@ -6,8 +6,8 @@
 			
 			
 			<trans-unit id="sheet.carousel">
-			     <source>Boostrap-Carousel</source>
-				<target state="translated">Boostrap-Carousel</target>
+			     <source>Options</source>
+				<target state="translated">Optionen</target>
 		    </trans-unit>
 
 			/* -- Controls --------------------------------- */
@@ -51,8 +51,28 @@
 			<trans-unit id="carousel.animationLoop">
 			     <source>Animation Loop</source>
 			     <target state="translated">Animation wiederholen</target>
-		    </trans-unit>	 
-		    
+		    </trans-unit>	 	
+			<trans-unit id="carousel.maxheight">
+			     <source>Max. height of the slider</source>
+			     <target state="translated">Maximale Höhe des Sliders</target>
+		    </trans-unit>	 	
+			     
+			<trans-unit id="itemdetail">
+			     <source>Show a Detaillink</source>
+			     <target state="translated">Zeige Detailink am Ende einer Nachricht</target>
+		    </trans-unit>	 		    
+			<trans-unit id="itemdate">
+			     <source>Show the date</source>
+			     <target state="translated">Zeige das Datum</target>
+		    </trans-unit>	 		    
+			<trans-unit id="itemcategory">
+			     <source>Show the first category</source>
+			     <target state="translated">Zeige die erste Kategorie</target>
+		    </trans-unit>	 		    
+			<trans-unit id="topimage">
+			     <source>Show the first image on top</source>
+			     <target state="translated">Zeige Das erste Bild als großes Topbild</target>
+		    </trans-unit>	   		    		    
 		    
 			/* -- Optionen --------------------------------- */
 			
@@ -118,25 +138,29 @@
 			<trans-unit id="label.no">
 			     <source>no</source>
 			     <target state="translated">Nein</target>
-		    </trans-unit>	 		    		    		    
-			<trans-unit id="label.stil1">
-			     <source>Stil 1</source>
-		    </trans-unit>	 		    
-			<trans-unit id="label.stil2">
-			     <source>Stil 2</source>
-		    </trans-unit>	 
-			<trans-unit id="label.stil3">
-			     <source>Stil 3</source>
-		    </trans-unit>
-		    <trans-unit id="label.stil4">
-			     <source>Stil 4</source>
-		    </trans-unit>
-			<trans-unit id="label.stil5">
-			     <source>Stil 5</source>
-		    </trans-unit>
-			<trans-unit id="label.stil6">
-			     <source>Stil 6</source>
-		    </trans-unit>
+		    </trans-unit>	 	
+		    
+			<trans-unit id="label.items">
+			     <source>Items in a row</source>
+			     <target state="translated">Artikel in einer Reihe</target>     
+		    </trans-unit>	  
+			<trans-unit id="label.1item">
+			     <source>One item</source>
+			     <target state="translated">1 Artikel</target>     
+		    </trans-unit>	    
+			<trans-unit id="label.2item">
+			     <source>Two items</source>
+			     <target state="translated">2 Artikel</target>   
+		    </trans-unit>	    
+			<trans-unit id="label.3item">
+			     <source>Three items</source>
+			     <target state="translated">3 Artikel</target> 
+		    </trans-unit>	    
+			<trans-unit id="label.4item">
+			     <source>Four items</source>
+			     <target state="translated">4 Artikel</target> 
+		    </trans-unit>	     
+		    	    		    		    
 		</body>
 	</file>
 </xliff>

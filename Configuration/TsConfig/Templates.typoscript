@@ -1,0 +1,18 @@
+
+# News Templates  **********************************************
+tx_news.templateLayouts {
+
+        1  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:teaser
+        2  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:calendar
+        3  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:bigimage
+        4  = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:smallimage        
+		
+		20 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:detail
+
+
+        30 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:sliderOne 
+        31 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:sliderThree    
+        32 = LLL:EXT:t3up_news/Resources/Private/Language/locallang_ts.xlf:sliderFour 
+ 
+
+}

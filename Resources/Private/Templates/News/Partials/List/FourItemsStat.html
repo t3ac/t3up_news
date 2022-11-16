@@ -2,10 +2,9 @@
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 	   
-	<div class="col-12 col-sm-6 col-md-3 col-lg-3">
-		<div class="article d-flex flex-wrap" >
+	<div class="col-12 col-sm-6 col-md-3 col-lg-3 pb-3 pb-md-4">
+		<div class="article h-100 pb-3" style="min-height:{settings.itemheight}px">
 		<n:excludeDisplayedNews newsItem="{newsItem}"/>
-
             <f:if condition="{newsItem.nomore}">
                 <f:then>
                     <f:render section="newscontent" arguments="{_all}"/>
@@ -13,11 +12,14 @@
                 <f:else>
                     <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
                         <f:render section="newscontent" arguments="{_all}"/>
-                        <p class="nomore w-100 px-3">Details</p>
+	                  	<f:if condition="{settings.itemdetail}">
+	                      <span class="moreNews px-3">
+	                      	<f:translate key="LLL:EXT:t3up_news/Resources/Private/Language/locallang.xlf:detail.title" />
+	                      </span>
+	                    </f:if>   
                     </n:link>
                 </f:else>
-            </f:if>    
-            		       
+            </f:if>    		       
 		</div>
     </div>
 

@@ -27,9 +27,9 @@
     </f:if>
       
     <f:section name="inner">
-        <div class="article col-12 col-sm-6 col-md-4 d-flex flex-wrap mb-3" style="background-color: {f:if(condition: '{settings.carouselbackgroundcolor}', then: '{settings.carouselbackgroundcolor};', else: 'inherit;')}  height:{settings.itemheight}px">
+        <div class="col-12 col-sm-6 col-md-4 d-flex flex-wrap px-3" style="background-color: {f:if(condition: '{settings.carouselbackgroundcolor}', then: '{settings.carouselbackgroundcolor};', else: 'inherit;')}">
             <n:excludeDisplayedNews newsItem="{newsItem}"/>
-            <div class="article-inner">
+            <div class="article">
 	            <div class="newsimage w-100">
 	                <f:if condition="{newsItem.mediaPreviews}">
 	                    <f:then>
@@ -74,16 +74,20 @@
 	                    </f:else>
 	                </f:if>
 	                
-	                 </n:removeMediaTags>
-	             
-	  
+	                 </n:removeMediaTags>	  
 	           </div>     
-               <f:if condition="{newsItem.nomore}">
-                  <f:then></f:then>
-                  <f:else>
-                      <p class="nomore m-0 px-3 pb-3 mt-auto"><n:link newsItem="{newsItem}" settings="{settings}" class="internal-link" title="{newsItem.title}">Details</n:link></p>
-                  </f:else>
-              </f:if>            
+	            <f:if condition="{newsItem.nomore}">
+		            <f:then></f:then>
+		        	<f:else>
+	                    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+		                  	<f:if condition="{settings.itemdetail}">
+		                      <span class="moreNews">
+		                      	<f:translate key="LLL:EXT:t3up_news/Resources/Private/Language/locallang.xlf:detail.title" />
+		                      </span>
+		                    </f:if>   
+	                    </n:link>
+		        	</f:else>
+	        	</f:if>         
 	        </div>
 	    </div>
     </f:section>

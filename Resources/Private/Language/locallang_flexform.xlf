@@ -6,7 +6,7 @@
 			
 			
 			<trans-unit id="sheet.carousel">
-			     <source>Boostrap-Carousel</source>
+			     <source>Options</source>
 		    </trans-unit>
 
 			/* -- Controls --------------------------------- */
@@ -41,10 +41,25 @@
 			<trans-unit id="carousel.animationLoop">
 			     <source>Animation Loop</source>
 		    </trans-unit>	 
-			<trans-unit id="itemheight">
-			     <source>Height of the item (in px)</source>
-		    </trans-unit>	 
-		    		    
+			<trans-unit id="carousel.maxheight">
+			     <source>Max. height of the slider</source>
+		    </trans-unit>	 		    
+		    
+
+			<trans-unit id="itemdetail">
+			     <source>Show a Detaillink</source>
+		    </trans-unit>	 		    
+			<trans-unit id="itemdate">
+			     <source>Show the date</source>
+		    </trans-unit>	 		    
+			<trans-unit id="itemcategory">
+			     <source>Show the first category</source>
+		    </trans-unit>	 		    
+			<trans-unit id="topimage">
+			     <source>Show the first image on top</source>
+		    </trans-unit>	 		    
+		    		    			    		    		    
+		    
 		    
 			/* -- Optionen --------------------------------- */
 			
@@ -78,6 +93,7 @@
 			<trans-unit id="carousel.lazy">
 			     <source>lazy scrolling</source>
 		    </trans-unit>	
+		       
 		    
 		    /* Standard */	   
 		    
@@ -92,25 +108,25 @@
 		    </trans-unit>
 			<trans-unit id="label.no">
 			     <source>no</source>
-		    </trans-unit>
-			<trans-unit id="label.stil1">
-			     <source>Stil 1</source>
-		    </trans-unit>	 		    
-			<trans-unit id="label.stil2">
-			     <source>Stil 2</source>
-		    </trans-unit>	 
-			<trans-unit id="label.stil3">
-			     <source>Stil 3</source>
-		    </trans-unit>	 
-		    <trans-unit id="label.stil4">
-			     <source>Stil 4</source>
-		    </trans-unit>	 		    
-			<trans-unit id="label.stil5">
-			     <source>Stil 5</source>
-		    </trans-unit>	 
-			<trans-unit id="label.stil6">
-			     <source>Stil 6</source>
-		    </trans-unit>		    
+		    </trans-unit>	    
+		    
+			<trans-unit id="label.items">
+			     <source>Items in a row</source>
+		    </trans-unit>	  
+			<trans-unit id="label.1item">
+			     <source>One item</source>
+		    </trans-unit>	    
+			<trans-unit id="label.2item">
+			     <source>Two items</source>
+		    </trans-unit>	    
+			<trans-unit id="label.3item">
+			     <source>Three items</source>
+		    </trans-unit>	    
+			<trans-unit id="label.4item">
+			     <source>Four items</source>
+		    </trans-unit>	    
+		     
+
 		</body>
 	</file>
 </xliff>

@@ -15,7 +15,7 @@ class FlexFormHook
    public function parseDataStructureByIdentifierPostProcess(array $dataStructure, array $identifier): array
    {
      if ($identifier['type'] === 'tca' && $identifier['tableName'] === 'tt_content' && $identifier['dataStructureKey'] === 'news_pi1,list') {
-         $file = Environment::getPublicPath() . '/typo3conf/ext/t3up_news/Configuration/FlexForms/flexform_newscarousel.xml';
+         $file = Environment::getPublicPath() . '/typo3conf/ext/t3up_news/Configuration/FlexForms/flexform_t3upnews.xml';
          $content = file_get_contents($file);
          if ($content) {
              $dataStructure['sheets']['extraEntry'] = GeneralUtility::xml2array($content);

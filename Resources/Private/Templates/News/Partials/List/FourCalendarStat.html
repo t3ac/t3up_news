@@ -1,10 +1,10 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
-	  
-	  
-    <div class="article align-items-stretch row mx-0 articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
-	<n:excludeDisplayedNews newsItem="{newsItem}"/>
+	   
+	<div class="col-12 col-sm-6 col-md-3 col-lg-3 pb-3 pb-md-4">
+  		<div class="article h-100 align-items-stretch row mx-0 articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+			<n:excludeDisplayedNews newsItem="{newsItem}"/>
     
         <div class="caldate col-3 d-flex flex-wrap align-items-center justify-content-center"> 
             <!-- date -->
@@ -67,4 +67,6 @@
      	</div>
 
     </div>
+ </div>
+    
 </html>

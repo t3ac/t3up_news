@@ -1,0 +1,108 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"  data-namespace-typo3-fluid="true">
+	   
+	<div class="col-12 col-sm-6 col-md-3 col-lg-3 pb-3 pb-md-4">
+		<div class="article h-100 pb-3">
+
+	        <f:if condition="{newsItem.mediaPreviews}">
+	             <f:then>
+	                  <f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
+	                      <f:if condition="{mediaElement.originalResource.type} == 2">
+	                          <div class="newsimage">
+	                              <f:render section="picture" arguments="{_all}"/>
+	                          </div>  
+	                      </f:if>
+	                      <f:if condition="{mediaElement.originalResource.type} == 4">
+	                          <div class="newsimage">
+	                              <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>    
+	                          </div>              
+	                      </f:if>
+	                      <f:if condition="{mediaElement.originalResource.type} == 5">
+	                          <div class="newsimage">
+	                              <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" />
+	                          </div>
+	                      </f:if>         
+	                  </f:alias>          
+	             </f:then>
+	        </f:if>
+	
+	    	<div class="teasertext col-12">
+				<p>
+	               	<f:if condition="{settings.itemcategory}">
+	               		{f:if(condition: newsItem.firstCategory.title, then: '<span class="d-block mb-1">{newsItem.firstCategory.title}</span>')}
+	                </f:if>
+					<strong>
+			            <f:if condition="{newsItem.nomore}">
+				            <f:then>
+				            	{newsItem.title}
+				            </f:then>
+				        	<f:else>
+				           		<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">{newsItem.title}</n:link>
+				        	</f:else>
+			        	</f:if>		   					
+					</strong>
+				</p>
+	    		<n:removeMediaTags>
+	
+		    		<f:if condition="{newsItem.teaser}">	
+		    			<f:then>	
+			    			<f:if condition="{settings.itemdate}">
+			    				<span class="teaserDate d-block mt-1 mb-2">
+					        		<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+										<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date> 
+										<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+					    			</time>
+			    				</span>
+			                </f:if>
+		                    <div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+		                </f:then>
+		                <f:else>
+			    			<f:if condition="{settings.itemdate}">
+			    				<span class="teaserDate d-block mt-1 mb-2">
+					        		<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+										<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date> 
+										<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+					    			</time>
+			    				</span>
+			                </f:if>		    			   
+		                    <div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+		                </f:else>
+		            </f:if>
+		            
+		            <f:if condition="{newsItem.nomore}">
+			            <f:then></f:then>
+			        	<f:else>
+		                    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+			                  	<f:if condition="{settings.itemdetail}">
+			                      <span class="moreNews">
+			                      	<f:translate key="LLL:EXT:t3up_news/Resources/Private/Language/locallang.xlf:detail.title" />
+			                      </span>
+			                    </f:if>   
+		                    </n:link>
+			        	</f:else>
+		        	</f:if>
+		        	
+	    		</n:removeMediaTags>
+	     	</div>
+	    </div>
+    </div>
+    <f:section name="picture">
+        <picture> 
+             
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '768')}"   media="(min-width: 641px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '768')}"   media="(min-width: 641px)" type="image/jpeg">
+             
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '640')}"   media="(min-width: 361px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '640')}"   media="(min-width: 361px)" type="image/jpeg">
+                    
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '360')}"  type="image/wepb">        
+             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '360')}"  type="image/jpeg">    
+
+            <img class="w-100" src="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', height: '{dimensions.height}', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '{data.imagewidth}')}"
+            {f:if(condition: '{mediaElement.originalResource.title}', then: 'title="{mediaElement.originalResource.title}"')}
+            {f:if(condition: '{mediaElement.originalResource.alternative}', then: 'alt="{mediaElement.originalResource.alternative}"')}  role="presentation" 
+             />
+        </picture>
+    </f:section>  
+    
+    
+</html>
