@@ -7,10 +7,21 @@
 	             <f:then>
 	                  <f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 	                      <f:if condition="{mediaElement.originalResource.type} == 2">
-	                          <div class="newsimage">
-	                              <f:render section="picture" arguments="{_all}"/>
-	                          </div>  
-	                      </f:if>
+	                      
+	                      	<f:if condition="{settings.media.maxWidth}">
+	                      		<f:then>
+		                      		<div class="imageOrg d-flex justify-content-center align-items-center">
+		       							<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>	
+		                      		</div>	
+		                      		</f:then>
+	                      		<f:else>
+		                      		<div class="newsimage">
+		                      			<f:render section="picture" arguments="{_all}"/>
+		                      		</div>	
+	                      		</f:else>
+                      		</f:if>
+	                           
+	                      </f:if>                  
 	                      <f:if condition="{mediaElement.originalResource.type} == 4">
 	                          <div class="newsimage">
 	                              <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>    

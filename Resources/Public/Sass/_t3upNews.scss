@@ -1,6 +1,3 @@
-
-.frame-default .news  .article                                   {background-color: $bodyBgColor;}  
-
 .news {
 
   .btn-secondary a                                          	 {color: #fff !important;}   
@@ -26,9 +23,10 @@
 
   &.bigimage {                                                
     .article                                                      {transition: all ease .3s; position: relative; margin-bottom: .75rem; }
-    .newsimage                                                    {overflow: hidden; }
-    .newsimage img                                                {width: 100%; height: 100%; object-fit: cover; object-position: center 0;}
-    .teasertext                                                   {padding: .75rem;}                                              
+    .image                                                        {overflow: hidden; }
+    .image img                                                    {width: 100%; height: 100%; object-fit: cover; object-position: center 0;}
+    .teasertext                                                   {padding: .75rem;}   
+    .imageOrg                                                     {min-height: 10rem}                                           
   }
   
   &.smallimage {                                                
@@ -73,13 +71,13 @@
   &.fourItemsStat  > div .article                                   {flex-grow: 2; width: 100%;  transition: all ease .3s; }
   
   &.twoItemsStat .article picture                                   {max-height: 200px; display: flex;  justify-content: center; align-items: center; overflow: hidden;}   
-  &.twoItemsStat .article img                                       {min-height: 200px; width: 100%; height: auto; object-fit: cover;}    
+  &.twoItemsStat .article .image img                                {min-height: 200px; width: 100%; height: auto; object-fit: cover;}    
      
   &.threeItemsStat .article picture                                 {max-height: 200px; display: flex;  justify-content: center; align-items: center; overflow: hidden;}   
-  &.threeItemsStat .article img                                     {min-height: 200px; width: 100%; height: auto; object-fit: cover;}     
+  &.threeItemsStat .article .image img                              {min-height: 200px; width: 100%; height: auto; object-fit: cover;}     
      
   &.fourItemsStat .article picture                                  {max-height: 200px; display: flex;  justify-content: center; align-items: center; overflow: hidden;}   
-  &.fourItemsStat .article img                                      {min-height: 200px; width: 100%; height: auto; object-fit: cover;}
+  &.fourItemsStat .article .image img                               {min-height: 200px; width: 100%; height: auto; object-fit: cover;}
          
   &.bigimage.twoItemsStat .article picture                          {max-height: 200px; display: flex;  justify-content: center; align-items: start; overflow: hidden;}   
   &.bigimage.threeItemsStat .article picture                        {max-height: 200px; display: flex;  justify-content: center; align-items: start; overflow: hidden;}   
@@ -88,8 +86,8 @@
   .threeItems .newsimage                                            {overflow: hidden; max-height: 12.5rem;}      
   .fourItems  .newsimage                                            {overflow: hidden; max-height: 10rem;}      
 
-  .threeItems .newsimage img,
-  .fourItems  .newsimage img                                        {width: 100%; height: 100%; object-fit: cover; object-position: center 0;}      
+  .threeItems .newsimage image img,
+  .fourItems  .newsimage image img                                  {width: 100%; height: 100%; object-fit: cover; object-position: center 0;}      
   
   .carousel-inner .carousel-item.active,
   .carousel-inner .carousel-item-next,

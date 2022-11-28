@@ -9,7 +9,7 @@
 		
         	<f:if condition="{newsItem.mediaPreviews}">
         		<f:then>
-	            <div class="image col-4"> 		
+	            <div {f:if(condition: settings.media.maxWidth, then: 'class="imageorg d-flex justify-content-center align-items-center col-4"', else: 'class="image col-4"')}> 		
 	       			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 	       				<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 	       					<f:if condition="{mediaElement.originalResource.type} == 2">
