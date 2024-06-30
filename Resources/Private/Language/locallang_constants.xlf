@@ -65,14 +65,13 @@
              <trans-unit id="detailPid">
                  <source>Detailpage for the linkhandler</source>
             </trans-unit>
+
             
-             <trans-unit id="newsmultislider">
-                 <source>Javascript for multislider news</source>
+             <trans-unit id="rowsize">
+                 <source>How many rows for the grid in detailview</source>
             </trans-unit>
             
 
-
-        
         </body>
     </file>
 </xliff>

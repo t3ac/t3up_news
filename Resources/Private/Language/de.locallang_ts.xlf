@@ -37,6 +37,28 @@
 				<source>Slider - 4 News</source>
 				<target state="translated">Slider mit gleichzeitig vier Nachrichten</target>			
 			</trans-unit>	
+			
+			<trans-unit id="basiscalendar">
+				<source>Basis Calendar</source>
+				
+			</trans-unit>				
+			<trans-unit id="t3upcalendar">
+				<source>T3UP Calendar</source>
+				
+			</trans-unit>				
+			<trans-unit id="t3upcalendarwide">
+				<source>T3UP Calendar wide</source>
+				
+			</trans-unit>			
+			<trans-unit id="t3upcalendarwidelist">
+				<source>T3UP Calendar wide list</source>
+				
+			</trans-unit>		
+			<trans-unit id="t3upcalendarsingle">
+				<source>T3UP Calendar single</source>
+				
+			</trans-unit>	
+			
 										
 		</body>
 	</file>

@@ -15,7 +15,7 @@
 		<f:render section="pagination" arguments="{_all}" />
 
 		<f:if condition="{settings.topimage}">
-         	<div class="topimage"> 		
+         	<div class="topimage"> 
    				<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
    					<f:if condition="{mediaElement.originalResource.type} == 2">
    							<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>	
@@ -29,6 +29,7 @@
    					{f:if(condition: mediaElement.originalResource.title, then: '<i class="d-inline-block mb-1 mt-2 px-3">{mediaElement.originalResource.title}</i>')}
    					{f:if(condition: mediaElement.originalResource.description, then: '<i class="d-inline-block my-1 px-3">{mediaElement.originalResource.description}</i>')}	
    				</f:alias>	
+   				
 			</div>
         </f:if>				
 			
@@ -58,16 +59,18 @@
 				<div class="news-text-wrap" itemprop="articleBody">
 					<f:format.html>{newsItem.bodytext}</f:format.html>
 				</div>
-			
-				<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
-  
+			  
 				<f:if condition="{newsItem.contentElements}">
 					<!-- content elements -->
 					<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
 				</f:if>
+
 	
 				<f:render section="social" arguments="{_all}" />
 				<f:render section="related" arguments="{_all}" />
+				
+				<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+				
 				<f:render section="back" arguments="{_all}" />
 			</div>
 		</n:renderMedia>
@@ -151,7 +154,7 @@
 					<h4>
 						<f:translate key="related-news" />
 					</h4>
-					<ul>
+					<ul class="list-unstyled">
 						<f:for each="{newsItem.allRelatedSorted}" as="related">
 							<li>
 								<span class="news-related-news-date"><f:format.date format="{f:translate(key:'dateFormat')}">{related.datetime}</f:format.date></span>
@@ -171,7 +174,7 @@
 					<h4>
 						<f:translate key="related-files" />
 					</h4>
-					<ul>
+					<ul class="list-unstyled">
 						<f:for each="{newsItem.relatedFiles}" as="relatedFile">
 							<li>
 								<span class="news-related-files-link">
@@ -194,7 +197,7 @@
 					<h4>
 						<f:translate key="related-links" />
 					</h4>
-					<ul>
+					<ul class="list-unstyled">
 						<f:for each="{newsItem.relatedLinks}" as="relatedLink">
 							<li>
 								<f:link.typolink parameter="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}">{f:if(condition: relatedLink.title, then: relatedLink.title, else: relatedLink.uri)}</f:link.typolink>
@@ -210,7 +213,7 @@
 	
 	<f:section name="back">
 	   	 <!-- Link Back -->
-	        <button type="button" class="btn btn-secondary"> 
+	        <button type="button" class="btn btn-light mt-3"> 
 	        	<f:if condition="{settings.backPid}">
 	        		<f:then>
 						<f:link.page pageUid="{settings.backPid}" ><f:translate key="back-link" /></f:link.page>   

@@ -3,11 +3,11 @@
 	  data-namespace-typo3-fluid="true">
 
 <f:if condition="{settings.cssFile}">
-	<n:includeFile path="{settings.cssFile}" />
+	<f:asset.css identifier="ext-news" href="{settings.cssFile}" />
 </f:if>
 
-<div class="news news-detail">
-	<div class="article" itemscope="itemscope" itemtype="http://schema.org/Article">
+<div class="news news-single">
+	<div class="article d-flex px-3" itemscope="itemscope" itemtype="http://schema.org/Article">
 		<f:render section="content" />
 	</div>
 </div>

@@ -8,7 +8,32 @@
     	<!--TYPO3SEARCH_end-->
     	<f:if condition="{news}">
     		<f:then>
-    		
+
+    		<f:comment>Origin / no extra template</f:comment>
+	    		<f:if condition="{settings.templateLayout} == '' ">
+					<div class="news-list-view" id="news-container-{contentObjectData.uid}">
+						<f:if condition="{settings.hidePagination}">
+							<f:then>
+								<f:for each="{news}" as="newsItem" iteration="iterator">
+									<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+								</f:for>
+							</f:then>
+							<f:else>
+		                        <f:if condition="{settings.list.paginate.insertAbove}">
+		                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+		                        </f:if>
+		                        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+		                            <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+		                        </f:for>
+		                        <f:if condition="{settings.list.paginate.insertBelow}">
+		                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+		                        </f:if>
+							</f:else>
+						</f:if>
+					</div>
+    			</f:if>	
+    			
+ 
     			<f:comment>Teasermenue</f:comment>
 	    		<f:if condition="{settings.templateLayout} == 1">
 		    		<f:if condition="{settings.hidePagination} == 1">		
@@ -21,20 +46,21 @@
 		                            </f:for>
 			                    </div>  
 			               </f:if>     
+			               
 			    	       <f:comment>2 Items Flex </f:comment>	
 			    	       <f:if condition="{settings.items} == 2">
-								<div class="news twoItemsStat w-auto">
+								<div class="news teaser twoItemsStat w-auto">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
 									    </f:if>
 									    <f:if condition="{iterator.cycle} % 2">
 									        <f:then>
-									            <f:render partial="List/TwoItemsStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									        </f:then>
 									
 									        <f:else>
-									            <f:render partial="List/TwoItemsStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="v" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									
 									            <f:if condition="{iterator.isLast}">
 									                <f:then></f:then>
@@ -53,18 +79,18 @@
 			    	       
 			    	       <f:comment>3 Items Flex </f:comment>
 			    	       <f:if condition="{settings.items} == 3">
-				    	       <div class="news threeItemsStat w-auto">
+				    	       <div class="news teaser threeItemsStat w-auto">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
 									    </f:if>
 									    <f:if condition="{iterator.cycle} % 3">
 									        <f:then>
-									            <f:render partial="List/ThreeItemsStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									        </f:then>
 									
 									        <f:else>
-									            <f:render partial="List/ThreeItemsStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									
 									            <f:if condition="{iterator.isLast}">
 									                <f:then></f:then>
@@ -79,36 +105,39 @@
 									    </f:if>
 									</f:for>
 								</div>                     
-			    	       </f:if>
+			    	       </f:if>	   	       
 			    	       
 			    	       <f:comment>4 Items Flex </f:comment>
 			    	       <f:if condition="{settings.items} == 4">
-				    	       <div class="news fourItemsStat w-auto">
+				    	       <div class="news teaser fourItemsStat w-auto">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
 									    </f:if>
 									    <f:if condition="{iterator.cycle} % 4">
 									        <f:then>
-									            <f:render partial="List/FourItemsStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									        </f:then>
-											<f:else>
+									        <f:else>
+									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									
 									            <f:if condition="{iterator.isLast}">
 									                <f:then></f:then>
 									                <f:else>
 									                    </div><div class="row align-items-stretch m-0">
 									                </f:else>
 									            </f:if>
-											</f:else>
+									        </f:else>
 									    </f:if>
+									
 									    <f:if condition="{iterator.isLast}">
 									        </div>
 									    </f:if>
 									</f:for>
 								</div>
-			    	       </f:if> 		
-			    	       
+			    	       </f:if> 					    	       
 						</f:then>
+						
 						<f:else>
 		                    <div class="news teaser">		    			
 		                        <f:if condition="{settings.list.paginate.insertAbove}">
@@ -372,10 +401,7 @@
 	                      </f:else>   
 	                 </f:if>        
             	</f:if>
-
-    	       
-
-    	       
+ 
     	       <f:comment>1 Items small Image</f:comment>
     	       <f:if condition="{settings.templateLayout} == 4">
 	    	       <div class="news smallimage">
@@ -399,12 +425,34 @@
 						</f:if>
 					</div>
  				</f:if>   
-            
+ 				
+ 				<f:comment>News Wall</f:comment>  
+	    		<f:if condition="{settings.templateLayout} == 5">
+					<f:if condition="{settings.hidePagination}">
+						<f:then>
+							<div id="freewall" class="wall free-wall w-100 d-block">
+								<f:for each="{news}" as="newsItem" iteration="iterator">
+									<f:render partial="List/Wall" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+								</f:for>
+							</div>
+						</f:then>
+						<f:else>
+							<div id="freewall" class="wall free-wall  w-100">
+		                        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+		                            <f:render partial="List/Wall" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+	                        	</f:for>
+	                        </div>
+	                        <div class="my-5 d-block w-100"><f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" /></div>
+						</f:else>
+					</f:if>
+					
+			   </f:if>     
+
                 <f:comment>Carousel 1 Element</f:comment>              
                 <f:if condition="{settings.templateLayout} == 30">      
                
                         <div id="slideshow{contentObjectData.uid}"  
-                            class="news t3up_slider w-100 oneItem carousel slide w-auto sliderstyle-{f:cObject(typoscriptObjectPath:'lib.bootstrapslider')}" 
+                            class="news t3up_slider w-100 oneItem carousel slide w-auto sliderstyle-{settings.style} {settings.animation}" 
                             data-ride="{f:if(condition:'{settings.autostart}',then: 'carousel')}" 
                             data-bs-ride="{f:if(condition:'{settings.autostart}',then: 'carousel')}" 
                             data-interval="{settings.carouselSpeed}" 
@@ -484,12 +532,12 @@
 							    </div>
  							</f:then>
 						    <f:else>
-						   		<div id="c{contentObjectData.uid}" class="threeItemsSat" 
+						   		<div id="c{contentObjectData.uid}" class="threeItemsStat" 
 									style="max-height:{f:if(condition:'{settings.carouselheight}',then:'{settings.carouselheight}vh;',else:'100%;')} max-width:{f:if(condition:'{settings.carouselwidth}',then:'{settings.carouselwidth}px;',else:'100%;')}">
 		
 								 	<div class="carousel-inner row w-100 mx-auto align-items-stretch"  role="listbox" {f:if(condition:'{settings.carouselheight}',then:'style="max-height: {settings.carouselheight}vh"')}>
 		                               <f:for each="{news}" as="newsItem" iteration="iterator">
-		                                    <f:render partial="List/ThreeItemsStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+		                                    <f:render partial="List/ThreeBigimage" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 		                                </f:for>
 							        </div> 
 							     </div>    
@@ -571,7 +619,7 @@
     		</f:then>
     		<f:else>
     			<div class="no-news-found">
-    				<f:translate key="list_nonewsfound" />
+    				<p><f:translate key="list_nonewsfound" /></p>
     			</div>
     		</f:else>
     	</f:if>

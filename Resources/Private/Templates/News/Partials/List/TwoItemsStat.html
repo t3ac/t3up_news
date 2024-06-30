@@ -10,14 +10,12 @@
                     <f:render section="newscontent" arguments="{_all}"/>
                 </f:then>
                 <f:else>
-                    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-                        <f:render section="newscontent" arguments="{_all}"/>
-	                  	<f:if condition="{settings.itemdetail}">
-	                      <span class="morenews  px-3">
-	                      	<f:translate key="LLL:EXT:t3up_news/Resources/Private/Language/locallang.xlf:detail.title" />
-	                      </span>
-	                    </f:if>   
-                    </n:link>
+                	<f:render section="newscontent" arguments="{_all}"/>
+                  	<f:if condition="{settings.itemdetail}">
+                      <span class="morenews  px-3">
+                      	<f:translate key="LLL:EXT:t3up_news/Resources/Private/Language/locallang.xlf:detail.title" />
+                      </span>
+                    </f:if>   
                 </f:else>
             </f:if>    		       
 		</div>
@@ -58,10 +56,10 @@
         </f:if>
 
         <div class="teasertext px-3 pt-3">
-            <f:if condition="{newsItem.firstCategory}">
-                    <!-- first category -->
-                  <span class="news-category">{newsItem.firstCategory.title}</span>
-             </f:if>
+              	<f:if condition="{settings.itemcategory}">
+              		{f:if(condition: newsItem.firstCategory.title, then: '<span class="d-block mb-1">{newsItem.firstCategory.title}</span>')}
+               </f:if>
+
             
             <h3>{newsItem.title}</h3>       
 

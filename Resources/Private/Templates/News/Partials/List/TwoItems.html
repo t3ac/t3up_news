@@ -35,7 +35,7 @@
 	                    <f:then>
 	                        <f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 	                            <f:if condition="{mediaElement.originalResource.type} == 2">
-	                                <f:render section="picture" arguments="{_all}"/>                            
+	                               <f:render partial="Rendering/Image" section="picture" arguments="{_all}"/>                           
 	                            </f:if>
 	                            <f:if condition="{mediaElement.originalResource.type} == 4">
 	                                <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>                
@@ -49,10 +49,9 @@
 	            </div>
 	    
 	            <div class="teasertext px-3 pt-3">
-	                <f:if condition="{newsItem.firstCategory}">
-	                        <!-- first category -->
-	                        <span class="news-category">{newsItem.firstCategory.title}</span>
-	                    </f:if>
+	               	<f:if condition="{settings.itemcategory}">
+	               		{f:if(condition: newsItem.firstCategory.title, then: '<span class="d-block mb-1">{newsItem.firstCategory.title}</span>')}
+	                </f:if>
 	                
 	                <f:if condition="{newsItem.nomore}">
 	                    <f:then>
@@ -86,26 +85,6 @@
               </f:if>            
 	        </div>
 	    </div>
-    </f:section>
-    
-    <f:section name="picture">
-        <n:link newsItem="{newsItem}" settings="{settings}" class="internal-link" title="{newsItem.title}">
-            <picture class="w-100"> 
-             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '768')}"   media="(min-width: 641px)" type="image/wepb">
-             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '768')}"   media="(min-width: 641px)" type="image/jpeg">
-             
-             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '640')}"   media="(min-width: 361px)" type="image/wepb">
-             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '640')}"   media="(min-width: 361px)" type="image/jpeg">
-                    
-             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '360')}"  type="image/wepb">        
-             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '360')}"  type="image/jpeg">    
-
-             <img src="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', height: '{dimensions.height}', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '{data.imagewidth}')}"
-             {f:if(condition: '{mediaElement.originalResource.title}', then: 'title="{mediaElement.originalResource.title}"')}
-             {f:if(condition: '{mediaElement.originalResource.alternative}', then: 'alt="{mediaElement.originalResource.alternative}"')}  role="presentation" 
-             loading="lazy" />
-            </picture>
-        </n:link>
-    </f:section>  
+    </f:section> 
     
 </html>

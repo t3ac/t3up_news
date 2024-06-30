@@ -1,185 +1,240 @@
-.news {
+.news{	
+							
+  .f3-widget-paginator li.current    							 {position: relative; display: block; padding: calc(#{$v1} * .5) $v1 0 ; margin-left: -1px; line-height: 1rem; 
+  																 color: #fff; background-color: $baseColor; border: 1px solid #ddd;     line-height: 135%;
+}                     
 
-  .btn-secondary a                                          	 {color: #fff !important;}   
-  .teasertext p                                             	 {margin-bottom: 0;}
-  .article a p                                              	 {font-weight: normal;} 
-  
-  .article                                                       {position: relative;}  
-  
-  .article .moreNews                                             {height: 0px; float: left; color: transparent;}
-  .article .moreNews:after                                       {transition: all ease 0.25s; position: absolute; bottom: 0; right: 0; content: '+'; text-align: center; width: 24px; height: 24px;color: #fff; background: #aaa;}
-  .article:hover .moreNews:after                                 {background: #666;}
-  
-  /* Single  **************************************************/  
-  &.news-detail .news-img-wrap                                   {line-height:0;  -webkit-column-count:1; column-count:1; -moz-column-count:1;}
-  
-  &.news-detail .news-img-wrap .outer .mediaelement              {width: 100%; height: 100%; overflow: hidden; position: relative;}
-  &.news-detail .news-img-wrap .outer .mediaelement img          {width: 100% !important; height: auto !important; object-fit: cover; object-position: 50% 50%; transition:.5s ease-in-out;}
+															 
+	&.t3up_slider .carousel-control-next							{margin-right:$v15;}	
+	&.t3up_slider .carousel-control-prev							{margin-left:$v15;}		
 
-  &.news-detail .topimage                                        {overflow: hidden; min-height: 1rem;}
-  &.news-detail .topimage img                                    {width: 100%; height: 100%; object-fit: cover; object-position: center 0;}   
+	
+	.article														{transition: all ease .3s; position: relative;}	
+	
+	
+	
+	.article .moreNews												{height: 0px; float: left; color: transparent;}
+	.article .moreNews:after										{transition: all ease 0.25s; line-height: 100%; padding: $v1 $v2; position: absolute; bottom: 0; right: 0; content: '+'; text-align: center; color: #fff; background-color: rgba($baseColor,.5);}
+	.article:hover .moreNews:after									{background-color: $baseColor;}
+	
+	 .teasertext													{padding: $v3; overflow: hidden;}
+	
+	/* Single	**************************************************/	
+	&.news-detail .news-img-wrap									{line-height:0;	-webkit-column-count:1; column-count:1; -moz-column-count:1;}
+	
+	&.news-detail .news-img-wrap .outer .mediaelement				{width: 100%; height: 100%; overflow: hidden; position: relative;}
+	&.news-detail .news-img-wrap .outer .mediaelement img			{width: 100% !important; height: auto !important; object-fit: cover; object-position: 50% 50%; transition:.5s ease-in-out;}
 
-  /* List *****************************************************/
+	&.news-detail .topimage											{overflow: hidden; min-height: 0;}
+	&.news-detail .topimage img										{width: 100%; height: 100%; object-fit: cover; object-position: center 0;}	
+	&.news-detail .news-text-wrap									{margin-bottom:$v3;}
 
-  &.bigimage {                                                
-    .article                                                      {transition: all ease .3s; position: relative; margin-bottom: .75rem; }
-    .image                                                        {overflow: hidden; }
-    .image img                                                    {width: 100%; height: 100%; object-fit: cover; object-position: center 0;}
-    .teasertext                                                   {padding: .75rem;}   
-    .imageOrg                                                     {min-height: 10rem}                                           
-  }
-  
-  &.smallimage {                                                
-    .article                                                      {transition: all ease .3s; position: relative; margin-bottom: .75rem; }
-    .image                                                        {overflow: hidden; min-height: 1rem;}
-    .image img                                                    {width: 100%; height: 100%; object-fit: cover; object-position: center 0;}   
-    .teasertext                                                   {padding: .75rem;}
-                                                       
-  }
+	/* List *****************************************************/
 
-  &.calendar {                                                
-    .article                                                      {transition: all ease .3s; position: relative; margin-bottom: 0.75rem; border-bottom: 1px solid #dadada;}
-    .teasertext                                                   {padding: 1rem; overflow: hidden;}
-    .caldate                                                      {transition: all ease .3s;text-align: center; border-right: 1px solid #ccc; text-transform: uppercase;}
-    .caldate a                                                    {color: #454545; line-height: 1.5rem; } 
-    .caldate:hover                                                {background-color: rgba(0,0,0,.1);}    
-    .caldate span                                                 {display: block; width: 100%;} 
-    .dayNumber                                                    {font-size: 150%; font-weight: bold;}
-                                                            
-  }
-
-  &.teaser {                                                
-    .article                                                      {transition: all ease .3s; position: relative; margin-bottom: .75rem;  border-bottom: 1px solid #dadada;}
-    .teasertext                                                   {padding: .75rem;}                                                     
-  }
-
-  /* 2 / 3 / 4 Items statisch  */
-  &.twoItemsStat,  
-  &.threeItemsStat,
-  &.fourItemsStat                                                   {margin: 0 -.75rem;}   
-  
-  &.twoItemsStat   > div > div,  
-  &.threeItemsStat > div > div,
-  &.fourItemsStat  > div > div                                      {padding: 0 .75rem; padding-bottom: .75rem;}    
-     
-  &.twoItemsStat   > div,     
-  &.threeItemsStat > div,
-  &.fourItemsStat  > div                                            {order: 1; display: flex; flex-wrap: wrap; flex-direction: row; max-width: 100%; align-items: stretch;}  
-  
-  &.twoItemStat    > div .article,   
-  &.threeItemsStat > div .article, 
-  &.fourItemsStat  > div .article                                   {flex-grow: 2; width: 100%;  transition: all ease .3s; }
-  
-  &.twoItemsStat .article picture                                   {max-height: 200px; display: flex;  justify-content: center; align-items: center; overflow: hidden;}   
-  &.twoItemsStat .article .image img                                {min-height: 200px; width: 100%; height: auto; object-fit: cover;}    
-     
-  &.threeItemsStat .article picture                                 {max-height: 200px; display: flex;  justify-content: center; align-items: center; overflow: hidden;}   
-  &.threeItemsStat .article .image img                              {min-height: 200px; width: 100%; height: auto; object-fit: cover;}     
-     
-  &.fourItemsStat .article picture                                  {max-height: 200px; display: flex;  justify-content: center; align-items: center; overflow: hidden;}   
-  &.fourItemsStat .article .image img                               {min-height: 200px; width: 100%; height: auto; object-fit: cover;}
-         
-  &.bigimage.twoItemsStat .article picture                          {max-height: 200px; display: flex;  justify-content: center; align-items: start; overflow: hidden;}   
-  &.bigimage.threeItemsStat .article picture                        {max-height: 200px; display: flex;  justify-content: center; align-items: start; overflow: hidden;}   
-  &.bigimage.FourItemsStat .article picture                         {max-height: 200px; display: flex;  justify-content: center; align-items: start; overflow: hidden;}   
-    
-  .threeItems .newsimage                                            {overflow: hidden; max-height: 12.5rem;}      
-  .fourItems  .newsimage                                            {overflow: hidden; max-height: 10rem;}      
-
-  .threeItems .newsimage image img,
-  .fourItems  .newsimage image img                                  {width: 100%; height: 100%; object-fit: cover; object-position: center 0;}      
-  
-  .carousel-inner .carousel-item.active,
-  .carousel-inner .carousel-item-next,
-  .carousel-inner .carousel-item-prev                               {display: flex;}
-
-}
-
-@media (min-width: 768px) {
-	.news {
-	      
-	    /* Items static  */
-	    &.twoItemsStat  > div > div,      
-	    &.threeItemsStat  > div > div,
-	    &.fourItemsStat  > div > div                                {overflow: hidden}
-
-	    &.twoItemsStat > div .article:hover,  
-  		&.threeItemsStat > div .article:hover, 
-  		&.fourItemsStat  > div .article:hover,
-	    &.calendar .article:hover,      
-		&.teaser .article:hover,
-		&.smallimage .article:hover,
-		&.bigimage .article:hover                                   {box-shadow: $shadow;}
-		
-		&.news-detail .news-img-wrap                                {line-height:0;  -webkit-column-count:2; column-count:2; -moz-column-count:2;  -webkit-column-gap: .75rem; -moz-column-gap: .75rem; column-gap: .75rem;}
-		&.news-detail .news-img-wrap .mediaelement-image:hover img  {transform: scale(1.1);}
+	&.bigimage{																
+	 .image															{overflow: hidden; }
+	 .image img														{width: 100%; height: 100%; object-fit: cover; object-position: center 0;}
+	 .imageOrg														{min-height: 10rem}														 
+	}
+	
+	&.smallimage{																
+	 .image															{overflow: hidden; min-height: 0;}
+	 .image img														{width: 100%; height: 100%; object-fit: cover; object-position: center 0;}	
 	}
 
-  .threeItems .carousel-inner .carousel-item-end.active,
-  .threeItems .carousel-inner .carousel-item-next                   {transform: translateX(33.33%);}
+	&.calendar{																
+	 .article														{margin-bottom: 0; border-bottom: 1px solid #dadada;}
+	 .caldate														{transition: all ease .3s;text-align: center; border-right: 1px solid #ccc; text-transform: uppercase;}
+	 .caldate a														{color: #454545; line-height: 1.5rem; } 
+	 .caldate:hover													{background-color: rgba(0,0,0,.1);}	 
+	 .caldate span													{display: block; width: 100%;} 
+	 .dayNumber														{font-size: 150%; font-weight: bold;}
+	}
+	
 
-  .fourItems .carousel-inner .carousel-item-end.active,
-  .fourItems .carousel-inner .carousel-item-next                    {transform: translateX(25%);}
-    
-  .threeItems .carousel-inner .carousel-item-start.active, 
-  .threeItems .carousel-inner .carousel-item-prev                   {transform: translateX(-33.33%);}  
+}
+
+	/* 2 / 3 / 4 Items statisch	*/
+	.twoItemsStat,	
+	.threeItemsStat,
+	.fourItemsStat													{margin: 0;}	
+	
+	.twoItemsStat	> div > div,	
+	.threeItemsStat > div > div,
+	.fourItemsStat	> div > div										{padding: 0;}	 
+		
+	.twoItemsStat	> div,		
+	.threeItemsStat > div,
+	.fourItemsStat	> div											{order: 1; display: flex; flex-wrap: wrap; flex-direction: row; max-width: 100%; align-items: stretch;}	
+	
+	.twoItemStat	 > div .article,	
+	.threeItemsStat  > div .article, 
+	.fourItemsStat	 > div .article									{flex-grow: 2; width: 100%;	transition: all ease .3s; }
+	
+	.twoItemsStat .article picture									{max-height: 200px; display: flex;	justify-content: center; align-items: center; overflow: hidden;}	
+	.twoItemsStat .article .image img								{min-height: 200px; width: 100%; height: auto; object-fit: cover;}	 
+		
+	.threeItemsStat .article picture								{max-height: 200px; display: flex;	justify-content: center; align-items: center; overflow: hidden;}	
+	.threeItemsStat .article .image img								{min-height: 200px; width: 100%; height: auto; object-fit: cover;}		
+		
+	.fourItemsStat .article picture									{max-height: 200px; display: flex;	justify-content: center; align-items: center; overflow: hidden;}	
+	.fourItemsStat .article .image img								{min-height: 200px; width: 100%; height: auto; object-fit: cover;}
+			
+	.bigimage.twoItemsStat   .article picture						{max-height: 200px; display: flex;	justify-content: center; align-items: start; overflow: hidden;}	
+	.bigimage.threeItemsStat .article picture						{max-height: 200px; display: flex;	justify-content: center; align-items: start; overflow: hidden;}	
+	.bigimage.FourItemsStat  .article picture						{max-height: 200px; display: flex;	justify-content: center; align-items: start; overflow: hidden;}	
   
-  .fourItems .carousel-inner .carousel-item-start.active, 
-  .fourItems .carousel-inner .carousel-item-prev                    {transform: translateX(-25%);}
-      
+	/* 1 / 3 / 4 dynmaic	*/		
+	.threeItems .newsimage											{overflow: hidden; max-height: 12.5rem;}		
+	.fourItems	.newsimage											{overflow: hidden; max-height: 10rem;}		
+
+	.threeItems .newsimage image img,
+	.fourItems	.newsimage image img								{width: 100%; height: 100%; object-fit: cover; object-position: center 0;}		
+	
+	.carousel-inner .carousel-item.active,
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev								{display: flex;}
+
+
+
+@media (min-width: 576px) AND (max-width: 767px){
+	.news{		
+		 /* Items static	*/
+		 /*&.twoItemsStat	> div > div:first-of-type,		*/
+		 
+		 .twoItemsStat	> div > div										{margin-right: $v15; width: $v50; overflow: hidden}		 
+		 .twoItemsStat	> div > div:nth-of-type(2n) 					{margin-right:0; margin-left:$v15;}		 
+		 
+		 .twoItemsStat	> div > div										{margin-right:$v15; width: $v50; overflow: hidden}		 
+		 .twoItemsStat	> div > div:nth-of-type(2n) 					{margin-right:0; margin-left:$v15;}
+		 
+		 .threeItemsStat > div > div									{margin-right:$v15; width: $v50; overflow: hidden}		 
+		 .threeItemsStat > div > div:nth-of-type(2n) 					{margin-right:0; margin-left:$v15;}
+		 
+		 .fourItemsStat	> div > div										{margin-right:$v15; width: $v50; overflow: hidden}		 
+		 .fourItemsStat	> div > div:nth-of-type(2n) 					{margin-right:0; margin-left:$v15;}	 
+		 
+		 .threeItems > div > div > div									{margin-right:$v15;  margin-left:$v15; width: $v50; overflow: hidden}		
+	}  
 }
 
 
- .fourItems  .carousel-inner .carousel-item-end,
- .fourItems  .carousel-inner .carousel-item-start                   {transform: translateX(0);}
+@media (min-width: 768px){
+	.news{	
+			
+		 /* Items static	*/
+		.threeItemsStat	> div > div										{margin-right:$v15; margin-left:$v15; width: $v33; overflow: hidden;}		 
+		.threeItemsStat	> div > div:first-of-type 						{margin-left:0;}
+		.threeItemsStat	> div > div:last-of-type 						{margin-right:0;}		 
+		 
+		.twoItemsStat > div .article:hover,	
+		.threeItemsStat > div .article:hover, 
+		.fourItemsStat	> div .article:hover,
+		.calendar .article:hover,		
+		.teaser .article:hover,
+		.smallimage .article:hover,
+		.bigimage .article:hover										{box-shadow: $shadow;}
+		
+		&.news-detail .news-img-wrap.v1									{line-height:0;	-webkit-column-count:2; column-count:2; -moz-column-count:2;	-webkit-column-gap: 0; -moz-column-gap: 0; column-gap: 0;}
+		&.news-detail .news-img-wrap.v1 .mediaelement-image:hover img	{transform: scale(1.025);} 
+		
+		.threeItems > div > div > div						            {width: $v34; }	
+		.threeItems > div > div > div									{margin-right:$v15; margin-left:$v15; overflow: hidden; }	
+	
+	
+		.threeItems .carousel-inner .carousel-item-end.active,
+		.threeItems .carousel-inner .carousel-item-next					{transform: translateX(33.33%);}
+	
+		.fourItems .carousel-inner .carousel-item-end.active,
+		.fourItems .carousel-inner .carousel-item-next					{transform: translateX(25%);}
+		 
+		.threeItems .carousel-inner .carousel-item-start.active, 
+		.threeItems .carousel-inner .carousel-item-prev					{transform: translateX(-33.33%);}	
+		
+		.fourItems .carousel-inner .carousel-item-start.active, 
+		.fourItems .carousel-inner .carousel-item-prev					{transform: translateX(-25%);}
+			
+	}
+}
+
+@media (min-width: 992px){
+	.news{
+		 /* Items static	*/
+		 .fourItemsStat	> div > div										{margin-right:$v2; margin-left:$v2; width: $v25; overflow: hidden}		 
+		 .fourItemsStat	> div > div:first-of-type 						{margin-left:0;}
+		 .fourItemsStat	> div > div:last-of-type 						{margin-right:0;}		
+	}
+}
+
+ .fourItems	.carousel-inner .carousel-item-end,
+ .fourItems	.carousel-inner .carousel-item-start					{transform: translateX(0);}
  
  .threeItems .carousel-inner .carousel-item-end,
- .threeItems .carousel-inner .carousel-item-start                   {transform: translateX(0);}
+ .threeItems .carousel-inner .carousel-item-start					{transform: translateX(0);}
  
  
-/*  *********************************************************************************************************************/
-  
-main {
-	.frame-white {
-    	.article                                            	    {background: #fff; } 
-	}
-	.frame-line {
-    	.article                                            	    {background: #fff; border: 1px solid rgba(0,0,0, .33) !important;} 
-	}
-	.frame-colored {
-		.news {
-  			&.calendar {
-    	        .article                                            {background: #fff;} 	
-				.caldate 										    {background-color: rgba(desaturate(lighten($baseColor, 50%),50%),.75);}
-			} 
+/*	*********************************************************************************************************************/
+	
+main{
+	.frame-news_newsliststicky	{
+		&.frame-white{													background: transparent; 
+		 	.article													{background: #fff; border-bottom: 1px solid rgba(0,0,0, .33) !important;} 
 		}
-	}
+		&.frame-line													{border-bottom: 0;
+		 	.article													{background: #fff; border: 1px solid rgba(0,0,0, .33) !important;} 
+		}
+		&.frame-colored{
+			.news{
+					&.calendar{
+		 			.article											{background: #fff;} 	
+					.caldate 											{background-color: rgba(desaturate(lighten($baseColor, 50%),50%),.75);}
+				} 
+			}
+		}
+	}		
 }
 
 
 
 
+.news.news-single .news-img-wrap.v2 								{display: grid; height: calc(100vh - 10px); grid-template: repeat($size, 1fr) / repeat($size, 1fr); grid-gap: 0.5em;
+	
+	@media (max-width: 800px){ 										display: flex; align-items: flex-start; flex-wrap: wrap;justify-content: center;
+		& > div 													{width: 48%;	margin: 1%;
+		@media 														(max-width: 350px){width: 98%;}
+	 	}
+		}
+		& > div{
+		 //Grid Structure
+		 &:nth-child(#{$size}n + 1) 								{grid-column: span 2; grid-row: span 2;}
+	 &:nth-child(2) 												{grid-column: span 3; grid-row: span 3;}
+	 &:nth-child(4) 												{grid-column: span 1; grid-row: span 2;}
+	 & > img														{width: 100%; min-height: 100%; transition: all ease 1s;}
+	 &:hover{
+		img 														{transform: scale(1.025);}
+	 	a 															{opacity: 1;}
+	 }
+	}
+	.mediaelement a													{height: 100%; width: 100%; display: inline-block}
+	.outer .mediaelement a img										{height: 100% !important;}
+	
+	& > div 															{overflow: hidden; position: relative; box-shadow: 0 2px 8px 0 rgba(#000, 0.2), 0 3px 20px 0 rgba(#000, 0.19);}
+}
+
+
+.news.news-single .news-img-wrap.v3{								display: flex; flex-wrap: wrap; 
+	.outer 															{height: 15rem;	flex-grow: 1; overflow: hidden;}	
+	.outer	img														{max-height: 100%; object-fit: cover; vertical-align: bottom;}
+	.outer:last-child 												{flex-grow: 2;}
+	.mediaelement-image:hover img									{transform: scale(1.025);} 
+}
+
+.news.news-single .news-img-wrap.v4{								
+	.mediaelement  													{overflow: hidden; margin-bottom: 1rem}	
+	.mediaelement  img													{transition: all ease .3s}		
+	.mediaelement:hover img									{transform: scale(1.025);} 
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      

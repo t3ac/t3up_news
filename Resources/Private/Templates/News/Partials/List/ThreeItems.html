@@ -27,9 +27,9 @@
     </f:if>
       
     <f:section name="inner">
-        <div class="col-12 col-sm-6 col-md-4 d-flex flex-wrap px-3" style="background-color: {f:if(condition: '{settings.carouselbackgroundcolor}', then: '{settings.carouselbackgroundcolor};', else: 'inherit;')}">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4" style="background-color: {f:if(condition: '{settings.carouselbackgroundcolor}', then: '{settings.carouselbackgroundcolor};', else: 'inherit;')}">
             <n:excludeDisplayedNews newsItem="{newsItem}"/>
-            <div class="article">
+            <div class="article h-100">
 	            <div class="newsimage w-100">
 	                <f:if condition="{newsItem.mediaPreviews}">
 	                    <f:then>
@@ -49,10 +49,9 @@
 	            </div>
 	    
 	            <div class="teasertext px-3 pt-3">
-	                <f:if condition="{newsItem.firstCategory}">
-	                        <!-- first category -->
-	                        <span class="news-category">{newsItem.firstCategory.title}</span>
-	                    </f:if>
+	               	<f:if condition="{settings.itemcategory}">
+	               		{f:if(condition: newsItem.firstCategory.title, then: '<span class="news-category">{newsItem.firstCategory.title}</span>')}
+	                </f:if>
 	                
 	                <f:if condition="{newsItem.nomore}">
 	                    <f:then>

@@ -54,7 +54,7 @@
 		    </trans-unit>	 	
 			<trans-unit id="carousel.maxheight">
 			     <source>Max. height of the slider</source>
-			     <target state="translated">Maximale Höhe des Sliders</target>
+			     <target state="translated">Maximale Höhe des Sliders (Wert in Pixel)</target>
 		    </trans-unit>	 	
 			     
 			<trans-unit id="itemdetail">
@@ -72,7 +72,23 @@
 			<trans-unit id="topimage">
 			     <source>Show the first image on top</source>
 			     <target state="translated">Zeige Das erste Bild als großes Topbild</target>
-		    </trans-unit>	   		    		    
+		    </trans-unit>	 
+			<trans-unit id="imagedesign">
+			     <source>Design of the images below</source>
+			     <target state="translated">Design der weiteren Bilder</target>
+		    </trans-unit>	 		    
+			<trans-unit id="label.v1">
+			     <source>Images in 2 rows</source>
+			     <target state="translated">Bilder in 2 Reihen</target>			     
+		    </trans-unit>	 		    
+			<trans-unit id="label.v2">
+			     <source>Imageblock</source>
+					     
+		    </trans-unit>	  
+			<trans-unit id="label.v3">
+			     <source>Imagewall</source>
+			     <target state="translated">Bilderwand einheitliche Höhe</target>			     
+		    </trans-unit>	 		    
 		    
 			/* -- Optionen --------------------------------- */
 			
@@ -88,12 +104,12 @@
 		    
 			<trans-unit id="carousel.captionColor">
 			     <source>Text-color</source>
-			     <target state="translated">Textbereich/Richtungspfeile</target>	
+			     <target state="translated">Textfarbe</target>	
 		    </trans-unit>	
 		    
 			<trans-unit id="carousel.captionOpacity">
 			     <source>Background-opacity</source>
-			     <target state="translated">Hintergrund Durchsichtigkeit</target>	
+			     <target state="translated">Hintergrund Durchsichtigkeit 0 - transparent, 100 - opak</target>	
 		   </trans-unit>
 			<trans-unit id="carousel.textalign">
 				<source>textalign</source>
@@ -142,7 +158,7 @@
 		    
 			<trans-unit id="label.items">
 			     <source>Items in a row</source>
-			     <target state="translated">Artikel in einer Reihe</target>     
+			     <target state="translated">Artikel in einer Reihe, bei größer 1, Paginierung ausgeschalten!</target>   
 		    </trans-unit>	  
 			<trans-unit id="label.1item">
 			     <source>One item</source>

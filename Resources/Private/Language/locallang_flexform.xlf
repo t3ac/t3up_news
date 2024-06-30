@@ -58,8 +58,18 @@
 			<trans-unit id="topimage">
 			     <source>Show the first image on top</source>
 		    </trans-unit>	 		    
-		    		    			    		    		    
-		    
+			<trans-unit id="imagedesign">
+			     <source>Design of the images below</source>
+		    </trans-unit>	 		    
+			<trans-unit id="label.v1">
+			     <source>Images in 2 rows</source>
+		    </trans-unit>	 		    
+			<trans-unit id="label.v2">
+			     <source>Imageblock</source>
+		    </trans-unit>	  
+			<trans-unit id="label.v3">
+			     <source>Imagewall</source>
+		    </trans-unit>	      		    		    	  
 		    
 			/* -- Optionen --------------------------------- */
 			

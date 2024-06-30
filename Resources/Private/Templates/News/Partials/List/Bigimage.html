@@ -17,9 +17,11 @@
 	                      		</div>	
 	                      		</f:then>
                       		<f:else>
-	                      		<div class="newsimage">
-	                      			<f:render section="picture" arguments="{_all}"/>
-	                      		</div>	
+		                      	<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+	                         		<div class="newsimage">
+		                              	<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" />
+		                          	</div>  
+			                    </n:link>
                       		</f:else>
                      		</f:if>
                           
@@ -30,9 +32,11 @@
                           </div>              
                       </f:if>
                       <f:if condition="{mediaElement.originalResource.type} == 5">
-                          <div class="newsimage">
-                              <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" />
-                          </div>
+                      	<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                        		<div class="newsimage">
+                              	<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" />
+                          	</div>  
+	                    </n:link>
                       </f:if>         
                   </f:alias>          
              </f:then>
