@@ -251,6 +251,7 @@
                 </TCEforms>
             </settings.head> 
 
+         
             <settings.itemdetail>
                 <TCEforms>
                     <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:itemdetail</label>
@@ -288,13 +289,13 @@
                     <displayCond>
                         <OR>
                             <numIndex index="1">FIELD:template.settings.templateLayout:=:1</numIndex>                        
-                            <numIndex index="2">FIELD:template.settings.templateLayout:=:3</numIndex>  
-                            <numIndex index="3">FIELD:template.settings.templateLayout:=:4</numIndex>
-                            <numIndex index="4">FIELD:template.settings.templateLayout:=:20</numIndex>
-                            <numIndex index="5">FIELD:template.settings.templateLayout:=:31</numIndex>                      
-                            <numIndex index="5">FIELD:template.settings.templateLayout:=:32</numIndex>                
+                            <numIndex index="2">FIELD:template.settings.templateLayout:=:2</numIndex>
+                            <numIndex index="3">FIELD:template.settings.templateLayout:=:3</numIndex>  
+                            <numIndex index="4">FIELD:template.settings.templateLayout:=:4</numIndex>
+                            <numIndex index="5">FIELD:template.settings.templateLayout:=:31</numIndex>
+                            <numIndex index="6">FIELD:template.settings.templateLayout:=:32</numIndex>                 
                         </OR>
-                    </displayCond>   
+                    </displayCond>     
                     <config>
                         <type>select</type>
                         <renderType>selectSingle</renderType>
@@ -319,11 +320,11 @@
                     <displayCond>
                         <OR>
                             <numIndex index="1">FIELD:template.settings.templateLayout:=:1</numIndex>                        
-                            <numIndex index="2">FIELD:template.settings.templateLayout:=:3</numIndex>  
-                            <numIndex index="3">FIELD:template.settings.templateLayout:=:4</numIndex>
-                            <numIndex index="4">FIELD:template.settings.templateLayout:=:20</numIndex>
-                            <numIndex index="5">FIELD:template.settings.templateLayout:=:31</numIndex>          
-                            <numIndex index="5">FIELD:template.settings.templateLayout:=:32</numIndex>        
+                            <numIndex index="2">FIELD:template.settings.templateLayout:=:2</numIndex>
+                            <numIndex index="3">FIELD:template.settings.templateLayout:=:3</numIndex>  
+                            <numIndex index="4">FIELD:template.settings.templateLayout:=:4</numIndex>
+                            <numIndex index="5">FIELD:template.settings.templateLayout:=:31</numIndex>
+                            <numIndex index="6">FIELD:template.settings.templateLayout:=:32</numIndex>                 
                         </OR>
                     </displayCond>   
                     <config>
@@ -343,7 +344,7 @@
                     </config>
                 </TCEforms>
             </settings.itemcategory> 
-            
+         
             <settings.topimage>
                 <TCEforms>
                     <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:topimage</label>
@@ -369,6 +370,36 @@
                     </config>
                 </TCEforms>
             </settings.topimage> 
+            
+            <settings.imagedesign>
+                <TCEforms>
+                    <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:imagedesign</label>
+                    <displayCond>
+                        <OR>
+                            <numIndex index="4">FIELD:template.settings.templateLayout:=:20</numIndex>              
+                        </OR>
+                    </displayCond>  
+                    <config>                     
+                        <type>select</type>
+                        <renderType>selectSingle</renderType>
+                        <items type="array">
+                            <numIndex index="0" type="array">
+                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v1</numIndex>
+                                <numIndex index="1">1</numIndex>
+                            </numIndex>               	
+                            <numIndex index="1" type="array">
+                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v2</numIndex>
+                                <numIndex index="1">2</numIndex>
+                            </numIndex>
+                            <numIndex index="2" type="array">
+                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v3</numIndex>
+                                <numIndex index="1">3</numIndex>
+                            </numIndex>                            
+                        </items>
+                        <default>1</default>
+                    </config>
+                </TCEforms>
+            </settings.imagedesign> 
 
 			<settings.textalignment>
 				<TCEforms>
@@ -450,81 +481,100 @@
                         <renderType>selectSingle</renderType>
                         <items type="array">
                             <numIndex index="1" type="array">
-                                <numIndex index="0">0 transparent</numIndex>
+                                <numIndex index="0">transparent</numIndex>
                                 <numIndex index="1">0</numIndex>
                             </numIndex>
                             <numIndex index="2" type="array">
-                                <numIndex index="0">1</numIndex>
+                                <numIndex index="0">6,6%</numIndex>
                                 <numIndex index="1">1</numIndex>
                             </numIndex>
                             <numIndex index="3" type="array">
-                                <numIndex index="0">2</numIndex>
+                                <numIndex index="0">13,3%</numIndex>
                                 <numIndex index="1">2</numIndex>
                             </numIndex>
                             <numIndex index="4" type="array">
-                                <numIndex index="0">3 - 25%</numIndex>
+                                <numIndex index="0">20%</numIndex>
                                 <numIndex index="1">3</numIndex>
                             </numIndex>
                             <numIndex index="5" type="array">
-                                <numIndex index="0">4</numIndex>
+                                <numIndex index="0">26.6%</numIndex>
                                 <numIndex index="1">4</numIndex>
                             </numIndex>
                             <numIndex index="6" type="array">
-                                <numIndex index="0">56</numIndex>
+                                <numIndex index="0">33,3%</numIndex>
                                 <numIndex index="1">5</numIndex>
                             </numIndex> 
                             <numIndex index="7" type="array">
-                                <numIndex index="0">6</numIndex>
+                                <numIndex index="0">40%</numIndex>
                                 <numIndex index="1">6</numIndex>
                             </numIndex>
                             <numIndex index="8" type="array">
-                                <numIndex index="0">7 - 50%</numIndex>
+                                <numIndex index="0">46,6%</numIndex>
                                 <numIndex index="1">7</numIndex>
                             </numIndex>
                             <numIndex index="9" type="array">
-                                <numIndex index="0">8</numIndex>
+                                <numIndex index="0">53,3%</numIndex>
                                 <numIndex index="1">8</numIndex>
                             </numIndex>
                             <numIndex index="10" type="array">
-                                <numIndex index="0">9</numIndex>
+                                <numIndex index="0">60%</numIndex>
                                 <numIndex index="1">9</numIndex>
                             </numIndex>
                             <numIndex index="11" type="array">
-                                <numIndex index="0">10</numIndex>
+                                <numIndex index="0">66.6%</numIndex>
                                 <numIndex index="1">a</numIndex>
                             </numIndex>
                             <numIndex index="12" type="array">
-                                <numIndex index="0">11 - 75%</numIndex>
+                                <numIndex index="0">73,3%</numIndex>
                                 <numIndex index="1">b</numIndex>
                             </numIndex>
                             <numIndex index="13" type="array">
-                                <numIndex index="0">12</numIndex>
+                                <numIndex index="0">80%</numIndex>
                                 <numIndex index="1">c</numIndex>
                             </numIndex>                          
                             <numIndex index="14" type="array">
-                                <numIndex index="0">13</numIndex>
+                                <numIndex index="0">86,6%</numIndex>
                                 <numIndex index="1">d</numIndex>
                             </numIndex>
                             <numIndex index="15" type="array">
-                                <numIndex index="0">14</numIndex>
+                                <numIndex index="0">93,3%</numIndex>
                                 <numIndex index="1">e</numIndex>
                             </numIndex>
                             <numIndex index="16" type="array">
-                                <numIndex index="0">15 - 100%</numIndex>
+                                <numIndex index="0">100% - opak</numIndex>
                                 <numIndex index="1">f</numIndex>
-                            </numIndex>    
-                            <numIndex index="17" type="array">
-                                <numIndex index="0">ohne</numIndex>
-                                <numIndex index="1">-</numIndex>
-                            </numIndex>                                           
+                            </numIndex>                                               
                         </items>
-                        <default>b</default>
+                        <default>a</default>
                     </config> 
                 </TCEforms>
         	</settings.captionopacity>             
             
-
-            
+        	<settings.style>
+				<TCEforms>
+                    <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.style</label>
+                    <displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Stil1</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Stil2</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Stil3</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>      
+                                </items>
+                            </config>
+                </TCEforms>
+        	</settings.style> 
+        	              
 			<settings.carouselbackgroundcolor>
 				<TCEforms>
                     <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.carouselbg</label>

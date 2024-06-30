@@ -1,0 +1,6 @@
+page.includeCSS{
+    t3upEventNews                         = {$page.scss.scssT3upEventNews}   
+    t3upEventNews.if.isTrue               = {$page.scss.scssT3upEventNews}  
+    t3upEventNews.outputStyle             = compressed    
+
+}

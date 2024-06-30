@@ -7,8 +7,8 @@
 /** @var string $_EXTKEY */
 $EM_CONF[$_EXTKEY] = [
     'title'            => 'T3UP - Newsextender',
-    'description'      => 'Extends the tx_news Plugin with fields "nomore", "image only", bootstrap-carousel and templates eventnews',
-    'version'          => '10.0.1',
+    'description'      => 'Extends the tx_news Plugin with fields "nomore", bootstrap-carousel and templates eventnews',
+    'version'          => '11.0.01',
     'state'            => 'stable',
     'category'         => 'templates',
     'author'           => 'Michael Lang',
@@ -19,8 +19,9 @@ $EM_CONF[$_EXTKEY] = [
     'clearCacheOnLoad' => false,
     'constraints'      => [
         'depends'   => [
-            'typo3' => '10.4.0-11.5.99',
-            'news' => '9.4.1-',
+            'typo3' => '11.5.0-12.4.99',
+            'news' => '11.0.0-',
+            't3up' => '11.2.0-',
         ],
         'conflicts' => [],
         'suggests'  => [],

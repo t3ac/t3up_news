@@ -8,7 +8,7 @@ plugin.tx_news {
                     0 = T3ac\T3upNews\Domain\Model\News
                 }
             }
-            T3up\T3upNews\Domain\Model\News {
+            T3ac\T3upNews\Domain\Model\News {
                 mapping {
                     recordType = 0
                     tableName = tx_news_domain_model_news
@@ -31,13 +31,14 @@ plugin.tx_news{
 page.includeCSS{
     t3upNews                         = {$page.scss.scssT3upNews}   
     t3upNews.if.isTrue               = {$page.scss.scssT3upNews}  
-    t3upNews.outputStyle             = compressed    
+    t3upNews.outputStyle             = compressed  
 }
 
 page.includeJSFooterlibs {
     newsmultislider                  = EXT:t3up_news/Resources/Public/JavaScript/multislider.js
     newsmultislider.if.isTrue        = {$page.files.newsmultislider}
     newsmultislider.async            = 1
+        
 }
 
 plugin{
@@ -49,4 +50,9 @@ plugin{
 			detail.media.image.maxWidth  = 1200
 		}
 	}
+}
+
+plugin.tx_wsscss.variables {
+    # rows in detail
+    size                           = {$plugin.tx_news.settings.size}
 }

@@ -1,0 +1,8 @@
+page {
+    scss {
+        # t3up - Extensions ____________________________________________
+        # customsubcategory=t3upextensions=T3UP-Extensions            
+        # cat = t3up: scss/t3upextensions/211;  type =string; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:scsseventnews
+        scssT3upEventNews                 = EXT:t3up_news/Resources/Public/Sass/_t3upEventNews.scss
+    }
+}

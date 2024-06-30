@@ -1,0 +1,59 @@
+			<extra>
+			    <ROOT>
+			        <TCEforms>
+			              <sheetTitle>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:sheet.carousel</sheetTitle>
+			        </TCEforms>			
+			        <type>array</type>
+			        <el>
+			            <settings.topimage>
+			                <TCEforms>
+			                    <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:topimage</label> 
+			                    <config>
+			                        <type>select</type>
+			                        <renderType>selectSingle</renderType>
+			                        <items type="array">
+			                            <numIndex index="0" type="array">
+			                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
+			                                <numIndex index="1">false</numIndex>
+			                            </numIndex>               	
+			                            <numIndex index="1" type="array">
+			                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
+			                                <numIndex index="1">true</numIndex>
+			                            </numIndex>
+			                        </items>
+			                        <default>true</default>
+			                    </config>
+			                </TCEforms>
+			            </settings.topimage> 
+			            
+			            <settings.imagedesign>
+			                <TCEforms>
+			                    <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:imagedesign</label>
+			                    <config>                     
+			                        <type>select</type>
+			                        <renderType>selectSingle</renderType>
+			                        <items type="array">
+			                            <numIndex index="0" type="array">
+			                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v1</numIndex>
+			                                <numIndex index="1">1</numIndex>
+			                            </numIndex>               	
+			                            <numIndex index="1" type="array">
+			                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v2</numIndex>
+			                                <numIndex index="1">2</numIndex>
+			                            </numIndex>
+			                            <numIndex index="2" type="array">
+			                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v3</numIndex>
+			                                <numIndex index="1">3</numIndex>
+			                            </numIndex>    
+			                            <numIndex index="3" type="array">
+			                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v4</numIndex>
+			                                <numIndex index="1">4</numIndex>
+			                            </numIndex>                        
+			                        </items>
+			                        <default>1</default>
+			                    </config>
+			                </TCEforms>
+			            </settings.imagedesign> 
+			        </el>
+			    </ROOT>
+			</extra>
