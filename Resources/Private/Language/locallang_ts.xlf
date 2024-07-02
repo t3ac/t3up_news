@@ -15,7 +15,10 @@
 			<trans-unit id="smallimage">
 				<source>Teaser Layout with a small Image</source>
 			</trans-unit>
-			
+			<trans-unit id="wall">
+				<source>Dynamic news-wall</source>
+			</trans-unit>
+
 			<trans-unit id="detail">
 				<source>Detail</source>
 			</trans-unit>			

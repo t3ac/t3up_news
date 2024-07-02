@@ -19,6 +19,10 @@
 				<source>Teaser Layout with a small Image</source>
 				<target state="translated">Teaser mit kleinem Bild</target>	
 			</trans-unit>
+			<trans-unit id="wall">
+				<source>Dynamic news-wall</source>
+				<target state="translated">Dynamische Nachrichten-Wand</target>	
+			</trans-unit>
 			
 			<trans-unit id="detail">
 				<source>Detail</source>
