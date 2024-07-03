@@ -3,7 +3,7 @@
 namespace T3ac\T3upNews\Domain\Model;
 
 /**
- * News
+ * News model
  */
 class News extends \GeorgRinger\News\Domain\Model\News {
 
@@ -13,17 +13,19 @@ class News extends \GeorgRinger\News\Domain\Model\News {
     protected $nomore;
 
     /**
-     * @return string
+     * @return int
      */
-    public function getNomore() {
-            return $this->nomore;
+    public function getNomore(): int
+    {
+        return $this->nomore;
     }
 
     /**
-     * @param string $nomore
+     * @param int $nomore
      */
-    public function setNomore($nomore) {
-            $this->nomore = $nomore;
+    public function setNomore($nomore): void
+    {
+        $this->nomore = $nomore;
     }
 	
 }
