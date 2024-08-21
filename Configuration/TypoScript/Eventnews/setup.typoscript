@@ -1,6 +1,15 @@
 page.includeCSS{
-    t3upEventNews                         = {$page.scss.scssT3upEventNews}   
-    t3upEventNews.if.isTrue               = {$page.scss.scssT3upEventNews}  
+    t3upEventNews                         = EXT:t3up_news/Resources/Public/Sass/_t3upEventNews.scss  
     t3upEventNews.outputStyle             = compressed    
 
+}
+plugin.tx_eventnews {
+  view {
+    templateRootPaths {
+        20 = EXT:t3up_news/Resources/Private/Templates/News/Templates/
+    }
+    partialRootPaths {
+        20 = EXT:t3up_news/Resources/Private/Templates/News/Partials/
+    }
+  }
 }
