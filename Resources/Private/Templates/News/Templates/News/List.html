@@ -49,7 +49,7 @@
 			               
 			    	       <f:comment>2 Items Flex </f:comment>	
 			    	       <f:if condition="{settings.items} == 2">
-								<div class="news teaser twoItemsStat w-auto">
+								<div class="teaser twoItemsStat">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
@@ -60,7 +60,7 @@
 									        </f:then>
 									
 									        <f:else>
-									            <f:render partial="v" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									
 									            <f:if condition="{iterator.isLast}">
 									                <f:then></f:then>
@@ -79,7 +79,7 @@
 			    	       
 			    	       <f:comment>3 Items Flex </f:comment>
 			    	       <f:if condition="{settings.items} == 3">
-				    	       <div class="news teaser threeItemsStat w-auto">
+				    	       <div class="teaser threeItemsStat">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
@@ -109,7 +109,7 @@
 			    	       
 			    	       <f:comment>4 Items Flex </f:comment>
 			    	       <f:if condition="{settings.items} == 4">
-				    	       <div class="news teaser fourItemsStat w-auto">
+				    	       <div class="teaser fourItemsStat">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
@@ -170,7 +170,7 @@
 			    	       
 			    	       <f:comment>2 Calendar Items Flex </f:comment>
 			    	       <f:if condition="{settings.items} == 2">
-								<div class="news calendar twoItemsStat w-auto">
+								<div class="calendar twoItemsStat">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
@@ -201,7 +201,7 @@
 	   	          	       
 			    	       <f:comment>3 Calendar Items Flex </f:comment>
 			    	       <f:if condition="{settings.items} == 3">
-				    	       <div class="news calendar threeItemsStat w-auto">
+				    	       <div class="calendar threeItemsStat">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
@@ -231,7 +231,7 @@
 			    	       
 			    	       <f:comment>4 Calendar Items Flex </f:comment>
 			    	       <f:if condition="{settings.items} == 4">
-				    	       <div class="news calendar fourItemsStat w-auto">
+				    	       <div class="calendar fourItemsStat">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
@@ -294,7 +294,7 @@
 			    	       
 			    	       <f:comment>2 Big Image Items Flex </f:comment>
 			    	       <f:if condition="{settings.items} == 2">
-								<div class="news bigimage twoItemsStat w-auto">
+								<div class="bigimage twoItemsStat">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
@@ -325,7 +325,7 @@
 		   	       
 			    	       <f:comment>3 Big Image Items Flex </f:comment>
 			    	       <f:if condition="{settings.items} == 3">
-				    	       <div class="news bigimage threeItemsStat w-auto">
+				    	       <div class="bigimage threeItemsStat">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
@@ -356,7 +356,7 @@
 				    	       
 			    	       <f:comment>4 Big Image Items Flex </f:comment>
 			    	       <f:if condition="{settings.items} == 4">
-				    	       <div class="news bigimage fourItemsStat w-auto">
+				    	       <div class="bigimage fourItemsStat">
 									<f:for each="{news}" as="newsItem" iteration="iterator">
 									    <f:if condition="{iterator.isFirst}">
 									        <div class="row align-items-stretch m-0">
