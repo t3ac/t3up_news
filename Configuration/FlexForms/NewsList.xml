@@ -125,30 +125,109 @@
                     </config>   
                 </TCEforms>
             </settings.items> 
-	
-            <settings.maxheight type="array">
-                <TCEforms>
-                    <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.maxheight</label>
+            
+			<settings.imageformat>
+				<TCEforms>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
+                    <displayCond>FIELD:template.settings.templateLayout:=:3</displayCond>
+	                <config type="array">
+	                    <type>select</type>
+	                    <renderType>selectSingle</renderType>
+	                    <items type="array">
+	                        <numIndex index="0" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format0</numIndex>
+	                            <numIndex index="1">0</numIndex>
+	                        </numIndex>  
+	                        <numIndex index="1" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format1</numIndex>
+	                            <numIndex index="1">1</numIndex>
+	                        </numIndex>
+	                        <numIndex index="2" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format2</numIndex>
+	                            <numIndex index="1">2</numIndex>
+	                        </numIndex>	
+	                        <numIndex index="3" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format3</numIndex>
+	                            <numIndex index="1">3</numIndex>
+	                        </numIndex>  
+	                        <numIndex index="4" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format4</numIndex>
+	                            <numIndex index="1">4</numIndex>
+	                        </numIndex>
+	                        <numIndex index="5" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format5</numIndex>
+	                            <numIndex index="1">5</numIndex>
+	                        </numIndex>	                            
+	                    </items>
+			            <default>0</default>
+	                </config>
+            	</TCEforms>
+		    </settings.imageformat>
+		    
+			<settings.smallimageformat>
+				<TCEforms>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
+                    <displayCond>FIELD:template.settings.templateLayout:=:4</displayCond>
+	                <config type="array">
+	                    <type>select</type>
+	                    <renderType>selectSingle</renderType>
+	                    <items type="array">
+	                        <numIndex index="0" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format0</numIndex>
+	                            <numIndex index="1">0</numIndex>
+	                        </numIndex>  
+	                        <numIndex index="1" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format1</numIndex>
+	                            <numIndex index="1">1</numIndex>
+	                        </numIndex>
+	                        <numIndex index="2" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format2</numIndex>
+	                            <numIndex index="1">2</numIndex>
+	                        </numIndex>	         
+	                        <numIndex index="3" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format3</numIndex>
+	                            <numIndex index="1">3</numIndex>
+	                        </numIndex>                  
+	                    </items>
+			            <default>0</default>
+	                </config>
+            	</TCEforms>
+		    </settings.smallimageformat>
+		    
+			<settings.carouselimageformat>
+				<TCEforms>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
                     <displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
-					<config>
-			            <type>input</type>
-			            <size>3</size>
-			            <default></default>
-			            <eval>int</eval>
-			            <range>
-			                <lower></lower>
-			                <upper>1200</upper>
-			            </range>
-			            <wizards>
-			                <slideshow>
-			                    <type>slider</type>
-			                    <step>10</step>
-			                </slideshow>
-			            </wizards>
-		        	</config>    
-                </TCEforms>
-            </settings.maxheight> 
-        
+	                <config type="array">
+	                    <type>select</type>
+	                    <renderType>selectSingle</renderType>
+	                    <items type="array">
+	                        <numIndex index="0" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format0</numIndex>
+	                            <numIndex index="1">0</numIndex>
+	                        </numIndex>  
+	                        <numIndex index="2" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format2</numIndex>
+	                            <numIndex index="1">2</numIndex>
+	                        </numIndex>	         
+	                        <numIndex index="3" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format3</numIndex>
+	                            <numIndex index="1">3</numIndex>
+	                        </numIndex>   
+	                        <numIndex index="4" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format4</numIndex>
+	                            <numIndex index="1">4</numIndex>
+	                        </numIndex>
+	                        <numIndex index="6" type="array">
+	                            <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format6</numIndex>
+	                            <numIndex index="1">6</numIndex>
+	                        </numIndex>                 
+	                    </items>
+			            <default>0</default>
+	                </config>
+            	</TCEforms>
+		    </settings.carouselimageformat>
+		    
             <settings.controlNav>
                 <TCEforms>
                     <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.controlNav</label>
@@ -232,21 +311,24 @@
                 <TCEforms>
                     <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.header</label>
                     <displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
-                    <config>
+					<config>
                         <type>select</type>
                         <renderType>selectSingle</renderType>
                         <items type="array">
                             <numIndex index="0" type="array">
-                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
-                                <numIndex index="1">true</numIndex>
-                            </numIndex>                 
-                            <numIndex index="1" type="array">
-                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
-                                <numIndex index="1">false</numIndex>
+                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.carousel.header.0</numIndex>
+                                <numIndex index="1">0</numIndex>
                             </numIndex>
-
+                            <numIndex index="1" type="array">
+                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.carousel.header.1</numIndex>
+                                <numIndex index="1">1</numIndex>
+                            </numIndex>
+                            <numIndex index="2" type="array">
+                                <numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.carousel.header.2</numIndex>
+                                <numIndex index="1">2</numIndex>
+                            </numIndex> 
                         </items>
-                        <default>true</default>
+			            <default>1</default>
                     </config>
                 </TCEforms>
             </settings.head> 
@@ -289,7 +371,6 @@
                     <displayCond>
                         <OR>
                             <numIndex index="1">FIELD:template.settings.templateLayout:=:1</numIndex>                        
-                            <numIndex index="2">FIELD:template.settings.templateLayout:=:2</numIndex>
                             <numIndex index="3">FIELD:template.settings.templateLayout:=:3</numIndex>  
                             <numIndex index="4">FIELD:template.settings.templateLayout:=:4</numIndex>
                             <numIndex index="5">FIELD:template.settings.templateLayout:=:31</numIndex>
