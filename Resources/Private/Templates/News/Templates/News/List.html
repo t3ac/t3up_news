@@ -42,7 +42,7 @@
 			    	       <f:if condition="{settings.items} == 1">
 			                     <div class="teaser oneitemsStat">
 		                           <f:for each="{news}" as="newsItem" iteration="iterator">
-									     <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									     <f:render partial="List/Teaser" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 		                            </f:for>
 			                    </div>  
 			               </f:if>     
@@ -56,11 +56,11 @@
 									    </f:if>
 									    <f:if condition="{iterator.cycle} % 2">
 									        <f:then>
-									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="List/Teaser" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									        </f:then>
 									
 									        <f:else>
-									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="List/Teaser" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									
 									            <f:if condition="{iterator.isLast}">
 									                <f:then></f:then>
@@ -86,11 +86,11 @@
 									    </f:if>
 									    <f:if condition="{iterator.cycle} % 3">
 									        <f:then>
-									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="List/Teaser" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									        </f:then>
 									
 									        <f:else>
-									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="List/Teaser" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									
 									            <f:if condition="{iterator.isLast}">
 									                <f:then></f:then>
@@ -116,10 +116,10 @@
 									    </f:if>
 									    <f:if condition="{iterator.cycle} % 4">
 									        <f:then>
-									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="List/Teaser" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									        </f:then>
 									        <f:else>
-									            <f:render partial="List/TeaserStat" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									            <f:render partial="List/Teaser" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 									
 									            <f:if condition="{iterator.isLast}">
 									                <f:then></f:then>
