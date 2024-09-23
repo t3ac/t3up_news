@@ -256,10 +256,14 @@
 main{
 	.frame-news_newsliststicky	{
 		&.frame-white{													background: transparent; 
-		 	.article													{background: #fff; border-bottom: 1px solid rgba(0,0,0, .33) !important;} 
+			h2,
+			h3															{color: inherit;}
+		 	.article													{background: #fff; border-bottom: 1px solid rgba(0,0,0, .33) !important;  color: $baseTextColor;}
 		}
-		&.frame-line													{border-bottom: 0;
-		 	.article													{background: #fff; border: 1px solid rgba(0,0,0, .33) !important;} 
+		&.frame-line													{border-bottom: 0; margin-bottom: 0;
+			h2,
+			h3															{color: inherit;}
+		 	.article													{background: #fff; border: 1px solid rgba(0,0,0, .33) !important; color: $baseTextColor;}
 		}
 		&.frame-colored{
 			.news{
