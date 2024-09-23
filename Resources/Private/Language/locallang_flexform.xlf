@@ -6,136 +6,136 @@
 			
 			
 			<trans-unit id="sheet.carousel">
-			     <source>Options</source>
-		    </trans-unit>
+			<source>Options</source>
+		</trans-unit>
 
 			/* -- Controls --------------------------------- */
 			
 			<trans-unit id="carousel.autostart">
-			     <source>Autostart</source>
-		    </trans-unit>
+			<source>Autostart</source>
+		</trans-unit>
 			<trans-unit id="carousel.animation">
-			     <source>Type of presentation</source>
-		    </trans-unit>
+			<source>Type of presentation</source>
+		</trans-unit>
 			<trans-unit id="carousel.animation.1">
-			     <source>slide</source>
-		    </trans-unit>
+			<source>slide</source>
+		</trans-unit>
 			<trans-unit id="carousel.animation.2">
-			     <source>fade</source>
-		    </trans-unit>
+			<source>fade</source>
+		</trans-unit>
 			<trans-unit id="carousel.carouselwidth">
-			     <source>Width of the carousel</source>
-		    </trans-unit>	
+			<source>Width of the carousel</source>
+		</trans-unit>	
 			<trans-unit id="carousel.carouselheight">
-			     <source>Height of the carousel</source>
-		    </trans-unit>
+			<source>Height of the carousel</source>
+		</trans-unit>
 			<trans-unit id="carousel.controlNav">
-			     <source>Show controls</source>
-		    </trans-unit>
+			<source>Show controls</source>
+		</trans-unit>
 			<trans-unit id="carousel.directionNav">
-			     <source>Create navigation for previous/next navigation</source>
-		    </trans-unit>
+			<source>Create navigation for previous/next navigation</source>
+		</trans-unit>
 			<trans-unit id="carousel.slideshowSpeed">
-			     <source>Speed in mil. Sec.</source>
-		    </trans-unit>
+			<source>Speed in mil. Sec.</source>
+		</trans-unit>
 			<trans-unit id="carousel.animationLoop">
-			     <source>Animation Loop</source>
-		    </trans-unit>	 
+			<source>Animation Loop</source>
+		</trans-unit>	
 			<trans-unit id="carousel.maxheight">
-			     <source>Max. height of the slider</source>
-		    </trans-unit>	 		    
-		    
+			<source>Max. height of the slider</source>
+		</trans-unit>			
+		
 
 			<trans-unit id="itemdetail">
-			     <source>Show a Detaillink</source>
-		    </trans-unit>	 		    
+			<source>Show a Detaillink</source>
+		</trans-unit>			
 			<trans-unit id="itemdate">
-			     <source>Show the date</source>
-		    </trans-unit>	 		    
+			<source>Show the date</source>
+		</trans-unit>			
 			<trans-unit id="itemcategory">
-			     <source>Show the first category</source>
-		    </trans-unit>	 		    
+			<source>Show the first category</source>
+		</trans-unit>			
 			<trans-unit id="topimage">
-			     <source>Show the first image on top</source>
-		    </trans-unit>	 		    
+			<source>Show the first image on top</source>
+		</trans-unit>			
 			<trans-unit id="imagedesign">
-			     <source>Design of the images below</source>
-		    </trans-unit>	 		    
+			<source>Design of the images below</source>
+		</trans-unit>			
 			<trans-unit id="label.v1">
-			     <source>Images in 2 rows</source>
-		    </trans-unit>	 		    
+			<source>Images in 2 rows</source>
+		</trans-unit>			
 			<trans-unit id="label.v2">
-			     <source>Imageblock</source>
-		    </trans-unit>	  
+			<source>Imageblock</source>
+		</trans-unit>	
 			<trans-unit id="label.v3">
-			     <source>Imagewall</source>
-		    </trans-unit>	      		    		    	  
-		    
+			<source>Imagewall</source>
+		</trans-unit>						
+		
 			/* -- Optionen --------------------------------- */
 			
 			<trans-unit id="carousel.style">
-			     <source>Style</source>
-		    </trans-unit>
+			<source>Style</source>
+		</trans-unit>
 			<trans-unit id="carousel.captionbg">
-			     <source>Background-color</source>
-		    </trans-unit>		
+			<source>Background-color</source>
+		</trans-unit>		
 			<trans-unit id="carousel.captionColor">
-			     <source>Text-color</source>
-		    </trans-unit>	
+			<source>Text-color</source>
+		</trans-unit>	
 			<trans-unit id="carousel.captionOpacity">
-			     <source>Background-opacity</source>
-		   </trans-unit>
+			<source>Background-opacity</source>
+		</trans-unit>
 			<trans-unit id="carousel.textalign">
-			     <source>textalign</source>
-		    </trans-unit>	
+			<source>textalign</source>
+		</trans-unit>	
 			<trans-unit id="carousel.header">
-			     <source>only header</source>
-		    </trans-unit>			    
+			<source>only header</source>
+		</trans-unit>			
 			<trans-unit id="carousel.imagecarouselbg">
-			     <source>Background-color</source>
-		    </trans-unit>	
+			<source>Background-color</source>
+		</trans-unit>	
 			<trans-unit id="carousel.carouselbg">
-			     <source>Background-color</source>
-		    </trans-unit>	
+			<source>Background-color</source>
+		</trans-unit>	
 			<trans-unit id="carousel.carouseloverlaycolor">
-			     <source>Overlay-color</source>
-		    </trans-unit>	
+			<source>Overlay-color</source>
+		</trans-unit>	
 			<trans-unit id="carousel.lazy">
-			     <source>lazy scrolling</source>
-		    </trans-unit>	
-		       
-		    
-		    /* Standard */	   
-		    
+			<source>lazy scrolling</source>
+		</trans-unit>	
+		
+		
+		/* Standard */	
+		
 			<trans-unit id="carousel.style">
-			     <source>Design</source>
-		    </trans-unit>		
+			<source>Design</source>
+		</trans-unit>		
 			<trans-unit id="label.basic">
-			     <source>Basic</source>
-		    </trans-unit>
+			<source>Basic</source>
+		</trans-unit>
 			<trans-unit id="label.yes">
-			     <source>yes</source>
-		    </trans-unit>
+			<source>yes</source>
+		</trans-unit>
 			<trans-unit id="label.no">
-			     <source>no</source>
-		    </trans-unit>	    
-		    
+			<source>no</source>
+		</trans-unit>	
+		
 			<trans-unit id="label.items">
-			     <source>Items in a row</source>
-		    </trans-unit>	  
+			<source>Items in a row</source>
+		</trans-unit>	
 			<trans-unit id="label.1item">
-			     <source>One item</source>
-		    </trans-unit>	    
+			<source>One item</source>
+		</trans-unit>	
 			<trans-unit id="label.2item">
-			     <source>Two items</source>
-		    </trans-unit>	    
+			<source>Two items</source>
+		</trans-unit>	
 			<trans-unit id="label.3item">
-			     <source>Three items</source>
-		    </trans-unit>	    
+			<source>Three items</source>
+		</trans-unit>	
 			<trans-unit id="label.4item">
-			     <source>Four items</source>
-		    </trans-unit>	    
-		     
+			<source>Four items</source>
+		</trans-unit>	
+		
 
 		</body>
 	</file>
