@@ -2,7 +2,7 @@
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 	 
-	 <div class="carousel-item  imageformat{settings.carouselimageformat} {f:if(condition: '{iterator.isFirst}', then: ' active')}" data-bs-interval="{settings.carouselSpeed}"}>
+	 <div class="carousel-item  imageformat{settings.imageformat} {f:if(condition: '{iterator.isFirst}', then: ' active')}" data-bs-interval="{settings.carouselSpeed}"}>
 		<n:excludeDisplayedNews newsItem="{newsItem}"/>
 
 		<f:if condition="{settings.carouseloverlaycolor}">
