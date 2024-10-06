@@ -1,0 +1,4 @@
+
+UPDATE `tt_content` SET `CType` = 'news_newsdetail', `list_type` = '' WHERE `pi_flexform` LIKE '%>News-&gt;detail%';
+
+UPDATE `tt_content` SET `CType` = 'news_newsliststicky', `list_type` = '' WHERE `list_type` LIKE 'news_pi1' 
