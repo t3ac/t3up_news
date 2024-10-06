@@ -107,36 +107,57 @@
 		
 		/* Standard */	
 		
-			<trans-unit id="carousel.style">
+		<trans-unit id="carousel.style">
 			<source>Design</source>
 		</trans-unit>		
-			<trans-unit id="label.basic">
+		<trans-unit id="label.basic">
 			<source>Basic</source>
 		</trans-unit>
-			<trans-unit id="label.yes">
+		<trans-unit id="label.yes">
 			<source>yes</source>
 		</trans-unit>
-			<trans-unit id="label.no">
+		<trans-unit id="label.no">
 			<source>no</source>
 		</trans-unit>	
 		
-			<trans-unit id="label.items">
+		<trans-unit id="label.items">
 			<source>Items in a row</source>
 		</trans-unit>	
-			<trans-unit id="label.1item">
+		<trans-unit id="label.1item">
 			<source>One item</source>
 		</trans-unit>	
-			<trans-unit id="label.2item">
+		<trans-unit id="label.2item">
 			<source>Two items</source>
 		</trans-unit>	
-			<trans-unit id="label.3item">
+		<trans-unit id="label.3item">
 			<source>Three items</source>
 		</trans-unit>	
-			<trans-unit id="label.4item">
+		<trans-unit id="label.4item">
 			<source>Four items</source>
 		</trans-unit>	
 		
-
+		
+		<trans-unit id="label.format">
+			<source>Imageformat</source>
+		</trans-unit>	
+		<trans-unit id="label.format0">
+			<source>none</source>
+		</trans-unit>	
+		<trans-unit id="label.format1">
+			<source>Square</source>
+		</trans-unit>	
+		<trans-unit id="label.format2">
+			<source>3 / 2</source>
+		</trans-unit>	
+		<trans-unit id="label.format3">
+			<source>16 / 9</source>
+		</trans-unit>	
+		<trans-unit id="label.format4">
+			<source>21 / 9</source>
+		</trans-unit>	
+		<trans-unit id="label.format5">
+			<source>3 / 1</source>
+		</trans-unit>	
 		</body>
 	</file>
 </xliff>
