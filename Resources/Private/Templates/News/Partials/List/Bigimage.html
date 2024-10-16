@@ -10,7 +10,9 @@
 					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 						<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 							<f:if condition="{mediaElement.originalResource.type} == 2">
-								<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>	
+								<n:link class="w-100" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+									<f:render partial="Rendering/Image" section="picture" arguments="{_all}"/> 
+								</n:link>
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 4">
 								<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>				
@@ -34,7 +36,6 @@
 			</p>
 					
 			<n:removeMediaTags>
-	
 				<f:if condition="{newsItem.teaser}">	
 					<f:then>	
 						<f:if condition="{settings.itemdate}">
@@ -67,7 +68,6 @@
 						</span>
 					</f:if>
 				</n:link>
-				
 			</n:removeMediaTags>
 	 	</div>
 	</div>

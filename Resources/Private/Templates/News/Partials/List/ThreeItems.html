@@ -2,7 +2,6 @@
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 	 
-
 	<f:if condition="{iterator.isFirst}">
 		<div class="carousel-item align-items-stretch active" data-bs-interval="{settings.carouselSpeed}">
 	</f:if>
@@ -22,6 +21,7 @@
 			</f:if>
 		</f:else>
 	</f:if>
+	
 	<f:if condition="{iterator.isLast}">
 		</div>
 	</f:if>
@@ -29,13 +29,15 @@
 	<f:section name="inner">
 		<div class="col-12 col-sm-6 col-md-4 col-lg-4" style="background-color: {f:if(condition: '{settings.carouselbackgroundcolor}', then: '{settings.carouselbackgroundcolor};', else: 'inherit;')}">
 			<n:excludeDisplayedNews newsItem="{newsItem}"/>
-			<div class="article h-100">
+			<div class="article">
 				<div class="newsimage imageformat{settings.imageformat}"> 		
 					<f:if condition="{newsItem.mediaPreviews}">
 						<f:then>
 							<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 								<f:if condition="{mediaElement.originalResource.type} == 2">
-									<f:render section="picture" arguments="{_all}"/>							
+									 <n:link class="w-100" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+										<f:render partial="Rendering/Image" section="picture" arguments="{_all}"/> 
+									</n:link>							
 								</f:if>
 								<f:if condition="{mediaElement.originalResource.type} == 4">
 									<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>				
@@ -51,6 +53,13 @@
 				<div class="teasertext px-3 pt-3">
 				   	<f:if condition="{settings.itemcategory}">
 				   		{f:if(condition: newsItem.firstCategory.title, then: '<span class="news-category">{newsItem.firstCategory.title}</span>')}
+					</f:if>
+				   	<f:if condition="{settings.itemdate}">
+				   		<span class="news-datum">
+							<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+								<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+							</time>
+						</span>
 					</f:if>
 
 					 <h3><n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">{newsItem.title}</n:link></h4>
@@ -78,25 +87,5 @@
 			</div>
 		</div>
 	</f:section>
-	
-	<f:section name="picture">
-		<n:link newsItem="{newsItem}" settings="{settings}" class="internal-link" title="{newsItem.title}">
-			<picture> 
-			 <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '768')}"   media="(min-width: 641px)" type="image/wepb">
-			 <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '768')}"   media="(min-width: 641px)" type="image/jpeg">
-			 
-			 <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '640')}"   media="(min-width: 361px)" type="image/wepb">
-			 <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '640')}"   media="(min-width: 361px)" type="image/jpeg">
-					
-			 <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '360')}"  type="image/wepb">		
-			 <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '360')}"  type="image/jpeg">	
-
-			 <img src="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', height: '{dimensions.height}', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '{data.imagewidth}')}"
-			 {f:if(condition: '{mediaElement.originalResource.title}', then: 'title="{mediaElement.originalResource.title}"')}
-			 {f:if(condition: '{mediaElement.originalResource.alternative}', then: 'alt="{mediaElement.originalResource.alternative}"')}  role="presentation" 
-			 loading="lazy" />
-			</picture>
-		</n:link>
-	</f:section>  
 	
 </html>
