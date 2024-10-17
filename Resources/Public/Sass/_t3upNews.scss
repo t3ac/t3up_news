@@ -104,8 +104,9 @@
 		
 		.fourItemsStat	> div > div				{margin-right:$v15; margin-left:$v15; width: $c25; overflow: hidden; flex-grow: inherit;}		 
 		.fourItemsStat	> div > div:first-of-type 		{margin-left:0;}
-		.fourItemsStat	> div > div:last-of-type 		{margin-right:0;}		 
-		 
+		.fourItemsStat	> div > div:last-of-type 		{margin-right:0;}		
+		
+		.newsteaser 	.article:hover,	
 		.twoItemsStat 	> div .article:hover,	
 		.threeItemsStat > div .article:hover, 
 		.fourItemsStat	> div .article:hover,
