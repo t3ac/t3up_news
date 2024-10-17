@@ -39,16 +39,16 @@
 			<f:if condition="{settings.hidePagination} == 1">		
 				<f:then>				
 				<f:comment>1 Items Flex </f:comment>
-				<f:if condition="{settings.items} == 1">
-				<div class="teaser oneitemsStat">
-			<f:for each="{news}" as="newsItem" iteration="iterator">
+					<f:if condition="{settings.items} == 1">
+						<div class="teaser oneitemsStat">
+							<f:for each="{news}" as="newsItem" iteration="iterator">
 								<f:render partial="List/Teaser" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-				</f:for>
-				</div>  
-			</f:if>	
+							</f:for>
+						</div>  
+					</f:if>	
 			
 				<f:comment>2 Items Flex </f:comment>	
-				<f:if condition="{settings.items} == 2">
+					<f:if condition="{settings.items} == 2">
 						<div class="teaser twoItemsStat">
 							<f:for each="{news}" as="newsItem" iteration="iterator">
 								<f:if condition="{iterator.isFirst}">
@@ -75,11 +75,11 @@
 								</f:if>
 							</f:for>
 						</div>			
-				</f:if>
+					</f:if>
 				
 				<f:comment>3 Items Flex </f:comment>
-				<f:if condition="{settings.items} == 3">
-					<div class="teaser threeItemsStat">
+					<f:if condition="{settings.items} == 3">
+						<div class="teaser threeItemsStat">
 							<f:for each="{news}" as="newsItem" iteration="iterator">
 								<f:if condition="{iterator.isFirst}">
 								<div class="row align-items-stretch m-0">
@@ -108,8 +108,8 @@
 				</f:if>			
 				
 				<f:comment>4 Items Flex </f:comment>
-				<f:if condition="{settings.items} == 4">
-					<div class="teaser fourItemsStat">
+					<f:if condition="{settings.items} == 4">
+						<div class="teaser fourItemsStat">
 							<f:for each="{news}" as="newsItem" iteration="iterator">
 								<f:if condition="{iterator.isFirst}">
 								<div class="row align-items-stretch m-0">
@@ -135,7 +135,7 @@
 								</f:if>
 							</f:for>
 						</div>
-				</f:if> 								
+					</f:if> 								
 				</f:then>
 				
 				<f:else>
