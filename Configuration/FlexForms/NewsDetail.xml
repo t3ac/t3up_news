@@ -29,14 +29,6 @@
 			<settings.imageformat>
 				<TCEforms>
 				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
-					<displayCond>
-						<OR>
-							<numIndex index="1">FIELD:template.settings.templateLayout:=:3</numIndex>				
-							<numIndex index="1">FIELD:template.settings.templateLayout:=:30</numIndex>
-							<numIndex index="2">FIELD:template.settings.templateLayout:=:31</numIndex>
-							<numIndex index="3">FIELD:template.settings.templateLayout:=:32</numIndex>								  
-						</OR>
-					</displayCond>
 					<config type="array">
 						<type>select</type>
 						<renderType>selectSingle</renderType>
