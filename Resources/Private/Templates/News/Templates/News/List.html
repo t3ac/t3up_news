@@ -139,17 +139,17 @@
 				</f:then>
 				
 				<f:else>
-			<div class="news teaser">						
-			<f:if condition="{settings.list.paginate.insertAbove}">
-				  <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
-			</f:if>
-			<f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
-				<f:render partial="List/Teaser" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-			</f:for>
-			<f:if condition="{settings.list.paginate.insertBelow}">
-				<f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
-			</f:if>
-			</div>
+					<div class="newsteaser">						
+						<f:if condition="{settings.list.paginate.insertAbove}">
+							  <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+						</f:if>
+						<f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+							<f:render partial="List/Teaser" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+						</f:for>
+						<f:if condition="{settings.list.paginate.insertBelow}">
+							<f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+						</f:if>
+					</div>
 				</f:else>
 			</f:if>	
 		</f:if>			
