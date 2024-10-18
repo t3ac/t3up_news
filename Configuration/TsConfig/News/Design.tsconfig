@@ -12,11 +12,13 @@ TCEFORM {
 		frame_class {
 			removeItems = ruler-before, ruler-after, indent, indent-left, indent-right
 			disableNoMatchingValueElement = 1
-            		types {
+			types {
 				news_newsliststicky {
 					addItems { 
-                    				white  	= LLL:EXT:t3up/Resources/Private/Language/locallang_backend.xlf:white
-                   				line	= LLL:EXT:t3up/Resources/Private/Language/locallang_backend.xlf:line
+						none	= none
+						default	= Default					
+						white  	= LLL:EXT:t3up/Resources/Private/Language/locallang_backend.xlf:white
+						line	= LLL:EXT:t3up/Resources/Private/Language/locallang_backend.xlf:line
 					}
 				} 
 			} // types
