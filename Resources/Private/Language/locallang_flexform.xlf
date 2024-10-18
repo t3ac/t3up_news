@@ -5,75 +5,79 @@
 		<body>
 			
 			
-			<trans-unit id="sheet.carousel">
+		<trans-unit id="sheet.carousel">
 			<source>Options</source>
 		</trans-unit>
 
 			/* -- Controls --------------------------------- */
 			
-			<trans-unit id="carousel.autostart">
+		<trans-unit id="carousel.autostart">
 			<source>Autostart</source>
 		</trans-unit>
-			<trans-unit id="carousel.animation">
+		<trans-unit id="carousel.animation">
 			<source>Type of presentation</source>
 		</trans-unit>
-			<trans-unit id="carousel.animation.1">
+		<trans-unit id="carousel.animation.1">
 			<source>slide</source>
 		</trans-unit>
-			<trans-unit id="carousel.animation.2">
+		<trans-unit id="carousel.animation.2">
 			<source>fade</source>
 		</trans-unit>
-			<trans-unit id="carousel.carouselwidth">
+		<trans-unit id="carousel.carouselwidth">
 			<source>Width of the carousel</source>
 		</trans-unit>	
-			<trans-unit id="carousel.carouselheight">
+		<trans-unit id="carousel.carouselheight">
 			<source>Height of the carousel</source>
 		</trans-unit>
-			<trans-unit id="carousel.controlNav">
+		<trans-unit id="carousel.controlNav">
 			<source>Show controls</source>
 		</trans-unit>
-			<trans-unit id="carousel.directionNav">
+		<trans-unit id="carousel.directionNav">
 			<source>Create navigation for previous/next navigation</source>
 		</trans-unit>
-			<trans-unit id="carousel.slideshowSpeed">
+		<trans-unit id="carousel.slideshowSpeed">
 			<source>Speed in mil. Sec.</source>
 		</trans-unit>
-			<trans-unit id="carousel.animationLoop">
+		<trans-unit id="carousel.animationLoop">
 			<source>Animation Loop</source>
 		</trans-unit>	
-			<trans-unit id="carousel.maxheight">
+		<trans-unit id="carousel.maxheight">
 			<source>Max. height of the slider</source>
 		</trans-unit>			
 		
 
-			<trans-unit id="itemdetail">
+		<trans-unit id="itemdetail">
 			<source>Show a Detaillink</source>
 		</trans-unit>			
-			<trans-unit id="itemdate">
+		<trans-unit id="itemdate">
 			<source>Show the date</source>
 		</trans-unit>			
-			<trans-unit id="itemcategory">
+		<trans-unit id="itemcategory">
 			<source>Show the first category</source>
 		</trans-unit>			
-			<trans-unit id="topimage">
+		<trans-unit id="topimage">
 			<source>Show the first image on top</source>
 		</trans-unit>			
-			<trans-unit id="imagedesign">
+		<trans-unit id="imagedesign">
 			<source>Design of the images below</source>
 		</trans-unit>			
-			<trans-unit id="label.v1">
+		<trans-unit id="label.v1">
 			<source>Images in 2 rows</source>
 		</trans-unit>			
-			<trans-unit id="label.v2">
-			<source>Imageblock</source>
+		<trans-unit id="label.v2">
+		<source>Imageblock</source>
 		</trans-unit>	
-			<trans-unit id="label.v3">
+		<trans-unit id="label.v3">
 			<source>Imagewall</source>
 		</trans-unit>						
+		<trans-unit id="label.caption">
+			<source>Caption</source>
+		</trans-unit>	
+
 		
 			/* -- Optionen --------------------------------- */
 			
-			<trans-unit id="carousel.style">
+		<trans-unit id="carousel.style">
 			<source>Style</source>
 		</trans-unit>
 			<trans-unit id="carousel.captionbg">
