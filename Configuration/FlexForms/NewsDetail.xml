@@ -47,6 +47,27 @@
 			</TCEforms>
 		</settings.caption>
 
+		<settings.itemdate type="array">
+			<TCEforms>
+				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.itemdate</label>
+				<config>
+					<type>select</type>
+					<renderType>selectSingle</renderType>
+					<items type="array">
+						<numIndex index="0" type="array">
+							<numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
+							<numIndex index="1">false</numIndex>
+						</numIndex>				 
+						<numIndex index="1" type="array">
+							<numIndex index="0">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
+							<numIndex index="1">true</numIndex>
+						</numIndex>
+					</items>
+					<default>true</default>
+				</config>
+			</TCEforms>
+		</settings.itemdate>
+
 		<settings.imageformat>
 			<TCEforms>
 			<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
