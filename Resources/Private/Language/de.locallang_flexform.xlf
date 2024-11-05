@@ -61,7 +61,7 @@
 				 <source>Show a Detaillink</source>
 				 <target state="translated">Zeige Detailink am Ende einer Nachricht</target>
 			</trans-unit>	 			
-			<trans-unit id="itemdate">
+			<trans-unit id="label.itemdate">
 				 <source>Show the date</source>
 				 <target state="translated">Zeige das Datum</target>
 			</trans-unit>	 			
