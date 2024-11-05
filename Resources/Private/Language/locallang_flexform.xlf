@@ -46,7 +46,7 @@
 		</trans-unit>			
 		
 
-		<trans-unit id="itemdetail">
+		<trans-unit id="label.itemdetail">
 			<source>Show a Detaillink</source>
 		</trans-unit>			
 		<trans-unit id="itemdate">
