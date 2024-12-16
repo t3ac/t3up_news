@@ -15,7 +15,6 @@
     "news"
   ],
   "require": {
-    "typo3/cms-core": "^12.4-",
     "t3ac/t3up": "^12-",
     "georgringer/news": "^12-" 
   },
