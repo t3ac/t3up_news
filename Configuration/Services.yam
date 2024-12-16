@@ -1,0 +1,11 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  T3ac\T3upNews\Hooks\FlexFormHook:
+    tags:
+      - name: event.listener
+        identifier: 'eventnews-flexformhook'
+        event: TYPO3\CMS\Core\Configuration\Event\AfterFlexFormDataStructureParsedEvent
