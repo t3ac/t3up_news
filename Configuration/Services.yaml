@@ -1,0 +1,6 @@
+services:
+    T3ac\T3upNews\EventListener\ModifyFlexformEvent:
+        tags:
+            - name: event.listener
+              identifier: 'flexParsing'
+              event: TYPO3\CMS\Core\Configuration\Event\AfterFlexFormDataStructureParsedEvent
