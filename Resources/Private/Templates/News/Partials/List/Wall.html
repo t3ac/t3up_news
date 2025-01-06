@@ -26,7 +26,7 @@
 			<f:if condition="{newsItem.mediaPreviews}">
 				<!-- media preview element -->
 				<f:then>
-					<div class="wall-img-wrap h-100">
+					<div class="wall-img-wrap">
 						<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
 							<f:if condition="{mediaElement.originalResource.type} == 2">
 								<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
