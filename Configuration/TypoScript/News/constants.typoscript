@@ -8,29 +8,29 @@ page {
     }
 
     rss {
-        # cat =t3up: rss//100; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.typenumber
+        # cat =t3up: rss//100; type =string;    	label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.typenumber
         typenumber                    =-1
-        # cat =t3up: rss//101; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.address
+        # cat =t3up: rss//101; type =string;    	label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.address
         webadress                     =
-        # cat =t3up: rss//102; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.title
+        # cat =t3up: rss//102; type =string;    	label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.title
         title                         =
-        # cat =t3up: rss//103; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.copyright
+        # cat =t3up: rss//103; type =string;    	label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.copyright
         copyright                     =
-        # cat =t3up: rss//104; type =int+; 			label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.folder
+        # cat =t3up: rss//104; type =int+;    		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.folder
         start                         =
-        # cat =t3up: rss//105; type =int+; 			label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.single
+        # cat =t3up: rss//105; type =int+;    		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.single
         detail                        =
-        # cat =t3up: rss//106; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.category
+        # cat =t3up: rss//106; type =string;    	label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.category
         categories                    =
         # cat =t3up: rss//107; type =options[0,active]; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.archived
         archiverestriction            = 0
-        # cat =t3up: rss//108; type =int+; 			label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.recursive
+        # cat =t3up: rss//108; type =int+;    		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.recursive
         recursive                     = 2
-        # cat =t3up: rss//109; type =int+; 			label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.limit 
+        # cat =t3up: rss//109; type =int+;    		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.limit 
         limt                          = 100
-        # cat =t3up: rss//110; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.description
+        # cat =t3up: rss//110; type =string;    	label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.description
         description                   =
-        # cat =t3up: rss//111; type =string; 		label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.categorytitle
+        # cat =t3up: rss//111; type =string;    	label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.categorytitle
         category                     = Education
         # cat =t3up: rss//112; type =options[,1,2,3]; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rss.pos        
 		pos                          =
@@ -63,10 +63,10 @@ plugin.tx_news{
 		
 		cssFile =
 		
-	 	 # cat=plugin.tx_news//; type = int+; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rowsize
+	     # cat=plugin.tx_news//; type = int+; label = LLL:EXT:t3up_news/Resources/Private/Language/locallang_constants.xlf:rowsize
 		 size = 6
 		
-	}	 	 
+	}
 	
 }
 
