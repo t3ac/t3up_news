@@ -428,6 +428,7 @@
  				
 		<f:comment>News Wall</f:comment>  
 		<f:if condition="{settings.templateLayout} == 5">
+	
 			<f:if condition="{settings.hidePagination}">
 				<f:then>
 					<div id="freewall" class="wall free-wall w-100 d-block clearfix">
@@ -437,7 +438,7 @@
 					</div>
 				</f:then>
 				<f:else>
-					<div id="freewall" class="wall free-wall w-100 clearfix">
+					<div id="freewall" class="wall free-wall  w-100 clearfix">
 						<f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
 							<f:render partial="List/Wall" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 						</f:for>
@@ -590,8 +591,43 @@
 				</f:if>	
 			</div>	 	 
 		</f:if>
-
-
+		
+		
+             <f:if condition="{settings.templateLayout} == 110">
+                 <f:then>
+                    <div class="news-list-view container" id="news-container-{contentObjectData.uid}">
+                    
+                        <f:if condition="{settings.hidePagination} == 1">       
+                            <f:then>                    
+	                            <div id="freewall" class="wall free-wall w-100 d-block clearfix">
+				                    <f:for each="{news}" as="newsItem" iteration="iterator">
+				                            <f:if condition="{newsItem.categories.0.uid} == {f:cObject(typoscriptObjectPath: 'lib.gpvar')} || {newsItem.categories.1.uid} == {f:cObject(typoscriptObjectPath: 'lib.gpvar')} || {newsItem.categories.2.uid} == {f:cObject(typoscriptObjectPath: 'lib.gpvar')}">
+				                                <f:then>
+				                                    <f:render partial="List/Wall" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+				                                </f:then>
+				                        </f:if>
+				                    </f:for>
+			                    </div>
+                            </f:then>
+                            
+                            <f:else>
+                                <div class="news teaser">                       
+                                    <f:if condition="{settings.list.paginate.insertAbove}">
+                                              <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                                    </f:if>
+                                    <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                                <f:render partial="List/Wall" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                    </f:for>
+                                    <f:if condition="{settings.list.paginate.insertBelow}">
+                                        <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                                    </f:if>
+                                  </div>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </f:then>
+            </f:if>
+            
 	</f:then>
 	<f:else>
 		<div class="no-news-found">

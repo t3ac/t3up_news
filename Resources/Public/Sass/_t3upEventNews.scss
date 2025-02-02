@@ -20,7 +20,7 @@
   
    .hasevents                             {transition: all ease .3s; border-bottom: 1px solid #dee2e6; position: relative;border-bottom: 4px solid $baseColor;}
    .hasevents:hover                       {background-color: rgba(white, 1);}   
-   .hasevents:hover a                     {color: #000;}
+   .hasevents:hover a                     {color: $black;}
    .hasevents .termin                     {display: block; background: #fff; border: 1px solid #dadada;
                                           border-radius: 4px; box-shadow: 0 2px 3px 0px rgba(0, 0, 0, .35); transition: all ease .5s;
                                           position: absolute; top: auto; left: auto; z-index: 14; display: none; text-align: left; font-size: 90%;}
