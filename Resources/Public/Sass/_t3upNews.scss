@@ -71,20 +71,20 @@
 @media (min-width: 576px) AND (max-width: 767px){
 	.news{		
 		 
-		 .twoItemsStat	> div > div				{margin-right: $v15; width: $c50; overflow: hidden}		 
-		 .twoItemsStat	> div > div:nth-of-type(2n) 		{margin-right:0; margin-left:$v15;}		 
+		 .twoItemsStat	> div > div				{margin-right: $v150; width: $c50; overflow: hidden}		 
+		 .twoItemsStat	> div > div:nth-of-type(2n) 		{margin-right:0; margin-left:$v150;}		 
 		 
-		 .twoItemsStat	> div > div				{margin-right:$v15; width: $c50; overflow: hidden}		 
-		 .twoItemsStat	> div > div:nth-of-type(2n) 		{margin-right:0; margin-left:$v15;}
+		 .twoItemsStat	> div > div				{margin-right:$v150; width: $c50; overflow: hidden}		 
+		 .twoItemsStat	> div > div:nth-of-type(2n) 		{margin-right:0; margin-left:$v150;}
 		 
-		 .threeItemsStat > div > div				{margin-right:$v15; width: $c50; overflow: hidden}		 
-		 .threeItemsStat > div > div:nth-of-type(2n) 		{margin-right:0; margin-left:$v15;}
+		 .threeItemsStat > div > div				{margin-right:$v150; width: $c50; overflow: hidden}		 
+		 .threeItemsStat > div > div:nth-of-type(2n) 		{margin-right:0; margin-left:$v150;}
 		 
-		 .fourItemsStat	> div > div				{margin-right:$v15; width: $c50; overflow: hidden}		 
-		 .fourItemsStat	> div > div:nth-of-type(2n) 		{margin-right:0; margin-left:$v15;}	 
+		 .fourItemsStat	> div > div				{margin-right:$v150; width: $c50; overflow: hidden}		 
+		 .fourItemsStat	> div > div:nth-of-type(2n) 		{margin-right:0; margin-left:$v150;}	 
 		 
-		 .news-detail.v1 .news-img-wrap .outer  		{margin-right: $v15; width: calc(#{$c50} - #{$v15}); float: left; }
-		 .news-detail.v1 .news-img-wrap .outer:nth-of-type(2n)  {margin-right: 0; margin-left: $v15;}	 
+		 .news-detail.v1 .news-img-wrap .outer  		{margin-right: $v150; width: calc(#{$c50} - #{$v150}); float: left; }
+		 .news-detail.v1 .news-img-wrap .outer:nth-of-type(2n)  {margin-right: 0; margin-left: $v150;}	 
 		 
 	}  
 }
@@ -94,15 +94,15 @@
 	.news{	
 						
 		 /* Items static	*/
-		.twoItemsStat	> div > div				{margin-right:$v15; margin-left:$v15; width: $c50; overflow: hidden; flex-grow: inherit;}		 
+		.twoItemsStat	> div > div				{margin-right:$v150; margin-left:$v150; width: $c50; overflow: hidden; flex-grow: inherit;}		 
 		.twoItemsStat	> div > div:first-of-type 		{margin-left:0;}
 		.twoItemsStat	> div > div:last-of-type 		{margin-right:0;}	
 		 
-		.threeItemsStat	> div > div				{margin-right:$v15; margin-left:$v15; width: $c33; overflow: hidden; flex-grow: inherit;}		 
+		.threeItemsStat	> div > div				{margin-right:$v150; margin-left:$v150; width: $c33; overflow: hidden; flex-grow: inherit;}		 
 		.threeItemsStat	> div > div:first-of-type 		{margin-left:0;}
 		.threeItemsStat	> div > div:last-of-type 		{margin-right:0;}	
 		
-		.fourItemsStat	> div > div				{margin-right:$v15; margin-left:$v15; width: $c25; overflow: hidden; flex-grow: inherit;}		 
+		.fourItemsStat	> div > div				{margin-right:$v150; margin-left:$v150; width: $c25; overflow: hidden; flex-grow: inherit;}		 
 		.fourItemsStat	> div > div:first-of-type 		{margin-left:0;}
 		.fourItemsStat	> div > div:last-of-type 		{margin-right:0;}		
 		
@@ -118,11 +118,11 @@
 		.news-detail .news-img-wrap.v1				{line-height:0;	-webkit-column-count:2; column-count:2; -moz-column-count:2;	-webkit-column-gap: 0; -moz-column-gap: 0; column-gap: 0;}
 		.news-detail .news-img-wrap.v1 .mediaelement-image:hover img	{transform: scale(1.025);} 
 		
-		.threeItems > div > div > div				{width: $c33; margin-right:$v15; margin-left:$v15; overflow: hidden; }	
+		.threeItems > div > div > div				{width: $c33; margin-right:$v150; margin-left:$v150; overflow: hidden; }	
 		.threeItems > div > .carousel-item > div:first-of-type 	{margin-left: 0}	
 		.threeItems > div > .carousel-item > div:nth-of-type(3n) {margin-right: 0}	
 		
-		.fourItems > div > div > div				{width: $c25; margin-right:$v15; margin-left:$v15; overflow: hidden; }	
+		.fourItems > div > div > div				{width: $c25; margin-right:$v150; margin-left:$v150; overflow: hidden; }	
 		.fourItems > div > .carousel-item > div:first-of-type 	{margin-left: 0}	
 		.fourItems > div > .carousel-item > div:nth-of-type(4n) {margin-right: 0}	
 	
@@ -138,8 +138,8 @@
 		.fourItems .carousel-inner .carousel-item-start.active, 
 		.fourItems .carousel-inner .carousel-item-prev		{transform: translateX(-25%);}
 		
-		.news-detail.v1 .news-img-wrap .outer  			{margin-right: $v15; width: calc(#{$c50} - #{$v15}); float: left; }
-		.news-detail.v1 .news-img-wrap .outer:nth-of-type(2n)  	{margin-right: 0; margin-left: $v15;}	 
+		.news-detail.v1 .news-img-wrap .outer  			{margin-right: $v150; width: calc(#{$c50} - #{$v150}); float: left; }
+		.news-detail.v1 .news-img-wrap .outer:nth-of-type(2n)  	{margin-right: 0; margin-left: $v150;}	 
 		
 		.news-detail.v2  .news-img-wrap{			display: grid; height: calc(100vh - 10px); grid-template: repeat($size, 1fr) / repeat($size, 1fr); grid-gap: 0.5em;
 			
