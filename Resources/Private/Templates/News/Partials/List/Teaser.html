@@ -1,52 +1,52 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
-	  data-namespace-typo3-fluid="true">
-	  
-	<div class="article">
-		<div class="teasertext">
-			<p>
-		               	<f:if condition="{settings.itemcategory}">
-		               		{f:if(condition: newsItem.firstCategory.title, then: '<span class="d-block mb-1">{newsItem.firstCategory.title}</span>')}
-		                </f:if>
-				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">{newsItem.title}</n:link>
-			</p>
-					
-			<n:removeMediaTags>
-	    
-			<f:if condition="{newsItem.teaser}">	
-				<f:then>	
-					<f:if condition="{settings.itemdate}">
-						<span class="teaserDate d-block mt-1 mb-2">
-							<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-									<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date> 
-									<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
-							</time>
-						</span>
-					</f:if>
-					<div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
-				</f:then>
-				<f:else>
-					<f:if condition="{settings.itemdate}">
-						<span class="teaserDate d-block mt-1 mb-2">
-							<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-								<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date> 
-								<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
-							</time>
-						</span>
-					</f:if>		    			   
-				    <div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
-				</f:else>
-			    </f:if>
-			    
-			    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-					<f:if condition="{settings.itemdetail}">
-				      <span class="moreNews">
-					<f:translate key="LLL:EXT:t3up_news/Resources/Private/Language/locallang.xlf:detail.title" />
-				      </span>
-				    </f:if>   
-			    </n:link>
-				
-			</n:removeMediaTags>
-		</div>
-    	</div>
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+      
+    <div class="article">
+        <div class="teasertext">
+            <p>
+                <f:if condition="{settings.itemcategory}">
+                    {f:if(condition: newsItem.firstCategory.title, then: '<span class="d-block mb-1">{newsItem.firstCategory.title}</span>')}
+                </f:if>
+                <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">{newsItem.title}</n:link>
+            </p>
+                    
+            <n:removeMediaTags>
+        
+            <f:if condition="{newsItem.teaser}">    
+                <f:then>    
+                    <f:if condition="{settings.itemdate}">
+                        <span class="teaserDate d-block mt-1 mb-2">
+                            <time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+                                    <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date> 
+                                    <meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+                            </time>
+                        </span>
+                    </f:if>
+                    <div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+                </f:then>
+                <f:else>
+                    <f:if condition="{settings.itemdate}">
+                        <span class="teaserDate d-block mt-1 mb-2">
+                            <time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+                                <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date> 
+                                <meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+                            </time>
+                        </span>
+                    </f:if>                           
+                    <div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+                </f:else>
+                </f:if>
+                
+                <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                    <f:if condition="{settings.itemdetail}">
+                      <span class="moreNews">
+                    <f:translate key="LLL:EXT:t3up_news/Resources/Private/Language/locallang.xlf:detail.title" />
+                      </span>
+                    </f:if>   
+                </n:link>
+                
+            </n:removeMediaTags>
+        </div>
+    </div>
 </html>

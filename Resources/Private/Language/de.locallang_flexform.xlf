@@ -1,186 +1,193 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="de" datatype="plaintext" original="messages" date="2021-01-22T11:44:12Z" product-name="t3up_news">
-		<header/>
-		<body>
-			
-			
-			<trans-unit id="sheet.carousel">
-				 <source>Options</source>
-				<target state="translated">Optionen</target>
-			</trans-unit>
+    <file source-language="de" datatype="plaintext" original="messages" date="2021-01-22T11:44:12Z" product-name="t3up_news">
+        <header/>
+        <body>
+            
+            
+            <trans-unit id="sheet.carousel">
+                 <source>Options</source>
+                <target state="translated">Optionen</target>
+            </trans-unit>
 
-			/* -- Controls --------------------------------- */
-			
-			<trans-unit id="carousel.autostart">
-				 <source>Autostart</source>
-				 <target state="translated">Autostart</target>
-			</trans-unit>
-			<trans-unit id="carousel.animation">
-				 <source>Type of presentation</source>
-				 <target state="translated">Art der Präsentation</target>
-			</trans-unit>
-			<trans-unit id="carousel.animation.1">
-				 <source>slide</source>
-				 <target state="translated">Verschiebe</target>
-			</trans-unit>
-			<trans-unit id="carousel.animation.2">
-				 <source>fade</source>
-				 <target state="translated">Einblenden</target>
-			</trans-unit>
-			<trans-unit id="carousel.carouselwidth">
-				 <source>Width of the carousel</source>
-				 <target state="translated">Breite des Carousels: 0 = 100%</target>
-			</trans-unit>	
-			<trans-unit id="carousel.carouselheight">
-				 <source>Height of the carousel</source>
-				 <target state="translated">Höhe des Carousels (1-100vH) Vordefiniert: 40vH, Mindestwert 200px;</target>	
-			</trans-unit>
-			<trans-unit id="carousel.controlNav">
-				 <source>Show controls</source>
-				 <target state="translated">Zeige Kontrollpunkte</target>
-			</trans-unit>
-			<trans-unit id="carousel.directionNav">
-				 <source>Create navigation for previous/next navigation</source>
-				 <target state="translated">Zeige Richtungspfeile</target>
-			</trans-unit>
-			<trans-unit id="carousel.slideshowSpeed">
-				 <source>Speed in mil. Sec.</source>
-				 <target state="translated">Geschwindigkeit in Millisekunden (Vorgabe 4 Sekunden)</target>
-			</trans-unit>
-			<trans-unit id="carousel.animationLoop">
-				 <source>Animation Loop</source>
-				 <target state="translated">Animation wiederholen</target>
-			</trans-unit>	 	
-			<trans-unit id="carousel.maxheight">
-				 <source>Max. height of the slider</source>
-				 <target state="translated">Maximale Höhe des Sliders (Wert in Pixel)</target>
-			</trans-unit>	 	
-				 
-			<trans-unit id="itemdetail">
-				 <source>Show a Detaillink</source>
-				 <target state="translated">Zeige Detailink am Ende einer Nachricht</target>
-			</trans-unit>	 			
-			<trans-unit id="label.itemdate">
-				 <source>Show the date</source>
-				 <target state="translated">Zeige das Datum</target>
-			</trans-unit>	 			
-			<trans-unit id="itemcategory">
-				 <source>Show the first category</source>
-				 <target state="translated">Zeige die erste Kategorie</target>
-			</trans-unit>	 			
-			<trans-unit id="topimage">
-				 <source>Show the first image on top</source>
-				 <target state="translated">Zeige Das erste Bild als großes Topbild</target>
-			</trans-unit>	 
-			<trans-unit id="imagedesign">
-				 <source>Design of the images below</source>
-				 <target state="translated">Design der weiteren Bilder</target>
-			</trans-unit>	 			
-			<trans-unit id="label.v1">
-				 <source>Images in 2 rows</source>
-				 <target state="translated">Bilder in 2 Reihen</target>				 
-			</trans-unit>	 			
-			<trans-unit id="label.v2">
-				 <source>Imageblock</source>
-				<target state="translated">Bilder in einem Block</target>		 
-			</trans-unit>	  
-			<trans-unit id="label.v3">
-				 <source>Imagewall</source>
-				 <target state="translated">Bilderwand einheitliche Höhe</target>				 
-			</trans-unit>	 			
-			
-			<trans-unit id="label.caption">
-				<source>Caption</source>
-				<target state="translated">Bildunterschrift</target>
-			</trans-unit>	
-			
-			/* -- Optionen --------------------------------- */
-			
-			<trans-unit id="carousel.style">
-				 <source>Style</source>
-				 <target state="translated">Design-Stil</target>
-			</trans-unit>
-				
-			<trans-unit id="carousel.captionbg">
-				 <source>Background-color</source>
-				 <target state="translated">Hintergrundfarbe des Textbereich/Richtungspfeile</target>	
-			</trans-unit>		
-			
-			<trans-unit id="carousel.captionColor">
-				 <source>Text-color</source>
-				 <target state="translated">Textfarbe</target>	
-			</trans-unit>	
-			
-			<trans-unit id="carousel.captionOpacity">
-				 <source>Background-opacity</source>
-				 <target state="translated">Hintergrund Durchsichtigkeit 0 - transparent, 100 - opak</target>	
-			</trans-unit>
-			<trans-unit id="carousel.textalign">
-				<source>textalign</source>
-				<target state="translated">Textausrichtigung</target>
-			</trans-unit>
+            /* -- Controls --------------------------------- */
+            
+            <trans-unit id="carousel.autostart">
+                 <source>Autostart</source>
+                 <target state="translated">Autostart</target>
+            </trans-unit>
+            <trans-unit id="carousel.animation">
+                 <source>Type of presentation</source>
+                 <target state="translated">Art der Präsentation</target>
+            </trans-unit>
+            <trans-unit id="carousel.animation.1">
+                 <source>slide</source>
+                 <target state="translated">Verschiebe</target>
+            </trans-unit>
+            <trans-unit id="carousel.animation.2">
+                 <source>fade</source>
+                 <target state="translated">Einblenden</target>
+            </trans-unit>
+            <trans-unit id="carousel.carouselwidth">
+                 <source>Width of the carousel</source>
+                 <target state="translated">Breite des Carousels: 0 = 100%</target>
+            </trans-unit>    
+            <trans-unit id="carousel.carouselheight">
+                 <source>Height of the carousel</source>
+                 <target state="translated">Höhe des Carousels (1-100vH) Vordefiniert: 40vH, Mindestwert 200px;</target>    
+            </trans-unit>
+            <trans-unit id="carousel.controlNav">
+                 <source>Show controls</source>
+                 <target state="translated">Zeige Kontrollpunkte</target>
+            </trans-unit>
+            <trans-unit id="carousel.directionNav">
+                 <source>Create navigation for previous/next navigation</source>
+                 <target state="translated">Zeige Richtungspfeile</target>
+            </trans-unit>
+            <trans-unit id="carousel.slideshowSpeed">
+                 <source>Speed in mil. Sec.</source>
+                 <target state="translated">Geschwindigkeit in Millisekunden (Vorgabe 4 Sekunden)</target>
+            </trans-unit>
+            <trans-unit id="carousel.animationLoop">
+                 <source>Animation Loop</source>
+                 <target state="translated">Animation wiederholen</target>
+            </trans-unit>         
+            <trans-unit id="carousel.maxheight">
+                 <source>Max. height of the slider</source>
+                 <target state="translated">Maximale Höhe des Sliders (Wert in Pixel)</target>
+            </trans-unit>         
+                 
+            <trans-unit id="itemdetail">
+                 <source>Show a Detaillink</source>
+                 <target state="translated">Zeige Detailink am Ende einer Nachricht</target>
+            </trans-unit>                 
+            <trans-unit id="itemdate">
+                 <source>Show the date</source>
+                 <target state="translated">Zeige das Datum</target>
+            </trans-unit>                 
+            <trans-unit id="itemcategory">
+                 <source>Show the first category</source>
+                 <target state="translated">Zeige die erste Kategorie</target>
+            </trans-unit>                 
+            <trans-unit id="topimage">
+                 <source>Show the first image on top</source>
+                 <target state="translated">Zeige Das erste Bild als großes Topbild</target>
+            </trans-unit>     
+            <trans-unit id="imagedesign">
+                 <source>Design of the images below</source>
+                 <target state="translated">Design der weiteren Bilder</target>
+            </trans-unit>                 
+            <trans-unit id="label.v1">
+                 <source>Images in 2 rows</source>
+                 <target state="translated">Bilder in 2 Reihen</target>                 
+            </trans-unit>                 
+            <trans-unit id="label.v2">
+                 <source>Imageblock</source>
+                <target state="translated">Bilder in einem Block</target>         
+            </trans-unit>      
+            <trans-unit id="label.v3">
+                 <source>Imagewall</source>
+                 <target state="translated">Bilderwand einheitliche Höhe</target>                 
+            </trans-unit>                 
+            
+            <trans-unit id="label.caption">
+                <source>Caption</source>
+                <target state="translated">Bildunterschrift</target>
+            </trans-unit>    
+            
+            /* -- Optionen --------------------------------- */
+            
+            <trans-unit id="carousel.style">
+                 <source>Style</source>
+                 <target state="translated">Design-Stil</target>
+            </trans-unit>
+                
+            <trans-unit id="carousel.captionbg">
+                 <source>Background-color</source>
+                 <target state="translated">Hintergrundfarbe des Textbereich/Richtungspfeile</target>    
+            </trans-unit>        
+            
+            <trans-unit id="carousel.captionColor">
+                 <source>Text-color</source>
+                 <target state="translated">Textfarbe</target>    
+            </trans-unit>    
+            
+            <trans-unit id="carousel.captionOpacity">
+                 <source>Background-opacity</source>
+                 <target state="translated">Hintergrund Durchsichtigkeit 0 - transparent, 100 - opak</target>    
+            </trans-unit>
+            <trans-unit id="carousel.textalign">
+                <source>textalign</source>
+                <target state="translated">Textausrichtigung</target>
+            </trans-unit>
 
-			<trans-unit id="carousel.header">
-				 <source>only header</source>
-				 <target state="translated">Nur Header anzeigen</target>	
-			</trans-unit>	
-			<trans-unit id="carousel.imagecarouselbg">
-				 <source>Background-color</source>
-				 <target state="translated">Hintergrundfarbe</target>	
-			</trans-unit>	
-			<trans-unit id="carousel.carouselbg">
-				 <source>Background-color</source>
-				 <target state="translated">Hintergrundfarbe des kompletten Carousels-Items</target>
-			</trans-unit>	
-			
-			<trans-unit id="carousel.carouseloverlaycolor">
-				 <source>Overlay-color</source>
-				 <target state="translated">Transparenzfarbe für die Bilder</target>
-			</trans-unit>	
-			
-			<trans-unit id="carousel.lazy">
-				 <source>lazy scrolling</source>
-				 <target state="translated">Verzöckertes Nachladen</target>
-			</trans-unit>	
-			
-			/* Standard */
-			<trans-unit id="carousel.style">
-				 <source>Design</source>
-			</trans-unit>		
-			<trans-unit id="label.basic">
-				 <source>Basic</source>
-			</trans-unit> 
-			<trans-unit id="label.yes">
-				 <source>yes</source>
-				 <target state="translated">Ja</target>
-			</trans-unit>	  		
-			<trans-unit id="label.no">
-				 <source>no</source>
-				 <target state="translated">Nein</target>
-			</trans-unit>	 	
-			
-			<trans-unit id="label.items">
-				 <source>Items in a row</source>
-				 <target state="translated">Artikel in einer Reihe, bei größer 1, Paginierung ausgeschalten!</target>   
-			</trans-unit>	  
-			<trans-unit id="label.1item">
-				 <source>One item</source>
-				 <target state="translated">1 Artikel</target>	 
-			</trans-unit>		
-			<trans-unit id="label.2item">
-				 <source>Two items</source>
-				 <target state="translated">2 Artikel</target>   
-			</trans-unit>		
-			<trans-unit id="label.3item">
-				 <source>Three items</source>
-				 <target state="translated">3 Artikel</target> 
-			</trans-unit>		
-			<trans-unit id="label.4item">
-				 <source>Four items</source>
-				 <target state="translated">4 Artikel</target> 
-			</trans-unit>		 
-											
-		</body>
-	</file>
+            <trans-unit id="carousel.header">
+                 <source>only header</source>
+                 <target state="translated">Nur Header anzeigen</target>    
+            </trans-unit>    
+            <trans-unit id="carousel.imagecarouselbg">
+                 <source>Background-color</source>
+                 <target state="translated">Hintergrundfarbe</target>    
+            </trans-unit>    
+            <trans-unit id="carousel.carouselbg">
+                 <source>Background-color</source>
+                 <target state="translated">Hintergrundfarbe des kompletten Carousels-Items</target>
+            </trans-unit>    
+            
+            <trans-unit id="carousel.carouseloverlaycolor">
+                 <source>Overlay-color</source>
+                 <target state="translated">Transparenzfarbe für die Bilder</target>
+            </trans-unit>    
+            
+            <trans-unit id="carousel.lazy">
+                 <source>lazy scrolling</source>
+                 <target state="translated">Verzöckertes Nachladen</target>
+            </trans-unit>    
+            
+            /* Column spaces */     
+            <trans-unit id="spacing">
+                <source>Spacing</source>
+                 <target state="translated">Abstände</target>
+            </trans-unit>  
+            
+            
+            /* Standard */
+            <trans-unit id="carousel.style">
+                 <source>Design</source>
+            </trans-unit>        
+            <trans-unit id="label.basic">
+                 <source>Basic</source>
+            </trans-unit> 
+            <trans-unit id="label.yes">
+                 <source>yes</source>
+                 <target state="translated">Ja</target>
+            </trans-unit>              
+            <trans-unit id="label.no">
+                 <source>no</source>
+                 <target state="translated">Nein</target>
+            </trans-unit>         
+            
+            <trans-unit id="label.items">
+                 <source>Items in a row</source>
+                 <target state="translated">Artikel in einer Reihe, bei größer 1, Paginierung ausgeschalten!</target>   
+            </trans-unit>      
+            <trans-unit id="label.1item">
+                 <source>One item</source>
+                 <target state="translated">1 Artikel</target>     
+            </trans-unit>        
+            <trans-unit id="label.2item">
+                 <source>Two items</source>
+                 <target state="translated">2 Artikel</target>   
+            </trans-unit>        
+            <trans-unit id="label.3item">
+                 <source>Three items</source>
+                 <target state="translated">3 Artikel</target> 
+            </trans-unit>        
+            <trans-unit id="label.4item">
+                 <source>Four items</source>
+                 <target state="translated">4 Artikel</target> 
+            </trans-unit>         
+                                            
+        </body>
+    </file>
 </xliff>

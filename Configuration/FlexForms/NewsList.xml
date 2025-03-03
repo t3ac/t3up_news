@@ -1,649 +1,757 @@
 <sheets>
-	<extra>
-		<ROOT>
-		    <sheetTitle>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:sheet.carousel</sheetTitle>
-		    <type>array</type>
-		    <el>
-		        <settings.animation>
-		                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.animation</label>
-		                <displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>								  
-					</OR>
-				</displayCond>
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.animation.1</numIndex>
-							<numIndex index="value">1</numIndex>
-						</numIndex>
-						<numIndex index="1">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.animation.2</numIndex>
-							<numIndex index="value">2</numIndex>
-						</numIndex>
-					</items>
-				</config>
-		        </settings.animation>
-		        
-			<settings.autostart>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.autostart</label>
-				<displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>								  
-					</OR>
-				</displayCond>
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
-							<numIndex index="value">false</numIndex>
-						</numIndex>				 
-						<numIndex index="1">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
-							<numIndex index="value">true</numIndex>
-						</numIndex>
-					</items>
-					<default>true</default>
-				</config>
-			</settings.autostart>
-		        
-			<settings.carouselwidth>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.carouselwidth</label>
-				<displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>									
-					</OR>
-				</displayCond>
-				<config>
-					<type>input</type>
-					<size>3</size>
-					<default>0</default>
-					<eval>int</eval>
-					<range>
-						<lower></lower>
-						<upper>1600</upper>
-					</range>
-					<wizards>
-						<carousel>
-							<type>slider</type>
-							<step>1</step>
-						</carousel>
-					</wizards>
-				</config>
-			</settings.carouselwidth>
-					
-			<settings.items>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.items</label>
-				<displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:1</numIndex>
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:2</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:3</numIndex>									
-					</OR>
-				</displayCond>
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.1item</numIndex>
-							<numIndex index="value">1</numIndex>
-						</numIndex>
-						<numIndex index="1">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.2item</numIndex>
-							<numIndex index="value">2</numIndex>
-						</numIndex>
-						<numIndex index="2">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.3item</numIndex>
-							<numIndex index="value">3</numIndex>
-						</numIndex>
-						<numIndex index="3">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.4item</numIndex>
-							<numIndex index="value">4</numIndex>
-						</numIndex>  
-					</items>
-					<default>1</default>
-				</config>   
-			</settings.items>
-		
-			<settings.imageformat>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
-				<displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:3</numIndex>				
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:30</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="3">FIELD:template.settings.templateLayout:=:32</numIndex>								  
-					</OR>
-				</displayCond>
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format0</numIndex>
-							<numIndex index="value">0</numIndex>
-						</numIndex>  
-						<numIndex index="1" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format1</numIndex>
-							<numIndex index="value">1</numIndex>
-						</numIndex>
-						<numIndex index="2" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format2</numIndex>
-							<numIndex index="value">2</numIndex>
-						</numIndex>	
-						<numIndex index="3" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format3</numIndex>
-							<numIndex index="value">3</numIndex>
-						</numIndex>  
-						<numIndex index="4" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format4</numIndex>
-							<numIndex index="value">4</numIndex>
-						</numIndex>
-						<numIndex index="5" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format5</numIndex>
-							<numIndex index="value">5</numIndex>
-						</numIndex>
-						<numIndex index="6" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format6</numIndex>
-							<numIndex index="value">6</numIndex>
-						</numIndex>							
-					</items>
-					<default>0</default>
-				</config>
-			</settings.imageformat>
-		
-			<settings.smallimageformat>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
-				<displayCond>FIELD:template.settings.templateLayout:=:4</displayCond>
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format0</numIndex>
-							<numIndex index="value">0</numIndex>
-						</numIndex>  
-						<numIndex index="1" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format1</numIndex>
-							<numIndex index="value">1</numIndex>
-						</numIndex>
-						<numIndex index="2" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format2</numIndex>
-							<numIndex index="value">2</numIndex>
-						</numIndex>			 
-						<numIndex index="3" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format3</numIndex>
-							<numIndex index="value">3</numIndex>
-						</numIndex>				  
-					</items>
-					<default>0</default>
-				</config>
-			</settings.smallimageformat>
-			
-			<settings.carouselimageformat>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
-				<displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
-				<config type="array">
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format0</numIndex>
-							<numIndex index="value">0</numIndex>
-						</numIndex>  
-						<numIndex index="2" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format2</numIndex>
-							<numIndex index="value">2</numIndex>
-						</numIndex>			 
-						<numIndex index="3" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format3</numIndex>
-							<numIndex index="value">3</numIndex>
-						</numIndex>   
-						<numIndex index="4" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format4</numIndex>
-							<numIndex index="value">4</numIndex>
-						</numIndex>
-						<numIndex index="6" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format6</numIndex>
-							<numIndex index="value">6</numIndex>
-						</numIndex>				 
-					</items>
-					<default>0</default>
-				</config>
-			</settings.carouselimageformat>
-			
-			<settings.controlNav>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.controlNav</label>
-				<displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
-							<numIndex index="value">false</numIndex>
-						</numIndex>			   	
-						<numIndex index="1" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
-							<numIndex index="value">true</numIndex>
-						</numIndex>
-					</items>
-					<default>true</default>
-				</config>
-			</settings.controlNav> 
-		
-			<settings.directionNav>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.directionNav</label>
-				<displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>								  
-					</OR>
-				</displayCond>
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
-							<numIndex index="value">false</numIndex>
-						</numIndex>
-						<numIndex index="1" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
-							<numIndex index="value">true</numIndex>
-						</numIndex>
-					</items>
-					<default>true</default>
-				</config>
-			</settings.directionNav>
-			
-			<settings.carouselSpeed>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.slideshowSpeed</label>
-				<displayCond>
-					<OR>
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:30</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="3">FIELD:template.settings.templateLayout:=:32</numIndex>									
-					</OR>
-				</displayCond>
-				<config>
-					<type>input</type>
-					<size>3</size>
-					<default>4000</default>
-					<eval>int</eval>
-					<range>
-						<lower>500</lower>
-						<upper>20000</upper>
-					</range>
-					<wizards>
-						<carousel>
-							<type>slider</type>
-							<step>100</step>
-						</carousel>
-					</wizards>
-				</config>	
-			</settings.carouselSpeed>   
-					
-			<settings.head>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.header</label>
-				<displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.carousel.header.0</numIndex>
-							<numIndex index="value">0</numIndex>
-						</numIndex>
-						<numIndex index="1" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.carousel.header.1</numIndex>
-							<numIndex index="value">1</numIndex>
-						</numIndex>
-						<numIndex index="2" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.carousel.header.2</numIndex>
-							<numIndex index="value">2</numIndex>
-						</numIndex> 
-					</items>
-					<default>1</default>
-				</config>
-			</settings.head> 
-		
-		 
-			<settings.itemdetail>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:itemdetail</label>
-				<displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:1</numIndex>						
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:2</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:3</numIndex>  
-						<numIndex index="3">FIELD:template.settings.templateLayout:=:4</numIndex>
-						<numIndex index="4">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="5">FIELD:template.settings.templateLayout:=:32</numIndex>				 
-					</OR>
-				</displayCond>   
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
-							<numIndex index="value">false</numIndex>
-						</numIndex>			   	
-						<numIndex index="1" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
-							<numIndex index="value">true</numIndex>
-						</numIndex>
-					</items>
-					<default>true</default>
-				</config>
-			</settings.itemdetail> 
-			
-			<settings.itemdate>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:itemdate</label>
-				<displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:1</numIndex>						
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:3</numIndex>  
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:4</numIndex>
-						<numIndex index="3">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="4">FIELD:template.settings.templateLayout:=:32</numIndex>				 
-					</OR>
-				</displayCond>	 
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
-							<numIndex index="value">false</numIndex>
-						</numIndex>			   	
-						<numIndex index="1" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
-							<numIndex index="value">true</numIndex>
-						</numIndex>
-					</items>
-					<default>true</default>
-				</config>
-			</settings.itemdate> 
-			
-			<settings.itemcategory>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:itemcategory</label>
-				<displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:1</numIndex>						
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:2</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:3</numIndex>  
-						<numIndex index="3">FIELD:template.settings.templateLayout:=:4</numIndex>
-						<numIndex index="4">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="5">FIELD:template.settings.templateLayout:=:32</numIndex>				 
-					</OR>
-				</displayCond>   
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
-							<numIndex index="value">false</numIndex>
-						</numIndex>			   	
-						<numIndex index="1" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
-							<numIndex index="value">true</numIndex>
-						</numIndex>
-					</items>
-					<default>false</default>
-				</config>
-			</settings.itemcategory> 
-		 
-			<settings.topimage>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:topimage</label>
-				<displayCond>
-					<OR>
-						<numIndex index="4">FIELD:template.settings.templateLayout:=:20</numIndex>			  
-					</OR>
-				</displayCond>   
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
-							<numIndex index="value">false</numIndex>
-						</numIndex>			   	
-						<numIndex index="1" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
-							<numIndex index="value">true</numIndex>
-						</numIndex>
-					</items>
-					<default>true</default>
-				</config>
-			</settings.topimage> 
-			
-			<settings.imagedesign>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:imagedesign</label>
-				<displayCond>
-					<OR>
-						<numIndex index="4">FIELD:template.settings.templateLayout:=:20</numIndex>			  
-					</OR>
-				</displayCond>  
-				<config>					 
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v1</numIndex>
-							<numIndex index="value">1</numIndex>
-						</numIndex>			   	
-						<numIndex index="1" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v2</numIndex>
-							<numIndex index="value">2</numIndex>
-						</numIndex>
-						<numIndex index="2" type="array">
-							<numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v3</numIndex>
-							<numIndex index="value">3</numIndex>
-						</numIndex>							
-					</items>
-					<default>1</default>
-				</config>
-			</settings.imagedesign> 
-		
-			<settings.textalignment>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.textalign</label>
-				<displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						 <numIndex index="14" type="array">
-							<numIndex index="label">left</numIndex>
-							<numIndex index="value">left</numIndex>
-						</numIndex>
-						<numIndex index="15" type="array">
-							<numIndex index="label">center</numIndex>
-							<numIndex index="value">center</numIndex>
-						</numIndex>
-						<numIndex index="16" type="array">
-							<numIndex index="label">right</numIndex>
-							<numIndex index="value">right</numIndex>
-						</numIndex>											
-					</items>
-				</config> 
-			</settings.textalignment>		
-			
-			<settings.captionbackgroundcolor>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.captionbg</label>
-				<displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>									
-					</OR>
-				</displayCond>
-				 <config>
-					<type>input</type> 
-					<size>10</size> 
-					<renderType>color</renderType>
-					<default>#000000</default> 
-				</config>
-			</settings.captionbackgroundcolor>	
-						  
-			<settings.captioncolor>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.captionColor</label>
-				<displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>									
-					</OR>
-				</displayCond>
-				 <config>
-					<type>input</type> 
-					<size>10</size> 
-					<renderType>color</renderType>
-					<default>#ffffff</default> 
-				</config>
-			</settings.captioncolor>
-			 
-			<settings.captionopacity>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.captionOpacity</label>
-				<displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="1" type="array">
-							<numIndex index="label">transparent</numIndex>
-							<numIndex index="value">0</numIndex>
-						</numIndex>
-						<numIndex index="2" type="array">
-							<numIndex index="label">6,6%</numIndex>
-							<numIndex index="value">1</numIndex>
-						</numIndex>
-						<numIndex index="3" type="array">
-							<numIndex index="label">13,3%</numIndex>
-							<numIndex index="value">2</numIndex>
-						</numIndex>
-						<numIndex index="4" type="array">
-							<numIndex index="label">20%</numIndex>
-							<numIndex index="value">3</numIndex>
-						</numIndex>
-						<numIndex index="5" type="array">
-							<numIndex index="label">26.6%</numIndex>
-							<numIndex index="value">4</numIndex>
-						</numIndex>
-						<numIndex index="6" type="array">
-							<numIndex index="label">33,3%</numIndex>
-							<numIndex index="value">5</numIndex>
-						</numIndex> 
-						<numIndex index="7" type="array">
-							<numIndex index="label">40%</numIndex>
-							<numIndex index="value">6</numIndex>
-						</numIndex>
-						<numIndex index="8" type="array">
-							<numIndex index="label">46,6%</numIndex>
-							<numIndex index="value">7</numIndex>
-						</numIndex>
-						<numIndex index="9" type="array">
-							<numIndex index="label">53,3%</numIndex>
-							<numIndex index="value">8</numIndex>
-						</numIndex>
-						<numIndex index="10" type="array">
-							<numIndex index="label">60%</numIndex>
-							<numIndex index="value">9</numIndex>
-						</numIndex>
-						<numIndex index="11" type="array">
-							<numIndex index="label">66.6%</numIndex>
-							<numIndex index="value">a</numIndex>
-						</numIndex>
-						<numIndex index="12" type="array">
-							<numIndex index="label">73,3%</numIndex>
-							<numIndex index="value">b</numIndex>
-						</numIndex>
-						<numIndex index="13" type="array">
-							<numIndex index="label">80%</numIndex>
-							<numIndex index="value">c</numIndex>
-						</numIndex>						  
-						<numIndex index="14" type="array">
-							<numIndex index="label">86,6%</numIndex>
-							<numIndex index="value">d</numIndex>
-						</numIndex>
-						<numIndex index="15" type="array">
-							<numIndex index="label">93,3%</numIndex>
-							<numIndex index="value">e</numIndex>
-						</numIndex>
-						<numIndex index="16" type="array">
-							<numIndex index="label">100% - opak</numIndex>
-							<numIndex index="value">f</numIndex>
-						</numIndex>											   
-					</items>
-					<default>a</default>
-				</config> 
-			</settings.captionopacity>			 
-			
-			<settings.style>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.style</label>
-				<displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
-				<config>
-					<type>select</type>
-					<renderType>selectSingle</renderType>
-					<items>
-						<numIndex index="0" type="array">
-							<numIndex index="label">Stil1</numIndex>
-							<numIndex index="value">1</numIndex>
-						</numIndex>
-						<numIndex index="1" type="array">
-							<numIndex index="label">Stil2</numIndex>
-							<numIndex index="value">2</numIndex>
-						</numIndex>
-						<numIndex index="2" type="array">
-							<numIndex index="label">Stil3</numIndex>
-							<numIndex index="value">3</numIndex>
-						</numIndex>	  
-					</items>
-				</config>
-			</settings.style> 
-						  
-			<settings.carouselbackgroundcolor>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.carouselbg</label>
-				<displayCond>
-					<OR>
-						<numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
-						<numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
-						<numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>									
-					</OR>
-				</displayCond>
-				 <config>
-					<type>input</type> 
-					<size>10</size> 
-					<renderType>color</renderType>
-					<default>inherit</default> 
-				</config>
-			</settings.carouselbackgroundcolor> 
-		
-			<settings.carouseloverlaycolor>
-				<label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.carouseloverlaycolor</label>
-				<displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
-				 <config>
-					<type>input</type> 
-					<size>10</size> 
-					<renderType>color</renderType>
-					<default></default> 
-				</config>
-			</settings.carouseloverlaycolor>  
-						
-		    </el>
-		</ROOT>
-	</extra>
+    <extra>
+        <ROOT>
+            <sheetTitle>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:sheet.carousel</sheetTitle>
+            <type>array</type>
+            <el>
+                <settings.animation>
+                        <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.animation</label>
+                        <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>                                  
+                    </OR>
+                </displayCond>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.animation.1</numIndex>
+                            <numIndex index="value">1</numIndex>
+                        </numIndex>
+                        <numIndex index="1">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.animation.2</numIndex>
+                            <numIndex index="value">2</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
+                </settings.animation>
+                
+            <settings.autostart>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.autostart</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>                                  
+                    </OR>
+                </displayCond>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
+                            <numIndex index="value">false</numIndex>
+                        </numIndex>                 
+                        <numIndex index="1">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
+                            <numIndex index="value">true</numIndex>
+                        </numIndex>
+                    </items>
+                    <default>true</default>
+                </config>
+            </settings.autostart>
+                
+            <settings.carouselwidth>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.carouselwidth</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>                                    
+                    </OR>
+                </displayCond>
+                <config>
+                    <type>input</type>
+                    <size>3</size>
+                    <default>0</default>
+                    <eval>int</eval>
+                    <range>
+                        <lower></lower>
+                        <upper>1600</upper>
+                    </range>
+                    <wizards>
+                        <carousel>
+                            <type>slider</type>
+                            <step>1</step>
+                        </carousel>
+                    </wizards>
+                </config>
+            </settings.carouselwidth>
+                    
+            <settings.items>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.items</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:1</numIndex>
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:2</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:3</numIndex>                                    
+                    </OR>
+                </displayCond>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.1item</numIndex>
+                            <numIndex index="value">1</numIndex>
+                        </numIndex>
+                        <numIndex index="1">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.2item</numIndex>
+                            <numIndex index="value">2</numIndex>
+                        </numIndex>
+                        <numIndex index="2">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.3item</numIndex>
+                            <numIndex index="value">3</numIndex>
+                        </numIndex>
+                        <numIndex index="3">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.4item</numIndex>
+                            <numIndex index="value">4</numIndex>
+                        </numIndex>  
+                    </items>
+                    <default>1</default>
+                </config>   
+            </settings.items>
+            
+            <settings.spacing type="array">
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:spacing</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:1</numIndex>
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:2</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:3</numIndex>                                    
+                    </OR>
+                </displayCond>
+                <config>
+                <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:spacing.1</label>
+                            <value></value>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:spacing.2</label>
+                            <value>1</value>
+                        </numIndex> 
+                        <numIndex index="2" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:spacing.3</label>
+                            <value>2</value>
+                        </numIndex> 
+                        <numIndex index="3" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:spacing.4</label>
+                            <value>3</value>
+                        </numIndex>    
+                        <numIndex index="4" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:spacing.5</label>
+                            <value>4</value>
+                        </numIndex>        
+                        <numIndex index="5" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:spacing.6</label>
+                            <value>5</value>
+                        </numIndex>    
+                        <numIndex index="6" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:spacing.7</label>
+                            <value>6</value>
+                        </numIndex>     
+                    </items>
+                    <default></default>
+                </config>
+            </settings.spacing> 
+            
+            <settings.padding type="array">
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:1</numIndex>
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:2</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:3</numIndex>                                    
+                    </OR>
+                </displayCond>
+                <config>
+                <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding.1</label>
+                            <value></value>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding.2</label>
+                            <value>1</value>
+                        </numIndex> 
+                        <numIndex index="2" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding.3</label>
+                            <value>2</value>
+                        </numIndex> 
+                        <numIndex index="3" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding.4</label>
+                            <value>3</value>
+                        </numIndex>    
+                        <numIndex index="4" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding.5</label>
+                            <value>4</value>
+                        </numIndex>        
+                        <numIndex index="5" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding.6</label>
+                            <value>5</value>
+                        </numIndex>    
+                        <numIndex index="6" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding.7</label>
+                            <value>6</value>
+                        </numIndex>  
+                        <numIndex index="7" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding.8</label>
+                            <value>7</value>
+                        </numIndex>
+                        <numIndex index="8" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding.9</label>
+                            <value>8</value>
+                        </numIndex> 
+                        <numIndex index="9" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding.10</label>
+                            <value>9</value>
+                        </numIndex> 
+                        <numIndex index="10" type="array">
+                            <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:padding.11</label>
+                            <value>10</value>
+                        </numIndex>    
+                    </items>
+                    <default></default>
+                </config>
+            </settings.padding>
+
+            <settings.imageformat>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:3</numIndex>                
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:30</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="3">FIELD:template.settings.templateLayout:=:32</numIndex>                                  
+                    </OR>
+                </displayCond>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format0</numIndex>
+                            <numIndex index="value">0</numIndex>
+                        </numIndex>  
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format1</numIndex>
+                            <numIndex index="value">1</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format2</numIndex>
+                            <numIndex index="value">2</numIndex>
+                        </numIndex>    
+                        <numIndex index="3" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format3</numIndex>
+                            <numIndex index="value">3</numIndex>
+                        </numIndex>  
+                        <numIndex index="4" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format4</numIndex>
+                            <numIndex index="value">4</numIndex>
+                        </numIndex>
+                        <numIndex index="5" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format5</numIndex>
+                            <numIndex index="value">5</numIndex>
+                        </numIndex>
+                        <numIndex index="6" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format6</numIndex>
+                            <numIndex index="value">6</numIndex>
+                        </numIndex>                            
+                    </items>
+                    <default>0</default>
+                </config>
+            </settings.imageformat>
+        
+            <settings.smallimageformat>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
+                <displayCond>FIELD:template.settings.templateLayout:=:4</displayCond>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format0</numIndex>
+                            <numIndex index="value">0</numIndex>
+                        </numIndex>  
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format1</numIndex>
+                            <numIndex index="value">1</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format2</numIndex>
+                            <numIndex index="value">2</numIndex>
+                        </numIndex>             
+                        <numIndex index="3" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format3</numIndex>
+                            <numIndex index="value">3</numIndex>
+                        </numIndex>                  
+                    </items>
+                    <default>0</default>
+                </config>
+            </settings.smallimageformat>
+            
+            <settings.carouselimageformat>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
+                <displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
+                <config type="array">
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format0</numIndex>
+                            <numIndex index="value">0</numIndex>
+                        </numIndex>  
+                        <numIndex index="2" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format2</numIndex>
+                            <numIndex index="value">2</numIndex>
+                        </numIndex>             
+                        <numIndex index="3" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format3</numIndex>
+                            <numIndex index="value">3</numIndex>
+                        </numIndex>   
+                        <numIndex index="4" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format4</numIndex>
+                            <numIndex index="value">4</numIndex>
+                        </numIndex>
+                        <numIndex index="6" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.format6</numIndex>
+                            <numIndex index="value">6</numIndex>
+                        </numIndex>                 
+                    </items>
+                    <default>0</default>
+                </config>
+            </settings.carouselimageformat>
+            
+            <settings.controlNav>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.controlNav</label>
+                <displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
+                            <numIndex index="value">false</numIndex>
+                        </numIndex>                   
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
+                            <numIndex index="value">true</numIndex>
+                        </numIndex>
+                    </items>
+                    <default>true</default>
+                </config>
+            </settings.controlNav> 
+        
+            <settings.directionNav>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.directionNav</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>                                  
+                    </OR>
+                </displayCond>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
+                            <numIndex index="value">false</numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
+                            <numIndex index="value">true</numIndex>
+                        </numIndex>
+                    </items>
+                    <default>true</default>
+                </config>
+            </settings.directionNav>
+            
+            <settings.carouselSpeed>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.slideshowSpeed</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:30</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="3">FIELD:template.settings.templateLayout:=:32</numIndex>                                    
+                    </OR>
+                </displayCond>
+                <config>
+                    <type>input</type>
+                    <size>3</size>
+                    <default>4000</default>
+                    <eval>int</eval>
+                    <range>
+                        <lower>500</lower>
+                        <upper>20000</upper>
+                    </range>
+                    <wizards>
+                        <carousel>
+                            <type>slider</type>
+                            <step>100</step>
+                        </carousel>
+                    </wizards>
+                </config>    
+            </settings.carouselSpeed>   
+                    
+            <settings.head>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.header</label>
+                <displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.carousel.header.0</numIndex>
+                            <numIndex index="value">0</numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.carousel.header.1</numIndex>
+                            <numIndex index="value">1</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.carousel.header.2</numIndex>
+                            <numIndex index="value">2</numIndex>
+                        </numIndex> 
+                    </items>
+                    <default>1</default>
+                </config>
+            </settings.head> 
+        
+         
+            <settings.itemdetail>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:itemdetail</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:1</numIndex>                        
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:2</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:3</numIndex>  
+                        <numIndex index="3">FIELD:template.settings.templateLayout:=:4</numIndex>
+                        <numIndex index="4">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="5">FIELD:template.settings.templateLayout:=:32</numIndex>                 
+                    </OR>
+                </displayCond>   
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
+                            <numIndex index="value">false</numIndex>
+                        </numIndex>                   
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
+                            <numIndex index="value">true</numIndex>
+                        </numIndex>
+                    </items>
+                    <default>true</default>
+                </config>
+            </settings.itemdetail> 
+            
+            <settings.itemdate>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:itemdate</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:1</numIndex>                        
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:3</numIndex>  
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:4</numIndex>
+                        <numIndex index="3">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="4">FIELD:template.settings.templateLayout:=:32</numIndex>                 
+                    </OR>
+                </displayCond>     
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
+                            <numIndex index="value">false</numIndex>
+                        </numIndex>                   
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
+                            <numIndex index="value">true</numIndex>
+                        </numIndex>
+                    </items>
+                    <default>true</default>
+                </config>
+            </settings.itemdate> 
+            
+            <settings.itemcategory>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:itemcategory</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:1</numIndex>                        
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:2</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:3</numIndex>  
+                        <numIndex index="3">FIELD:template.settings.templateLayout:=:4</numIndex>
+                        <numIndex index="4">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="5">FIELD:template.settings.templateLayout:=:32</numIndex>                 
+                    </OR>
+                </displayCond>   
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
+                            <numIndex index="value">false</numIndex>
+                        </numIndex>                   
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
+                            <numIndex index="value">true</numIndex>
+                        </numIndex>
+                    </items>
+                    <default>false</default>
+                </config>
+            </settings.itemcategory> 
+         
+            <settings.topimage>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:topimage</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="4">FIELD:template.settings.templateLayout:=:20</numIndex>              
+                    </OR>
+                </displayCond>   
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.no</numIndex>
+                            <numIndex index="value">false</numIndex>
+                        </numIndex>                   
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.yes</numIndex>
+                            <numIndex index="value">true</numIndex>
+                        </numIndex>
+                    </items>
+                    <default>true</default>
+                </config>
+            </settings.topimage> 
+            
+            <settings.imagedesign>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:imagedesign</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="4">FIELD:template.settings.templateLayout:=:20</numIndex>              
+                    </OR>
+                </displayCond>  
+                <config>                     
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v1</numIndex>
+                            <numIndex index="value">1</numIndex>
+                        </numIndex>                   
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v2</numIndex>
+                            <numIndex index="value">2</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="label">LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:label.v3</numIndex>
+                            <numIndex index="value">3</numIndex>
+                        </numIndex>                            
+                    </items>
+                    <default>1</default>
+                </config>
+            </settings.imagedesign> 
+        
+            <settings.textalignment>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.textalign</label>
+                <displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                         <numIndex index="14" type="array">
+                            <numIndex index="label">left</numIndex>
+                            <numIndex index="value">left</numIndex>
+                        </numIndex>
+                        <numIndex index="15" type="array">
+                            <numIndex index="label">center</numIndex>
+                            <numIndex index="value">center</numIndex>
+                        </numIndex>
+                        <numIndex index="16" type="array">
+                            <numIndex index="label">right</numIndex>
+                            <numIndex index="value">right</numIndex>
+                        </numIndex>                                            
+                    </items>
+                </config> 
+            </settings.textalignment>        
+            
+            <settings.captionbackgroundcolor>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.captionbg</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>                                    
+                    </OR>
+                </displayCond>
+                 <config>
+                    <type>input</type> 
+                    <size>10</size> 
+                    <renderType>color</renderType>
+                    <default>#000000</default> 
+                </config>
+            </settings.captionbackgroundcolor>    
+                          
+            <settings.captioncolor>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.captionColor</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>                                    
+                    </OR>
+                </displayCond>
+                 <config>
+                    <type>input</type> 
+                    <size>10</size> 
+                    <renderType>color</renderType>
+                    <default>#ffffff</default> 
+                </config>
+            </settings.captioncolor>
+             
+            <settings.captionopacity>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.captionOpacity</label>
+                <displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">transparent</numIndex>
+                            <numIndex index="value">0</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="label">6,6%</numIndex>
+                            <numIndex index="value">1</numIndex>
+                        </numIndex>
+                        <numIndex index="3" type="array">
+                            <numIndex index="label">13,3%</numIndex>
+                            <numIndex index="value">2</numIndex>
+                        </numIndex>
+                        <numIndex index="4" type="array">
+                            <numIndex index="label">20%</numIndex>
+                            <numIndex index="value">3</numIndex>
+                        </numIndex>
+                        <numIndex index="5" type="array">
+                            <numIndex index="label">26.6%</numIndex>
+                            <numIndex index="value">4</numIndex>
+                        </numIndex>
+                        <numIndex index="6" type="array">
+                            <numIndex index="label">33,3%</numIndex>
+                            <numIndex index="value">5</numIndex>
+                        </numIndex> 
+                        <numIndex index="7" type="array">
+                            <numIndex index="label">40%</numIndex>
+                            <numIndex index="value">6</numIndex>
+                        </numIndex>
+                        <numIndex index="8" type="array">
+                            <numIndex index="label">46,6%</numIndex>
+                            <numIndex index="value">7</numIndex>
+                        </numIndex>
+                        <numIndex index="9" type="array">
+                            <numIndex index="label">53,3%</numIndex>
+                            <numIndex index="value">8</numIndex>
+                        </numIndex>
+                        <numIndex index="10" type="array">
+                            <numIndex index="label">60%</numIndex>
+                            <numIndex index="value">9</numIndex>
+                        </numIndex>
+                        <numIndex index="11" type="array">
+                            <numIndex index="label">66.6%</numIndex>
+                            <numIndex index="value">a</numIndex>
+                        </numIndex>
+                        <numIndex index="12" type="array">
+                            <numIndex index="label">73,3%</numIndex>
+                            <numIndex index="value">b</numIndex>
+                        </numIndex>
+                        <numIndex index="13" type="array">
+                            <numIndex index="label">80%</numIndex>
+                            <numIndex index="value">c</numIndex>
+                        </numIndex>                          
+                        <numIndex index="14" type="array">
+                            <numIndex index="label">86,6%</numIndex>
+                            <numIndex index="value">d</numIndex>
+                        </numIndex>
+                        <numIndex index="15" type="array">
+                            <numIndex index="label">93,3%</numIndex>
+                            <numIndex index="value">e</numIndex>
+                        </numIndex>
+                        <numIndex index="16" type="array">
+                            <numIndex index="label">100% - opak</numIndex>
+                            <numIndex index="value">f</numIndex>
+                        </numIndex>                                               
+                    </items>
+                    <default>a</default>
+                </config> 
+            </settings.captionopacity>             
+            
+            <settings.style>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.style</label>
+                <displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0" type="array">
+                            <numIndex index="label">Stil1</numIndex>
+                            <numIndex index="value">1</numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                            <numIndex index="label">Stil2</numIndex>
+                            <numIndex index="value">2</numIndex>
+                        </numIndex>
+                        <numIndex index="2" type="array">
+                            <numIndex index="label">Stil3</numIndex>
+                            <numIndex index="value">3</numIndex>
+                        </numIndex>      
+                    </items>
+                </config>
+            </settings.style> 
+                          
+            <settings.carouselbackgroundcolor>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.carouselbg</label>
+                <displayCond>
+                    <OR>
+                        <numIndex index="0">FIELD:template.settings.templateLayout:=:30</numIndex>
+                        <numIndex index="1">FIELD:template.settings.templateLayout:=:31</numIndex>
+                        <numIndex index="2">FIELD:template.settings.templateLayout:=:32</numIndex>                                    
+                    </OR>
+                </displayCond>
+                 <config>
+                    <type>input</type> 
+                    <size>10</size> 
+                    <renderType>color</renderType>
+                    <default>inherit</default> 
+                </config>
+            </settings.carouselbackgroundcolor> 
+        
+            <settings.carouseloverlaycolor>
+                <label>LLL:EXT:t3up_news/Resources/Private/Language/locallang_flexform.xlf:carousel.carouseloverlaycolor</label>
+                <displayCond>FIELD:template.settings.templateLayout:=:30</displayCond>
+                 <config>
+                    <type>input</type> 
+                    <size>10</size> 
+                    <renderType>color</renderType>
+                    <default></default> 
+                </config>
+            </settings.carouseloverlaycolor>  
+                        
+            </el>
+        </ROOT>
+    </extra>
 </sheets>
