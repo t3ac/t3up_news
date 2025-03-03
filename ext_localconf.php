@@ -13,7 +13,7 @@ call_user_func(static function () {
 
 	if (ExtensionManagementUtility::isLoaded('eventnews')) {
         ExtensionManagementUtility::addPageTSConfig("@import 'EXT:t3up_news/Configuration/TsConfig/Eventnews/Templates.tsconfig'");
-        ExtensionManagementUtility::addTypoScriptSetup("@import 'EXT:t3up_news/Configuration/TypoScript/Eventnews/setup.typoscript'");
+        	ExtensionManagementUtility::addTypoScriptSetup("@import 'EXT:t3up_news/Configuration/TypoScript/Eventnews/setup.typoscript'");
 		ExtensionManagementUtility::addTypoScriptConstants("@import 'EXT:t3up_news/Configuration/TypoScript/Eventnews/constants.typoscript'");
 	}
 });
