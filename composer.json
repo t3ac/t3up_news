@@ -15,7 +15,7 @@
     "news"
   ],
   "require": {
-    "t3ac/t3up": "^12-",
+    "t3ac/t3up": "^13-",
     "georgringer/news": "^12-" 
   },
   "autoload": {
