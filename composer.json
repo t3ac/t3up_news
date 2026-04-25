@@ -6,7 +6,7 @@
     {
       "name": "Michael Lang",
       "role": "Developer",
-      "email": "michael.lang@h-da.de"
+      "email": "info@t3ac.de"
     }
   ],
   "license": ["GPL-2.0-or-later"],
@@ -15,8 +15,8 @@
     "news"
   ],
   "require": {
-    "t3ac/t3up": "^13-",
-    "georgringer/news": "^12-" 
+    "t3ac/t3up": "^13.2-",
+    "georgringer/news": "^13.- ||  ^14.-  " 
   },
   "autoload": {
     "psr-4": {
