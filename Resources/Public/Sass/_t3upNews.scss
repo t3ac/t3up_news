@@ -7,7 +7,7 @@
     
     .article                                            {transition: all ease .3s; position: relative;}
     .article .moreNews                                  {height: 0; float: left; color: transparent;}
-    .article .moreNews:after                            {transition: all ease 0.25s; line-height: 100%; padding: $v025 $v05; position: absolute; bottom: 0; right: 0; content: '+'; text-align: center; color: $white; background-color: rgba($basicColor,.5);}
+    .article .moreNews:after                            {transition: all ease 0.25s; line-height: 100%; padding: $v02 $v05; position: absolute; bottom: 0; right: 0; content: '+'; text-align: center; color: $white; background-color: rgba($basicColor,.5);}
     .article:hover .moreNews:after                      {background-color: $basicColor;}
     
     .teasertext                                         {padding: $v05; overflow: hidden;}
