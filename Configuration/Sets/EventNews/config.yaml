@@ -1,0 +1,5 @@
+name: t3ac/t3up-eventnews
+label: 'EXT:t3up_news :: Eventnews Templates'
+dependencies:
+  - georgringer/news
+  - t3ac/t3up
