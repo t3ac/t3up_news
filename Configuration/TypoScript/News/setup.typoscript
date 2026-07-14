@@ -4,20 +4,16 @@ plugin.tx_news{
         layoutRootPaths.10              = EXT:t3up_news/Resources/Private/Templates/News/Layouts/
         templateRootPaths.10            = EXT:t3up_news/Resources/Private/Templates/News/Templates/
     }
-    settings.cssFile                 >
+    settings.cssFile                    >
 }
 
 page.includeCSS{
-    t3upNews                            = {$page.scss.scssT3upNews}   
-    t3upNews.if.isTrue                  = {$page.scss.scssT3upNews}  
-    t3upNews.outputStyle                = compressed  
+    t3upNews                            = EXT:t3up_news/Resources/Public/Sass/_t3upNews.scss 
 }
-
+    
 page.includeJSFooterlibs {
     newsmultislider                     = EXT:t3up_news/Resources/Public/JavaScript/multislider.js
-    newsmultislider.if.isTrue           = {$page.files.newsmultislider}
     newsmultislider.async               = 1
-        
 }
 
 plugin{
@@ -33,5 +29,5 @@ plugin{
 
 plugin.tx_wsscss.variables {
     # rows in detail
-    size                                = {$plugin.tx_news.settings.size}
+    size                                          = 6
 }
