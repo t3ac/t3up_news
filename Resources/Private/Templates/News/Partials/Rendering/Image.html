@@ -1,8 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 	<f:section name="picture">   
 	    <picture>
-	    
-              
+	                  
             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '2560', fileExtension: 'webp')}" media="(min-width: 1601px)" type="image/webp">
             <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '2560', fileExtension: 'jpeg')}" media="(min-width: 1601px)" type="image/jpeg">
          
@@ -29,23 +28,16 @@
 	
 	        <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '240',  fileExtension: 'webp')}" media="(min-width: 161px)"  type="image/webp">
 	        <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '240',  fileExtension: 'jpeg')}" media="(min-width: 161px)"  type="image/jpeg">
-	
-	    	<source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '160',  fileExtension: 'webp')}" media="(min-width: 121px)"  type="image/webp">
-	    	<source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '160',  fileExtension: 'jpeg')}" media="(min-width: 121px)"  type="image/jpeg">
-	
-	    	<source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '120',  fileExtension: 'webp')}" media="(min-width: 81px)"  type="image/webp">
-	    	<source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '120',  fileExtension: 'jpeg')}" media="(min-width: 81px)"  type="image/jpeg">
-	
-	        <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '80',   fileExtension: 'webp')}" type="image/webp">
-	        <source srcset="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', maxWidth: '80',   fileExtension: 'jpeg')}" type="image/jpeg">
-	
+		
 
-             <img 
-             src="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default', width: 2560}"
-             {f:if(condition: '{mediaElement.originalResource.title}', then: 'title="{mediaElement.originalResource.title}"')}
-             {f:if(condition: '{mediaElement.originalResource.alternative}', then: 'alt="{mediaElement.originalResource.alternative}"')}  
-			 />
-             
+             <img class="w-100" role="Presentation"
+             src="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default')}"
+             {f:if(condition: '{image.title}', then: 'title="{mediaElement.originalResource.title}"')}
+             {f:if(condition: '{image.properties.creator}', then: 'author="{imediaElement.originalResource.creator}"')}    
+             {f:if(condition: '{image.alternative}', then: 'alt="{mediaElement.originalResource.alternative}"')} 
+             loading="lazy"
+             />
+                            
 		</picture>
  	</f:section>
 </html>

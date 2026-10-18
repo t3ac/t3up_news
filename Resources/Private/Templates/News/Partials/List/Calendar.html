@@ -10,13 +10,13 @@
             	<f:if condition="{newsItem.nomore}">
             		<f:then>
 	                    <span class="day"><f:format.date format="%a">{newsItem.datetime}</f:format.date></span> 
-	                    <span class="dayNumber py-1"><f:format.date format="%d">{newsItem.datetime}</f:format.date></span> 
+	                    <span class="dayNumber py-2 h2 m-0"><f:format.date format="%d">{newsItem.datetime}</f:format.date></span> 
 	                    <span class="month"><f:format.date format="%b">{newsItem.datetime}</f:format.date></span> 
             		</f:then>
             		<f:else>
 		                <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">            
 	                    <span class="day"><f:format.date format="%a">{newsItem.datetime}</f:format.date></span> 
-	                    <span class="dayNumber py-1"><f:format.date format="%d">{newsItem.datetime}</f:format.date></span> 
+	                    <span class="dayNumber py-2 h2 m-0"><f:format.date format="%d">{newsItem.datetime}</f:format.date></span> 
 	                    <span class="month"><f:format.date format="%b">{newsItem.datetime}</f:format.date></span> 
 		                </n:link>   
             		</f:else>
@@ -24,11 +24,13 @@
         </div>
 		
     	<div class="teasertext col-9">
-    		<p>
-			   	<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-			   		{newsItem.title}
-			   	</n:link>	
-    		</p>
+			<p>
+				<f:if condition="{settings.itemcategory}">
+					{f:if(condition: newsItem.firstCategory.title, then: '<span class="d-block mb-1 newsItemCategory">{newsItem.firstCategory.title}</span>')}
+				</f:if>
+				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}"><span class="{settings.t3upNews.articleHeaderSize}">{newsItem.title}</span></n:link>						
+			</p>
+    		
     		<n:removeMediaTags>
 	    		<f:if condition="{newsItem.teaser}">		
 	    			<f:then>

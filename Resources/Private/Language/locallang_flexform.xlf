@@ -44,11 +44,7 @@
         <trans-unit id="carousel.maxheight">
             <source>Max. height of the slider</source>
         </trans-unit>            
-        
-
-        <trans-unit id="itemdetail">
-            <source>Show a Detaillink</source>
-        </trans-unit>            
+                  
         <trans-unit id="itemdate">
             <source>Show the date</source>
         </trans-unit>            
@@ -91,11 +87,8 @@
         </trans-unit>
             <trans-unit id="carousel.textalign">
             <source>textalign</source>
-        </trans-unit>    
-            <trans-unit id="carousel.header">
-            <source>only header</source>
-        </trans-unit>            
-            <trans-unit id="carousel.imagecarouselbg">
+        </trans-unit>              
+        <trans-unit id="carousel.imagecarouselbg">
             <source>Background-color</source>
         </trans-unit>    
             <trans-unit id="carousel.carouselbg">
@@ -108,73 +101,43 @@
             <source>lazy scrolling</source>
         </trans-unit>    
         
-
-            /* Column spaces */     
-            <trans-unit id="spacing">
-                <source>Spacing</source>
-            </trans-unit>            
-            <trans-unit id="spacing.1">
-                <source>none</source>
-            </trans-unit>            
-            <trans-unit id="spacing.2">
-                <source>0.25rem / 0.5rem</source>
-            </trans-unit>            
-            <trans-unit id="spacing.3">
-                <source>0.33rem / 0.66rem</source>
-            </trans-unit>            
-            <trans-unit id="spacing.4">
-                <source>0.5rem / 1rem</source>
-            </trans-unit>            
-            <trans-unit id="spacing.5">
-                <source>0.66rem / 1.25rem</source>
-            </trans-unit>            
-            <trans-unit id="spacing.6">
-                <source>0.75rem / 1.5rem</source>
-            </trans-unit>            
-            <trans-unit id="spacing.7">
-                <source>1rem / 2rem</source>
-            </trans-unit>  
-            <trans-unit id="padding">
-                <source>Padding</source>
-            </trans-unit>            
-            <trans-unit id="padding.1">
-                <source>none</source>
-            </trans-unit>            
-            <trans-unit id="padding.2">
-                <source>0.25rem</source>
-            </trans-unit>            
-            <trans-unit id="padding.3">
-                <source>0.33rem</source>
-            </trans-unit>            
-            <trans-unit id="padding.4">
-                <source>0.5rem</source>
-            </trans-unit>            
-            <trans-unit id="padding.5">
-                <source>0.66rem</source>
-            </trans-unit>            
-            <trans-unit id="padding.6">
-                <source>0.75rem</source>
-            </trans-unit>            
-            <trans-unit id="padding.7">
-                <source>1rem</source>
-            </trans-unit>  
-            <trans-unit id="padding.8">
-                <source>1.25rem</source>
-            </trans-unit>            
-            <trans-unit id="padding.9">
-                <source>1.5rem</source>
-            </trans-unit>            
-            <trans-unit id="padding.10">
-                <source>1.75rem</source>
-            </trans-unit>  
-            <trans-unit id="padding.11">
-                <source>2rem</source>
-            </trans-unit>  
-            
         
+        <trans-unit id="carousel.header">
+            <source>Header display</source>
+        </trans-unit>         
+        <trans-unit id="carousel.header.0">
+            <source>no header</source>
+        </trans-unit>  
+        <trans-unit id="carousel.header.1">
+            <source>only header</source>
+        </trans-unit>  
+        <trans-unit id="carousel.header.2">
+            <source>header and teaser</source>
+        </trans-unit>         
         
+        <trans-unit id="indicators" xml:space="preserve">           
+           <source>Control element style </source>           
+        </trans-unit>           
+         <trans-unit id="slider.indicators.1" xml:space="preserve">           
+             <source>Standard</source>           
+         </trans-unit>                 
+         <trans-unit id="slider.indicators.2" xml:space="preserve">           
+             <source>Standard bottom</source>           
+         </trans-unit>          
+         <trans-unit id="slider.indicators.3" xml:space="preserve">           
+             <source>Square bottom</source>           
+         </trans-unit>                       
+         <trans-unit id="slider.indicators.4" xml:space="preserve">           
+             <source>Square bottom outline</source>           
+         </trans-unit> 
+         <trans-unit id="slider.indicators.5" xml:space="preserve">           
+             <source>Square top</source>           
+         </trans-unit>                       
+         <trans-unit id="slider.indicators.6" xml:space="preserve">           
+             <source>Square top outline</source>           
+         </trans-unit>     
+         
         /* Standard */    
-        
         <trans-unit id="carousel.style">
             <source>Design</source>
         </trans-unit>        
@@ -225,7 +188,10 @@
         </trans-unit>    
         <trans-unit id="label.format5">
             <source>3 / 1</source>
-        </trans-unit>    
+        </trans-unit> 
+        <trans-unit id="label.format6">
+            <source>4 / 5</source>
+        </trans-unit> 
         </body>
     </file>
 </xliff>

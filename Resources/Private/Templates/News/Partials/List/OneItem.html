@@ -18,11 +18,11 @@
 		</f:alias> 		
 		
 		 <f:if condition="{settings.head} > 0">
-			<div class="carousel-caption stil{settings.style}" style="color: {settings.captioncolor}; text-align: {settings.textalignment}; background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity}">
-				<n:link style="color: {settings.captioncolor}" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-					<span class="h3 m-0 d-block">{newsItem.title}</span>
+			<div class="carousel-caption stil{settings.style}" style="background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity}">
+				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+					<span class="h3 m-0 d-block" style="color: {settings.captioncolor} !important">{newsItem.title}</span>
 					<f:if condition="{settings.head} > 1">
-						  <span class="p d-none d-md-inline-block">
+						  <span class="p d-none d-md-inline-block" style="color: {settings.captioncolor} !important">
 							  {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.htmlentitiesDecode()}
 						  </span> 
 						</f:if>	

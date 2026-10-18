@@ -1,0 +1,98 @@
+categories:
+  t3upNews:
+    label: 'T3up News'
+  t3upNews.templates:
+    label: 'T3up News Templates' 
+    parent: t3upNews
+
+settings:
+
+  t3upNews.templateRootPath:
+    label: 'template path' 
+    default: 'EXT:t3up_news/Resources/Private/Templates/'
+    type: string
+    category: t3upNews.templates
+  t3upNews.partialRootPath:
+    label: 'Partial path' 
+    default: 'EXT:t3up_news/Resources/Private/Partials/'
+    type: string
+    category: t3upNews.templates
+  t3upNews.layoutRootPath:
+    label: 'Layout path'  
+    default: 'EXT:t3up_news/Resources/Private/Layouts/'
+    type: string
+    category: t3upNews.templates
+
+  t3upNews.articleHeaderSize:
+    label: 'Headersize of article'
+    category: t3upNews
+    default: 'none'
+    type: string
+    enum:
+      none: 'p'    
+      h2: 'H2'
+      h3: 'H3'      
+      h4: 'H4'
+  t3upNews.articleBG:
+    label: 'Article background of template Teaser'
+    category: t3upNews
+    type: color
+    default: '#efefef'
+  t3upNews.articleHoverBG:
+    label: 'Hover: Article background of template Teaser'
+    category: t3upNews
+    type: color
+    default: '#ffffff'
+  t3upNews.articleBorderColor:
+    label: 'Article border-color'
+    category: t3upNews
+    type: color
+    default: '#dadada'
+  t3upNews.articlePadding:
+    label: 'Article padding'
+    category: t3upNews
+    type: string
+    default: '1rem'
+  t3upNews.articleMarginBottom:
+    label: 'Article margin-bottom'
+    category: t3upNews
+    type: string
+    default: '0.5rem'    
+  t3upNews.articleMoreBG:
+    label: 'Background color of more news'
+    category: t3upNews
+    type: color
+    default: '#aaaaaa' 
+  t3upNews.articleMoreHoverBG:
+    label: 'Hover background color of more news'
+    category: t3upNews
+    type: color
+    default: '#454545' 
+  t3upNews.articleMoreSize:
+    label: 'Background color of more news'
+    category: t3upNews
+    type: string
+    default: '125%' 
+  t3upNews.articleMoreColor:
+    label: 'Color of more news'
+    category: t3upNews
+    type: color
+    default: '#181818'
+  t3upNews.articleMoreHoverColor:
+    label: 'Hover color of more news'
+    category: t3upNews
+    type: color
+    default: '#ffffff' 
+  t3upNews.articleSpacing:
+    label: 'Space between the articles'
+    category: t3upNews
+    type: string
+    default: '0.5rem'
+    enum:
+      0: 'none'    
+      0.25rem: 'very small'
+      0.5rem: 'small'      
+      0.75rem: 'medium'
+      1rem: 'large'
+      1.5rem: 'larger' 
+      2rem: 'big' 

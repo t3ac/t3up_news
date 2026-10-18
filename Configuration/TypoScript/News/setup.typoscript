@@ -1,33 +1,52 @@
-plugin.tx_news{
-    view{
-        partialRootPaths.10             = EXT:t3up_news/Resources/Private/Templates/News/Partials/
-        layoutRootPaths.10              = EXT:t3up_news/Resources/Private/Templates/News/Layouts/
-        templateRootPaths.10            = EXT:t3up_news/Resources/Private/Templates/News/Templates/
-    }
-    settings.cssFile                    >
-}
+plugin {
+	tx_news{
+	    view{
+	        partialRootPaths.10             = EXT:t3up_news/Resources/Private/Templates/News/Partials/
+	        layoutRootPaths.10              = EXT:t3up_news/Resources/Private/Templates/News/Layouts/
+	        templateRootPaths.10            = EXT:t3up_news/Resources/Private/Templates/News/Templates/
+	        
+	        templateRootPaths {
+        		2 = {$t3upNews.templateRootPath}
+    		}
 
-page.includeCSS{
-    t3upNews                            = EXT:t3up_news/Resources/Public/Sass/_t3upNews.scss 
-}
-    
-page.includeJSFooterlibs {
-    newsmultislider                     = EXT:t3up_news/Resources/Public/JavaScript/multislider.js
-    newsmultislider.async               = 1
-}
+    		partialRootPaths {
+        		2 = {$t3upNews.partialRootPath}
+    		}
 
-plugin{
-    tx_news{
+    		layoutRootPaths {
+        		2 = {$t3upNews.layoutRootPath}
+    		}  
+	    }
+	    
+    	settings.cssFile                    >
         settings{
             list.media.image.maxWidth           = 2560
             list.media.image.maxHeight          = 1920
             detail.media.image.maxHeight        = 1000
             detail.media.image.maxWidth         = 1200
-        }
+            
+            t3upNews.articleHeaderSize          = {$t3upNews.articleHeaderSize}
+        }    	
+
     }
 }
 
+page.includeCSS{
+    t3upNews                            		= EXT:t3up_news/Resources/Public/Sass/_t3upNews.scss 
+    t3upNewsDetail                              = EXT:t3up_news/Resources/Public/Sass/_t3upNewsDetail.scss 
+}
+
 plugin.tx_wsscss.variables {
-    # rows in detail
-    size                                          = 6
+    articleBG                                    = {$t3upNews.articleBG}
+    articleHoverBG                               = {$t3upNews.articleHoverBG}    
+    elementsInArticle = 6
+    articleBorderColor                           = {$t3upNews.articleBorderColor}    
+    articlePadding                               = {$t3upNews.articlePadding}    
+    articleMarginBottom                          = {$t3upNews.articleMarginBottom}   
+    articleMoreBG                                = {$t3upNews.articleMoreBG}     
+    articleMoreHoverBG                           = {$t3upNews.articleMoreHoverBG}     
+    articleMoreSize                              = {$t3upNews.articleMoreSize}     
+    articleMoreColor                             = {$t3upNews.articleMoreColor}   
+    articleMoreHoverColor                        = {$t3upNews.articleMoreHoverColor}  
+    articleSpacing                               = {$t3upNews.articleSpacing}  
 }

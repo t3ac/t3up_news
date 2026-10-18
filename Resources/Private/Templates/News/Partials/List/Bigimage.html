@@ -30,9 +30,9 @@
 		<div class="teasertext">
 			<p>
 				<f:if condition="{settings.itemcategory}">
-					{f:if(condition: newsItem.firstCategory.title, then: '<span class="d-block mb-1">{newsItem.firstCategory.title}</span>')}
+					{f:if(condition: newsItem.firstCategory.title, then: '<span class="d-block mb-1 newsItemCategory">{newsItem.firstCategory.title}</span>')}
 				</f:if>
-				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">{newsItem.title}</n:link>
+				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}"><span class="{settings.t3upNews.articleHeaderSize}">{newsItem.title}</span></n:link>						
 			</p>
 					
 			<n:removeMediaTags>

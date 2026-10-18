@@ -1,5 +1,5 @@
 name: t3ac/t3up-news
-label: 'EXT:t3up_news :: News Templates'
+label: 'T3UP-News :: News Templates'
 dependencies:
   - georgringer/news
   - t3ac/t3up
