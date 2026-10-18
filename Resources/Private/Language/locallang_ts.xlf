@@ -22,7 +22,8 @@
 		
 			<trans-unit id="sliderOne">
 				<source>Slider - 1 News</source>
-			</trans-unit>						
+			</trans-unit>					
+	
 		</body>
 	</file>
 </xliff>
