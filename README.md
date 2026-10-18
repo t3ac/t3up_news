@@ -3,3 +3,5 @@
 01.01.2025 - Änderung für die Flexform in T12
 20.01.2025 - Änderunge der Sass, eventlistener und yaml eingefügt
 14.07.2026 - Umstellung auf Sets, löschen der Konstanten
+20.10.2026 - TYPO3 Version 14
+
