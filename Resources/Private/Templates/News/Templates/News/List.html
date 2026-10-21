@@ -457,14 +457,15 @@
                 </div>    
                 
                 <!-- Left and right controls -->
-		        <f:if condition="{flexFormData.directionNav}">
+		        <f:if condition="{settings.directionNav}">
 			        <!-- Direction -->
+			       <h1>HALLLLOOOOO</h1>
 			        <button class="carousel-control-prev d-flex justify-content-center align-items-center" type="button" data-bs-target="#slideshow{data.uid}" data-bs-slide="prev">
-			           <span class="symbol-outline prev {flexFormData.slidefontsize}" style="background-color:{flexFormData.backgroundcolor}; color: {flexFormData.captioncolor}; ">&#xe2ea</span>
+			           <span class="symbol-outline prev" style="background-color:{settings.backgroundcolor}; color: {settings.captioncolor}; ">arrow_back_ios_new</span>
 			           <span class="visually-hidden">Previous</span>
 			        </button>
 			        <button class="carousel-control-next d-flex justify-content-center align-items-center" type="button" data-bs-target="#slideshow{data.uid}" data-bs-slide="next">
-			          <span class="symbol-outline next {flexFormData.slidefontsize}" style="background-color: {flexFormData.backgroundcolor}; color: {flexFormData.captioncolor};">&#xe5e1</span>
+			          <span class="symbol-outline next" style="background-color: {settings.backgroundcolor}; color: {settings.captioncolor};">arrow_forward_ios</span>
 			          <span class="visually-hidden">Next</span>
 			        </button>
 		        </f:if> 
