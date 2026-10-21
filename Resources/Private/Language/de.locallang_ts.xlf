@@ -6,10 +6,13 @@
 			<trans-unit id="teaser">
 				<source>Teaser</source>
 			</trans-unit>	
+			<trans-unit id="calendar">
 				<source>Kalender</source>
 			</trans-unit>		
+			<trans-unit id="bigimage">
 				<source>Teaser mit großem Bild</source>	
 			</trans-unit>			
+			<trans-unit id="smallimage">
 				<source>Teaser mit kleinem Bild</source>	
 			</trans-unit>
 			
