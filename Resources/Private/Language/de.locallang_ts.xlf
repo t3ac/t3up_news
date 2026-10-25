@@ -23,7 +23,12 @@
 			<trans-unit id="sliderOne">
 				<source>Slider mit einem Bild</source>
 			</trans-unit>					
-						
+			<trans-unit id="sliderThree">
+				<source>Slider mit gleichzeitig drei Nachrichten</source>	
+			</trans-unit>			
+			<trans-unit id="sliderFour">
+				<source>Slider mit gleichzeitig vier Nachrichten</source>			
+			</trans-unit>	
 		</body>
 	</file>
 </xliff>
