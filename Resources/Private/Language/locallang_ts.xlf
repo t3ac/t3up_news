@@ -23,7 +23,12 @@
 			<trans-unit id="sliderOne">
 				<source>Slider - 1 News</source>
 			</trans-unit>					
-	
+			<trans-unit id="sliderThree">
+				<source>Slider - 3 News</source>
+			</trans-unit>			
+			<trans-unit id="sliderFour">
+				<source>Slider - 4 News</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
