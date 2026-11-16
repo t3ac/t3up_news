@@ -8,7 +8,7 @@
 $EM_CONF[$_EXTKEY] = [
     'title'            => 'T3UP - Newsextender',
     'description'      => 'Extends the tx_news Plugin with fields bootstrap-carousel and templates eventnews',
-    'version'          => '14.0.01',
+    'version'          => '14.0.03',
     'state'            => 'stable',
     'category'         => 'templates',
     'author'           => 'Michael Lang',
