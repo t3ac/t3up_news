@@ -32,9 +32,9 @@
 
              <img class="w-100" role="Presentation"
              src="{f:uri.image(src:'{mediaElement.originalResource.uid}', treatIdAsReference:'1', cropVariant: 'default')}"
-             {f:if(condition: '{image.title}', then: 'title="{mediaElement.originalResource.title}"')}
-             {f:if(condition: '{image.properties.creator}', then: 'author="{imediaElement.originalResource.creator}"')}    
-             {f:if(condition: '{image.alternative}', then: 'alt="{mediaElement.originalResource.alternative}"')} 
+             {f:if(condition: '{mediaElement.originalResource.title}', then: 'title="{mediaElement.originalResource.title}"')}
+             {f:if(condition: '{mediaElement.originalResource.properties.creator}', then: 'author="{imediaElement.originalResource.creator}"')}    
+             {f:if(condition: '{mediaElement.originalResource.alternative}', then: 'alt="{mediaElement.originalResource.alternative}"')} 
              loading="lazy"
              />
                             
