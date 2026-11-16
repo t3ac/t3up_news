@@ -55,66 +55,123 @@ $articleMoreHoverColor :                                (#{$articleMoreHoverColo
         .dayNumber                                      {font-weight: bold;}
     }
         
-    /* 1 / 3 / 4 dynmaic    */        
+    /* 1 / 3 / 4 dynamic    */        
     
      .threeItems .carousel-inner .carousel-item         {display: none;}
      .threeItems .carousel-inner .carousel-item.active  {display: flex;}
     
      .fourItems .carousel-inner .carousel-item          {display: none;}
      .fourItems .carousel-inner .carousel-item.active   {display: flex;}
+	 
+	 .threeItemsStat,
+	 .fourItemsStat                                     {overflow: hidden;}
+	 
 }
 
 
 @media (min-width: 576px){
-    .news{   
-		 .fourItemsStat .article,  
-		 .threeItemsStat .article ,
-         .twoItemsStat .article                         {margin-right: $articleSpacing; width: calc($c50 - $articleSpacing); overflow: hidden; margin-bottom: calc($articleSpacing * 2)}
-	}
+	.news{
+	    /* SPACING    */        	 
+		 .spacing1 > div                                    {@include mx01;}
+		 .spacing2 > div                                    {@include mx02;}
+		 .spacing3 > div                                    {@include mx03;}
+		 .spacing4 > div                                    {@include mx04;}
+		 .spacing5 > div                                    {@include mx05;}
+		 .spacing6 > div                                    {@include mx06;}    
+		 .spacing7 > div                                    {@include mx07;}	
+		 
+		 .threeItems .carousel-item > div:first-of-type,		 
+		 .fourItems  .carousel-item > div:first-of-type,
+	     .threeItemsStat > div:first-of-type,		 
+		 .fourItemsStat  > div:first-of-type                {margin-left:0; }	   
+		 
+	     .threeItemsStat > div:last-of-type,		 
+	     .fourItemsStat  > div:last-of-type                 {margin-right:0; }	 
+	}		 
 }
 
 @media (min-width: 576px) AND (max-width: 767px){
-    .news{ 
+    .news{   
+		/* SPACING    */        	 
+		 .spacing1 > div                                 {width: calc(#{$c50} - #{$v1});}
+		 .spacing2 > div                                 {width: calc(#{$c50} - #{$v2});}
+		 .spacing3 > div                                 {width: calc(#{$c50} - #{$v3});}
+		 .spacing4 > div                                 {width: calc(#{$c50} - #{$v4});}
+		 .spacing5 > div                                 {width: calc(#{$c50} - #{$v5});}
+		 .spacing6 > div                                 {width: calc(#{$c50} - #{$v6});}  
+		 .spacing7 > div                                 {width: calc(#{$c50} - #{$v7});}
 		
-		 .fourItemsStat .article:nth-of-type(2n),
-		 .threeItemsStat .article:nth-of-type(2n), 
-         .twoItemsStat .article:nth-of-type(2n)         {margin-right:0; margin-left: $articleSpacing;}
-	}
-}
-
-@media (min-width: 768px){
-    .news{   
-		 .fourItemsStat .article,  
-		 .threeItemsStat .article                       {margin-right: $articleSpacing;  margin-left: $articleSpacing; width: calc($c33 - calc($articleSpacing * 1.5)); overflow: hidden; margin-bottom: calc($articleSpacing * 2)}
-	}
-}
-
-@media (min-width: 768px) AND (max-width: 991px){
-    .news{   
-		 .fourItemsStat  .article:first-of-type,
-		 .threeItemsStat .article:first-of-type,        
-		 .fourItemsStat  .article:nth-of-type(4n),
-		 .threeItemsStat .article:nth-of-type(4n)  	    {margin-left: 0;}
-		 .fourItemsStat  .article:nth-of-type(3n),
-		 .threeItemsStat .article:nth-of-type(3n)       {margin-right:0; margin-left: $articleSpacing;}
-	}
-}
-
-@media (min-width: 991px){
-    .news{   
-		 .fourItemsStat .article                        {margin-right: $articleSpacing;  margin-left: $articleSpacing; width: calc($c25 - calc($articleSpacing * 2)); overflow: hidden; margin-bottom: calc($articleSpacing * 2)}
+		 .threeItems .carousel-item > div:nth-of-type(2n),		 
+		 .fourItems  .carousel-item > div:nth-of-type(2n) {margin-right:0;}		
 		 
-		 .twoItemsStat   .article:first-of-type,
-		 .threeItemsStat .article:first-of-type, 
-		 .fourItemsStat  .article:first-of-type 	    {margin-left: 0;}	
-		 .twoItemsStat   .article:nth-of-type(2n),			 
-		 .threeItemsStat .article:nth-of-type(3n),			 
-		 .fourItemsStat  .article:nth-of-type(4n)  	    {margin-right: 0;}		 
-	}
+			  		 
+    }
 }
 
 
- 
+@media (min-width: 768px) {
+    .news{   
+         
+		/* SPACING    */        	 
+		 .spacing1 > div                                   {width: calc(#{$c33} - #{$v1} * 1.25);}
+		 .spacing2 > div                                   {width: calc(#{$c33} - #{$v2} * 1.25);}
+		 .spacing3 > div                                   {width: calc(#{$c33} - #{$v3} * 1.25);}
+		 .spacing4 > div                                   {width: calc(#{$c33} - #{$v4} * 1.25);}
+		 .spacing5 > div                                   {width: calc(#{$c33} - #{$v5} * 1.25);}
+		 .spacing6 > div                                   {width: calc(#{$c33} - #{$v6} * 1.25);} 
+		 .spacing7 > div                                   {width: calc(#{$c33} - #{$v7} * 1.25);}
+	  
+	    .threeItems{
+		    .spacing1 > div:nth-of-type(3n)                {margin-right:0;}
+		    .spacing2 > div:nth-of-type(3n)                {margin-right:0;}
+		    .spacing3 > div:nth-of-type(3n)                {margin-right:0;}
+	    	.spacing4 > div:nth-of-type(3n)                {margin-right:0;}
+		    .spacing5 > div:nth-of-type(3n)                {margin-right:0;}
+	    	.spacing6 > div:nth-of-type(3n)                {margin-right:0;}
+		    .spacing7 > div:nth-of-type(3n)                {margin-right:0;}
+	     }
+	 }	 
+} 
+
+@media (min-width: 768px) AND (max-width: 991px) {
+    .news{   
+		 .fourItems {  
+			.spacing1 > div:nth-of-type(3n)                {margin-right:0;}
+			.spacing2 > div:nth-of-type(3n)                {margin-right:0;}
+			.spacing3 > div:nth-of-type(3n)                {margin-right:0;}
+			.spacing4 > div:nth-of-type(3n)                {margin-right:0;}
+			.spacing5 > div:nth-of-type(3n)                {margin-right:0;}
+			.spacing6 > div:nth-of-type(3n)                {margin-right:0;}
+			.spacing7 > div:nth-of-type(3n)                {margin-right:0;}			
+		 }
+	 } 
+} 	
+	
+@media (min-width: 992px) {
+    .news{   
+         
+		 .fourItems {			
+		/* SPACING    */        	 
+			 .spacing1 > div                                   {width: calc(#{$c25} - #{$v1} * 1.5);}
+			 .spacing2 > div                                   {width: calc(#{$c25} - #{$v2} * 1.5);}
+			 .spacing3 > div                                   {width: calc(#{$c25} - #{$v3} * 1.5);}
+			 .spacing4 > div                                   {width: calc(#{$c25} - #{$v4} * 1.5);}
+			 .spacing5 > div                                   {width: calc(#{$c25} - #{$v5} * 1.5);}
+			 .spacing6 > div                                   {width: calc(#{$c25} - #{$v6} * 1.5);} 
+			 .spacing7 > div                                   {width: calc(#{$c25} - #{$v7} * 1.5);}
+		
+	
+			.spacing1 > div:nth-of-type(4n)                {margin-right:0;}
+			.spacing2 > div:nth-of-type(4n)                {margin-right:0;}
+			.spacing3 > div:nth-of-type(4n)                {margin-right:0;}
+			.spacing4 > div:nth-of-type(4n)                {margin-right:0;}
+			.spacing5 > div:nth-of-type(4n)                {margin-right:0;}
+			.spacing6 > div:nth-of-type(4n)                {margin-right:0;}
+			.spacing7 > div:nth-of-type(4n)                {margin-right:0;}
+		 }
+    }
+}
+
 /*    ****************************************************************/
     
 main{
